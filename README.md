@@ -1,4 +1,3 @@
-```markdown
 # Malachite Substrate 🟢
 ### The Causal Ontology of Civilization
 
@@ -57,4 +56,3 @@ print(ancestors)
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the **Genesis Protocol**.
 
 **License:** CC-BY-4.0
-```
