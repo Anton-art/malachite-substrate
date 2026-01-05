@@ -1,0 +1,11 @@
+    ```text
+    # Python
+    __pycache__/
+    *.py[cod]
+    *.so
+    .env
+    venv/
+    .vscode/
+    .idea/
+    .DS_Store
+    ```
