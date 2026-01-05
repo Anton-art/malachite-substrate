@@ -1,4 +1,3 @@
-```python
 import pandas as pd
 import networkx as nx
 import os
@@ -55,4 +54,3 @@ class MalachiteLoader:
         if node_id not in self.graph:
             return "Node not found."
         return list(nx.ancestors(self.graph, node_id))
-```
