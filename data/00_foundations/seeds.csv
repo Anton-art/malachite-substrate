@@ -1,4 +1,3 @@
-```csv
 ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
 F-00,ENVIRONMENT,RESOURCE,ETERNAL,NULL,Given by Nature,Existence,NULL,Habitat
 F-01,EARTH,RESOURCE,ETERNAL,[F-00],Differentiation,Matter/Gravity,NULL,Resource Base
@@ -14,4 +13,3 @@ S-07,SCREW,SEED,INTUITIVE,[S-03;S-04],Plane wrapped around cylinder,Linear to Ro
 S-08,FIRE,SEED,INTUITIVE,[F-03;F-01],Lightning strikes tree,Exothermic Reaction,Capture/Feeding,Heat/Protection
 S-09,GRAIN,SEED,INTUITIVE,[F-01;F-02;F-03],Seeds grow where water flows,Photosynthesis,Planting,Food Storage
 S-10,SYMBOL,SEED,INTUITIVE,[F-03],Moon cycles repeat,Abstraction,Marking,Timekeeping/Memory
-```
