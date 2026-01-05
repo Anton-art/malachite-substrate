@@ -1,4 +1,3 @@
-```python
 import sys
 import os
 # Add root to path to import malachite
@@ -40,18 +39,3 @@ def validate():
 
 if __name__ == "__main__":
     validate()
-```
-
----
-
-### 🚀 Что делать дальше?
-
-1.  **Сохраните эти файлы.**
-2.  Запустите проверку: `python tools/validate.py`.
-    *   Вы должны увидеть: `✅ Graph Built... ✨ THE CRYSTAL IS SOLID.`
-3.  **Инициализируйте Git:**
-    ```bash
-    git init
-    git add .
-    git commit -m "Genesis: The 10 Seeds of Intuitive Era"
-    ```
