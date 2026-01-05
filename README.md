@@ -1,4 +1,9 @@
 # Malachite Substrate 🟢
+
+<p align="center">
+  <img src="assets/malachite-structure.png" width="500">
+</p>
+
 ### The Causal Ontology of Civilization
 
 > *"Current AI models are gas: volatile, expansive, and amnesic. To build true AGI, we need a solid state. We need Malachite."*
