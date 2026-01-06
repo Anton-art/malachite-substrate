@@ -15,7 +15,7 @@ ELEC-19,CRT_SCREEN,COMPONENT,MODERN,[ELEC-11;SCI-16;ELEC-03],Electron beam paint
 ELEC-20,MAGNETIC_TAPE,MEDIA,MODERN,[MAT-01;ELEC-03;IND-19],Plastic film coated with iron oxide stores signal,Magnetic Hysteresis,Coating/Spooling,Audio/Video/Data Storage
 ELEC-21,TUNER_CIRCUIT,COMPONENT,MODERN,[ELEC-01;ELEC-03;SCI-11],Capacitor + Inductor filter specific frequency,Resonance,Circuit Design,Radio/TV/Wireless Comms
 ELEC-22,SONAR,MACHINE,MODERN,[ELEC-10;SCI-06;WAR-03],Sound pulses map underwater objects,Acoustics/Echo,Piezoelectricity,Submarine Hunting/Mapping
-IND-45,OIL_REFINING,PROCESS,MODERN,[IND-03;SCI-07],Crude oil separated by boiling points,Fractional Distillation,Chemical Engineering,Fuel (Petrol/Kerosene)/Plastics
+IND-45,OIL_REFINING,PROCESS,MODERN,[IND-03;SCI-07],Crude oil separated by boiling points,Fractional Distillation,Chemical Engineering,Fuel/Plastics
 IND-46,ASSEMBLY_LINE,METHOD,MODERN,[IND-43;ELEC-08;IND-50],Moving conveyor brings work to worker,Flow Efficiency,Logistics/Taylorism,Mass Production (Ford)
 IND-47,THERMAL_CRACKING,PROCESS,MODERN,[IND-45;SCI-07;SCI-10],Heat and pressure break heavy oil molecules into gasoline,Molecular Cracking,High Pressure Vessels,Aviation Fuel/Cheap Gasoline
 IND-48,MICROMETER,TOOL,MODERN,[S-07;IND-39;PRIM-55],Screw thread translates rotation into precise linear measurement,Metrology/Precision,Grinding,Quality Control/Interchangeability
@@ -23,7 +23,8 @@ IND-49,MILLING_MACHINE,MACHINE,MODERN,[IND-05;IND-39;IND-06],Rotating cutter rem
 IND-50,SCREW_THREAD_STD,STANDARD,MODERN,[IND-06;IND-43;IND-48],Universal angle and pitch for fasteners,Standardization,Machining,Global Repair/Assembly
 IND-51,HYDRAULICS,SYSTEM,MODERN,[SCI-07;IND-04;IND-59],Fluid under pressure transmits force and motion,Pascal's Law,Sealing/Pumping,Heavy Machinery/Aircraft Controls
 IND-52,THRESHING_MACHINE,MACHINE,MODERN,[IND-06;IND-05;PRIM-32],Rotating drum separates grain from stalk/chaff,Centrifugal Force/Impact,Mechanization,Industrial Agriculture
-IND-53,COMBINE_HARVESTER,MACHINE,MODERN,[IND-40;IND-52;IND-24],Reaping; threshing; and winnowing in one machine,Process Integration,Assembly,Mass Food Production
+IND-53,COMBINE_HARVESTER,MACHINE,MODERN,[IND-40;IND-52;IND-24],Reaping/threshing/winnowing in one machine,Process Integration,Assembly,Mass Food Production
+IND-54,GAS_TRACTOR_PTO,MACHINE,MODERN,[IND-24;IND-42;IND-23],Lightweight tractor transfers engine power to tools,Torque Transmission,Internal Combustion,Universal Farm Power
 IND-55,GRAIN_ELEVATOR,INFRASTRUCTURE,MODERN,[IND-61;IND-05;IND-15],Vertical conveyor stores grain in concrete silos,Bulk Handling/Aeration,Civil Engineering,Global Food Logistics
 IND-56,SCREW_PROPELLER,MACHINE,MODERN,[S-07;IND-05;SCI-06],Twisted blades push water backwards to drive ship,Hydrodynamics/Action-Reaction,Casting/Balancing,Ocean Shipping/Warships
 IND-57,STEAM_TURBINE,MACHINE,MODERN,[IND-05;SCI-07;IND-06],High pressure steam spins blades directly,Aerodynamics/Rotational Force,Precision Machining,Fast Ships/Power Plants
@@ -41,4 +42,48 @@ IND-68,PIPELINE,INFRASTRUCTURE,MODERN,[MAT-04;IND-36;IND-04],Welded steel tubes 
 IND-69,BLOWOUT_PREVENTER,MACHINE,MODERN,[IND-51;IND-59;IND-19],Hydraulic rams seal well against extreme pressure,Hydrostatics/Shear Force,Heavy Casting/Sealing,Oil Safety/Deep Sea Drilling
 IND-70,PLYWOOD,MATERIAL,MODERN,[IND-06;PRIM-01;IND-51],Wood veneer layers glued cross-grain,Composite Material,Rotary Peeling/Pressing,Construction/Aviation/Furniture
 IND-71,CHAINSAW,MACHINE,MODERN,[IND-24;IND-27;PRIM-56],Engine drives cutting chain around guide bar,Portable Power,Mechanization,Forestry/Logging
-IND-72,ENGINEERED_WOOD,MATERIAL,MODERN,[MAT-13;IND-51;IND-03],Saw
+IND-72,ENGINEERED_WOOD,MATERIAL,MODERN,[MAT-13;IND-51;IND-03],Sawdust/chips bonded with resin under heat/pressure,Waste Utilization,Pressing/Extrusion,Mass Furniture/Affordable Housing
+IND-73,BAND_SAW_MILL,MACHINE,MODERN,[IND-19;IND-05;PRIM-32],Continuous steel loop blade cuts logs efficiently,Continuous Cutting,Metallurgy/Mechanics,Lumber Industry/Efficiency
+IND-74,INJECTION_MOLDING,MACHINE,MODERN,[S-07;IND-51;MAT-08],Screw forces molten plastic into mold under high pressure,Plasticity/Thermal Cycle,Precision Machining,Mass Consumer Goods/Toys
+MAT-01,PLASTIC_BAKELITE,MATERIAL,MODERN,[IND-45;IND-18],Synthetic polymer from oil/coal,Polymerization,Molding,Insulation/Consumer Goods
+MAT-02,ALUMINUM_SMELTING,PROCESS,MODERN,[ELEC-06;SCI-09],Electricity separates metal from ore (Hall-Heroult),Electrolysis,Industrial Arc,Lightweight Structures/Planes
+MAT-04,ARC_WELDING,PROCESS,MODERN,[ELEC-06;IND-19;SCI-11],Electric arc melts metal edges to fuse them into one piece,Fusion Joining,Electrodes/High Current,Tanks/Ships/Pipelines
+MAT-05,STAINLESS_STEEL,ALLOY,MODERN,[IND-19;SCI-13;ELEC-06],Steel + Chromium resists corrosion indefinitely,Passivation,Electric Arc Furnace,Surgery/Food/Chemicals
+MAT-06,TITANIUM_REFINING,PROCESS,MODERN,[SCI-09;ELEC-06;SCI-13],Extracting light/strong metal from ore using magnesium/chlorine,Kroll Process,Vacuum Metallurgy,Supersonic Jets/Submarines
+MAT-07,SUPERALLOYS,ALLOY,MODERN,[AV-04;SCI-13;MAT-06],Nickel-based alloys stay hard at white heat,Crystal Structure Engineering,Vacuum Casting,Jet Turbines/Rocket Nozzles
+MAT-08,POLYETHYLENE,MATERIAL,MODERN,[IND-47;SCI-09;SCI-01],Gas molecules linked into long plastic chains,Polymerization,Chemical Reactor,Packaging/Radar Insulation/Pipes
+MAT-09,SYNTHETIC_RUBBER,MATERIAL,MODERN,[IND-47;SCI-09;IND-17],Man-made elastomer from oil byproducts,Polymerization,Chemical Synthesis,Tires/Gaskets/War Logistics
+MAT-10,NYLON,MATERIAL,MODERN,[IND-47;SCI-09;PRIM-03],Synthetic fiber stronger than silk,Extrusion/Spinning,Chemical Engineering,Parachutes/Clothing/Ropes
+MAT-11,PVC,MATERIAL,MODERN,[IND-47;IND-18;SCI-09],Chlorine + Ethylene = Durable rigid plastic,Polymerization,Chemical Synthesis,Pipes/Windows/Cable Insulation
+MAT-12,TEFLON_PTFE,MATERIAL,MODERN,[SCI-09;IND-18;WAR-07],Fluorine atoms shield carbon chain from reaction,Chemical Inertness,High-Tech Synthesis,Atomic Isotope Separation/Space
+MAT-13,EPOXY_RESIN,MATERIAL,MODERN,[IND-45;SCI-09],Two liquids harden into cross-linked solid,Thermosetting,Chemical Reaction,Composites/Electronics/Adhesives
+AV-01,AERODYNAMICS,DISCOVERY,MODERN,[SCI-06;F-03],Air moves faster over curved wing -> Lift (Bernoulli),Fluid Dynamics,Wind Tunnels,Flight Theory
+AV-02,AIRPLANE_PROPELLER,MACHINE,MODERN,[AV-01;IND-24;IND-27],Light engine + Wings + Bicycle tech,Lift/Thrust,Lightweight framing,Flight
+AV-03,GYROSCOPE,MACHINE,MODERN,[IND-23;SCI-06],Spinning wheel resists tilting,Conservation of Angular Momentum,Precision Balancing,Navigation/Autopilot
+AV-04,JET_ENGINE,MACHINE,MODERN,[AV-01;IND-57;MAT-07],Compressor -> Combustion -> Turbine,Newton's 3rd Law,High-temp Alloys,High Speed Flight
+AV-05,FLIGHT_CONTROLS,SYSTEM,MODERN,[AV-01;IND-51;S-02],Ailerons/Rudders deflect air to control Roll/Pitch/Yaw,Aerodynamic Torque,Hydraulics/Cables,Stable Flight/Combat Maneuvers
+AV-06,MONOCOQUE,STRUCTURE,MODERN,[MAT-02;MAT-04;IND-70],Outer skin carries the structural load (Eggshell),Stress Distribution,Riveting/Sheet Metal,High-Speed Jets/Rockets
+AV-07,CABIN_PRESSURIZATION,SYSTEM,MODERN,[AV-04;SCI-07;IND-59],Engine bleed air keeps cabin at sea level pressure,Gas Laws/Sealing,Valves/Compressors,Commercial Aviation/High Altitude
+AV-08,RETRACTABLE_GEAR,MACHINE,MODERN,[IND-51;AV-01;IND-60],Wheels fold into fuselage to reduce drag,Drag Reduction,Hydraulics,Speed/Efficiency
+URB-01,AIR_CONDITIONING,SYSTEM,MODERN,[IND-25;ELEC-08;SCI-07],Cooling and dehumidifying air for indoor climate control,Thermodynamics/Phase Change,Ductwork/Compressors,Skyscrapers/Data Centers
+URB-02,CURTAIN_WALL,STRUCTURE,MODERN,[IND-19;MAT-02;PRIM-28],Non-structural glass skin hanging on steel frame,Load Distribution,Extrusion/Glazing,Modern Architecture/Natural Light
+URB-03,FIRE_SPRINKLER,SYSTEM,MODERN,[IND-04;MAT-05;SCI-07],Heat bursts bulb to release water automatically,Thermal Expansion/Hydraulics,Plumbing/Sensors,High-Rise Safety
+URB-04,TUNNELING_SHIELD,MACHINE,MODERN,[IND-51;IND-04;SCI-07],Protective cylinder for digging through soft soil/water,Pneumatics/Soil Mechanics,Heavy Engineering,Subways/Undersea Tunnels
+AGRI-01,GREEN_REVOLUTION,METHOD,MODERN,[SCI-14;SCI-20;IND-28],Breeding dwarf varieties of wheat/rice that accept high fertilizer,Selective Breeding/Genetics,Hybridization,Ending Famine
+AGRI-02,DRIP_IRRIGATION,SYSTEM,MODERN,[MAT-08;IND-04;IND-51],Plastic tubes deliver water directly to roots,Fluid Dynamics/Efficiency,Extrusion,Desert Farming/Water Conservation
+AGRI-03,COLD_CHAIN,INFRASTRUCTURE,MODERN,[IND-25;ECON-03;IND-07],Refrigerated containers/trucks/warehouses keep food fresh globally,Thermodynamics/Logistics,Insulation/Cooling,Global Food Trade
+FOOD-01,FOOD_ADDITIVES,MATERIAL,MODERN,[IND-18;SCI-09;IND-12],Chemicals to preserve texture/flavor/color,Organic Chemistry,Synthesis,Processed Food/Shelf Life
+MED-05,HYPODERMIC_SYRINGE,TOOL,MODERN,[MAT-05;IND-74;SCI-12],Stainless hollow needle + Plastic body,Fluid Dynamics/Sterility,Injection Molding,Vaccination/Drug Delivery
+MED-06,VENTILATOR_MACHINE,MACHINE,MODERN,[IND-04;IND-59;IND-14],Pumps force air/anesthesia into lungs,Pneumatics/Life Support,Precision Mechanics,Surgery/ICU
+MED-07,ECG_MONITOR,MACHINE,MODERN,[ELEC-11;ELEC-19;ELEC-02],Amplifies heart's electrical signals onto screen,Bio-Electricity,Signal Processing,Cardiology/Patient Monitoring
+MED-08,ULTRASOUND_SCANNER,MACHINE,MODERN,[ELEC-22;ELEC-19;MAT-03],High freq sound maps soft tissues,Piezoelectricity/Echo,Signal Processing,Obstetrics/Diagnostics
+GEO-01,PLATE_TECTONICS,THEORY,MODERN,[ELEC-22;SCI-21;SCI-01],Earth's crust moves on magma; Continents drift,Geophysics,Seafloor Mapping,Resource Exploration/Earthquake Safety
+GEO-02,RARE_EARTH_MINING,INDUSTRY,MODERN,[SCI-13;IND-18;SCI-09],Extraction of Lanthanides/Lithium for high-tech,Chemical Separation,Open Pit Mining,Electronics/Batteries/Magnets
+GEO-03,SOIL_MECHANICS,METHOD,MODERN,[IND-30;SCI-06;IND-04],Calculating load-bearing capacity of earth,Physics of Granular Materials,Testing/Drilling,Skyscrapers/Dams/Tunnels
+GEO-04,RADIOMETRIC_DATING,METHOD,MODERN,[SCI-16;SCI-09;SCI-01],Measuring isotopes to determine absolute age of rocks,Radioactive Decay,Mass Spectrometry,Geology/Archaeology/Climate Science
+SCI-16,ELECTRON,DISCOVERY,MODERN,[ELEC-01;SCI-08],Electricity is made of particles,Subatomic Physics,Cathode Rays,Electronics/Quantum Physics
+SCI-17,RELATIVITY,DISCOVERY,MODERN,[SCI-06;SCI-02],Time and Space are linked; E=mc^2,Spacetime/Mass-Energy Equivalence,Math,Nuclear Energy/GPS
+SCI-18,QUANTUM_MECHANICS,DISCOVERY,MODERN,[SCI-16;SCI-09],Energy comes in packets; Probability rules matter,Wave-Particle Duality,Math/Experiment,Electronics/Nuclear Physics
+SCI-19,NUCLEAR_FISSION,DISCOVERY,MODERN,[SCI-18;SCI-17],Splitting atom releases massive energy,Mass Defect,Neutron Bombardment,Bomb/Power Plant
+SCI-20,HABER_BOSCH,PROCESS,MODERN,[SCI-07;IND-18],Nitrogen from air -> Ammonia (Fertilizer/Explosives),High Pressure Catalysis,Chemical Engineering,Feeding Billions/Total War
+SCI-21,SEISMIC_SURVEY,METHOD,MODERN,[IND-16;ELEC-10;ELEC-20],Sound waves map underground geology,Reflection Seismology,Signal Processing,Resource Exploration

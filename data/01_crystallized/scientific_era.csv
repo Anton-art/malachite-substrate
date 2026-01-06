@@ -1,7 +1,7 @@
 ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
 SCI-01,SCIENTIFIC_METHOD,METHOD,SCIENTIFIC,[PRIM-40;PRIM-29],Books spread knowledge; Lenses show invisible things,Empiricism/Verification,Observation/Hypothesis,Research
 SCI-02,TELESCOPE,TOOL,SCIENTIFIC,[PRIM-29;PRIM-28],Two lenses in a tube make far things close,Optics/Refraction,Grinding/Assembly,Astronomy/Navigation
-SCI-03,HELIOCENTRISM,DISCOVERY,SCIENTIFIC,[SCI-02;SCI-01],Planets orbit Sun; not Earth,Gravity/Orbital Mechanics,Math/Observation,Navigation/Calendar
+SCI-03,HELIOCENTRISM,DISCOVERY,SCIENTIFIC,[SCI-02;SCI-01],Planets orbit Sun (not Earth),Gravity/Orbital Mechanics,Math/Observation,Navigation/Calendar
 SCI-04,MICROSCOPE,TOOL,SCIENTIFIC,[PRIM-29;SCI-01],Two lenses make small things huge,Optics/Magnification,Grinding/Assembly,Biology/Medicine
 SCI-05,CALCULUS,METHOD,SCIENTIFIC,[PRIM-31;SCI-01],Math for changing rates (Velocity/Acceleration),Integration/Differentiation,Symbolic Logic,Engineering/Physics
 SCI-06,NEWTON_PHYSICS,DISCOVERY,SCIENTIFIC,[SCI-05;SCI-03],Laws of Motion and Gravity,Determinism,Math,Predicting Mechanics
@@ -48,4 +48,21 @@ IND-31,SANITATION_SYSTEM,INFRASTRUCTURE,SCIENTIFIC,[IND-04;SCI-12;PRIM-35],Pumps
 IND-32,GAS_LIGHTING,INFRASTRUCTURE,SCIENTIFIC,[IND-03;SCI-07;PRIM-25],Coal gas piped to lamps,Pyrolysis,Gasworks,Public Safety
 IND-33,ELEVATOR_SAFETY,MACHINE,SCIENTIFIC,[IND-19;SCI-06;S-06],Platform with automatic brake,Mechanics/Safety,Steel Frame,Vertical City
 IND-34,CENTRAL_HEATING,INFRASTRUCTURE,SCIENTIFIC,[IND-05;SCI-10],Boiler steam circulated in pipes,Thermodynamics,Plumbing,Climate Control
-IND-35,BARBED_WIRE,INVENTION,SCIENTIFIC,[IND-19;IND-38],Steel wire
+IND-35,BARBED_WIRE,INVENTION,SCIENTIFIC,[IND-19;IND-38],Steel wire with points,Area Denial,Drawing wire,Fencing/War
+IND-36,ROLLING_MILL,MACHINE,SCIENTIFIC,[IND-05;IND-19;S-04],Red-hot steel passed through rollers,Plastic Deformation,Mechanization,Rails/Beams
+IND-37,GALVANIZATION,PROCESS,SCIENTIFIC,[ELEC-02;SCI-01;IND-18],Zinc coating protects steel,Electrochemical Protection,Dipping,Wires/Bridges
+IND-38,WIRE_DRAWING,MACHINE,SCIENTIFIC,[IND-05;IND-19;S-01],Pulling metal through holes,Cold Working,Mechanization,Cables/Wires
+IND-39,TOOL_STEEL,ALLOY,SCIENTIFIC,[IND-19;SCI-13;SCI-01],Tungsten/Chrome added to steel,Alloying,Metallurgy,Cutting Tools
+IND-40,MECHANICAL_REAPER,MACHINE,SCIENTIFIC,[IND-06;IND-19;PRIM-32],Blades cut grain automatically,Mechanization,Assembly,Mass Agriculture
+IND-41,PASTEURIZATION,PROCESS,SCIENTIFIC,[SCI-12;SCI-10],Heating kills pathogens,Thermal Sterilization,Heating,Public Health
+IND-42,STEAM_TRACTOR,MACHINE,SCIENTIFIC,[IND-05;IND-07;PRIM-18],Steam engine pulls plows,Traction,Boilermaking,Industrial Farming
+IND-43,INTERCHANGEABLE_PARTS,METHOD,SCIENTIFIC,[IND-06;PRIM-55;SCI-01],Identical components for mass assembly,Standardization,Metrology,Mass Production/Repair
+IND-44,ELECTRICAL_INSULATION,MATERIAL,SCIENTIFIC,[IND-17;ELEC-04],Rubber coating on wires,Dielectric Protection,Extrusion,Safe Wiring/Undersea Cables
+IND-45,OIL_REFINING,PROCESS,SCIENTIFIC,[IND-03;SCI-07],Crude oil separated by boiling points,Fractional Distillation,Chemical Engineering,Fuel (Kerosene/Petrol)
+SOC-01,JOINT_STOCK_CORP,SOCIAL_CONSTRUCT,SCIENTIFIC,[SCI-05;PRIM-44;PRIM-23],Shared ownership to fund massive projects,Risk Distribution,Law/Finance,Capitalism/Industrialization
+ELEC-01,LEYDEN_JAR,TOOL,SCIENTIFIC,[PRIM-28;PRIM-14],Glass jar stores static charge,Capacitance,Friction,Electricity Storage
+ELEC-02,BATTERY_VOLTA,INVENTION,SCIENTIFIC,[PRIM-14;SCI-01;IND-18],Stacked metals + Acid create flow,Chemical Potential -> Electrical,Stacking,Constant Current
+ELEC-03,ELECTROMAGNET,DISCOVERY,SCIENTIFIC,[ELEC-02;PRIM-14;IND-44],Current in coil creates magnet,Electromagnetism,Coiling wire,Motors/Relays
+ELEC-04,TELEGRAPH,MACHINE,SCIENTIFIC,[ELEC-03;PRIM-30;IND-38;IND-44],Electricity sends clicks over wire,Binary Encoding,Wiring,Instant Communication
+ELEC-05,MORSE_CODE,SYMBOL,SCIENTIFIC,[ELEC-04;PRIM-30],Dots and dashes represent alphabet,Binary Logic,Encoding,Data Transmission
+ELEC-06,DYNAMO,MACHINE,SCIENTIFIC,[ELEC-03;SCI-11;PRIM-32;IND-23],Spinning magnet creates current,Induction,Rotation,Power Generation
