@@ -49,7 +49,7 @@ MAT-02,ALUMINUM_SMELTING,PROCESS,MODERN,[ELEC-06;SCI-09],Electricity separates m
 MAT-04,ARC_WELDING,PROCESS,MODERN,[ELEC-06;IND-19;SCI-11],Electric arc melts metal edges to fuse them into one piece,Fusion Joining,Electrodes/High Current,Tanks/Ships/Pipelines
 MAT-05,STAINLESS_STEEL,ALLOY,MODERN,[IND-19;SCI-13;ELEC-06],Steel + Chromium resists corrosion indefinitely,Passivation,Electric Arc Furnace,Surgery/Food/Chemicals
 MAT-06,TITANIUM_REFINING,PROCESS,MODERN,[SCI-09;ELEC-06;SCI-13],Extracting light/strong metal from ore using magnesium/chlorine,Kroll Process,Vacuum Metallurgy,Supersonic Jets/Submarines
-MAT-07,SUPERALLOYS,ALLOY,MODERN,[AV-04;SCI-13;MAT-06],Nickel-based alloys stay hard at white heat,Crystal Structure Engineering,Vacuum Casting,Jet Turbines/Rocket Nozzles
+MAT-07,SUPERALLOYS,ALLOY,MODERN,[SCI-13;MAT-06;ELEC-06],Nickel-based alloys stay hard at white heat,Crystal Structure Engineering,Vacuum Casting,Jet Turbines/Rocket Nozzles
 MAT-08,POLYETHYLENE,MATERIAL,MODERN,[IND-47;SCI-09;SCI-01],Gas molecules linked into long plastic chains,Polymerization,Chemical Reactor,Packaging/Radar Insulation/Pipes
 MAT-09,SYNTHETIC_RUBBER,MATERIAL,MODERN,[IND-47;SCI-09;IND-17],Man-made elastomer from oil byproducts,Polymerization,Chemical Synthesis,Tires/Gaskets/War Logistics
 MAT-10,NYLON,MATERIAL,MODERN,[IND-47;SCI-09;PRIM-03],Synthetic fiber stronger than silk,Extrusion/Spinning,Chemical Engineering,Parachutes/Clothing/Ropes
