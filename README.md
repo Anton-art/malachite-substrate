@@ -3,9 +3,11 @@
 <p align="center">
   <img src="assets/malachite-structure.png" width="500">
 </p>
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Build Status](https://github.com/Anton-art/malachite-substrate/actions/workflows/ci.yml/badge.svg)](https://github.com/Anton-art/malachite-substrate/actions)
-[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+<p align="center">
+  <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License"></a>
+  <a href="https://github.com/Anton-art/malachite-substrate/actions"><img src="https://github.com/Anton-art/malachite-substrate/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python Version"></a>
+</p>
 
 > *"Current AI models are gas: volatile, expansive, and amnesic. To build true AGI, we need a solid state. We need Malachite."*
 
