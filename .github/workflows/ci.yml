@@ -1,46 +1,61 @@
-name: Malachite Guardian 🛡️
+name: Malachite Guardian & Publisher 🚀
 
-# TRIGGER EVENTS:
-# The Guardian wakes up on every Push to the main branch
-# or when someone opens a Pull Request.
+# КОГДА ЗАПУСКАТЬ:
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch: # Кнопка для ручного запуска
 
-# AUTOMATED TASKS:
+# ПРАВА ДОСТУПА (Критически важно для создания сайта):
+permissions:
+  contents: write
+
 jobs:
-  validate-integrity:
-    name: Validate Causal Topology
-    runs-on: ubuntu-latest  # Uses a fresh Linux virtual machine
+  build-and-deploy:
+    name: Validate & Publish
+    runs-on: ubuntu-latest
 
     steps:
-    # 1. Download the repository code to the virtual machine
+    # 1. Скачиваем код
     - name: 📥 Checkout Repository
       uses: actions/checkout@v4
 
-    # 2. Set up Python environment (using version 3.11)
+    # 2. Настраиваем Python
     - name: 🐍 Set up Python 3.11
       uses: actions/setup-python@v5
       with:
         python-version: "3.11"
-        cache: 'pip' # Enables caching to make future runs faster
+        cache: 'pip'
 
-    # 3. Install required libraries (Pandas, NetworkX, Pyvis)
+    # 3. Устанавливаем библиотеки
     - name: 📦 Install Dependencies
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    # 4. RUN THE SHERIFF (Causal Validator)
-    # If this script finds an error (exit code 1), the build fails ❌
+    # 4. ЗАПУСКАЕМ ШЕРИФА (Проверка логики)
     - name: 🕵️ Run Causal Validation
       run: |
         python tools/validate.py
 
-    # 5. VERIFY VISUALIZATION
-    # Ensures the graph can be rendered without errors
-    - name: 🎨 Verify Graph Visualization
+    # 5. ГЕНЕРИРУЕМ ГРАФ (Художник)
+    # Мы не просто проверяем, мы готовим файл для сайта
+    - name: 🎨 Generate Graph & Prepare Site
       run: |
         python tools/visualize.py
+        # Переименовываем файл, чтобы браузер открывал его автоматически
+        mv malachite_graph.html index.html
+
+    # 6. ПУБЛИКУЕМ САЙТ (Издатель)
+    # Этот шаг берет index.html и отправляет в ветку gh-pages
+    - name: 🚀 Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main' # Только если это основная ветка
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        publish_branch: gh-pages
+        keep_files: true
+        include_files: index.html
