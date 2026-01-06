@@ -3,10 +3,10 @@
 <p align="center">
   <img src="assets/malachite-structure.png" width="500">
 </p>
-
+---
 ###[🌐 Live Interactive Exploration](https://anton-art.github.io/malachite-substrate/)
 
-Explore the causal of Civilization directly in your browser. No installation required:
+Explore the causal of civilization directly in your browser. No installation required
 
 > *Click on nodes to see "Eureka" moments, physical principles, and technological dependencies.*
 ---
