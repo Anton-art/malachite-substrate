@@ -1,0 +1,10 @@
+    pandas
+    networkx
+
+    # Interactive Visualization (Pyvis)
+    pyvis
+
+    # Optional: For future Vectorization/AI integration (Good to have listed)
+    # These are needed for the full SDK, but we can install them now.
+    scikit-learn
+    scipy

@@ -1,0 +1,61 @@
+{
+  "simulation_id": "SIM-2026-001",
+  "target_node": "DIG-99-AGI_ALIGNMENT",
+  "status": "PRE_CRYSTALLIZED",
+  "description": "Simulation of integrating Artificial General Intelligence into society.",
+  "era_context": "SYNTROPY",
+  
+  "impact_factors": {
+    "positive": [
+      {
+        "type": "EFFICIENCY",
+        "value": 100,
+        "description": "Solving energy, biology, and logistics problems instantly."
+      },
+      {
+        "type": "KNOWLEDGE",
+        "value": 90,
+        "description": "Total mapping of all physics and history (Malachite completion)."
+      }
+    ],
+    "negative": [
+      {
+        "type": "EXISTENTIAL_RISK",
+        "value": 1000,
+        "description": "Loss of human control / Misaligned goals (Paperclip Maximizer)."
+      },
+      {
+        "type": "ECONOMIC_SHOCK",
+        "value": 80,
+        "description": "Total automation of white-collar jobs."
+      }
+    ],
+    "compensators": [
+      {
+        "type": "TECHNOLOGY",
+        "ref_id": "DIG-91", 
+        "name": "Zero Knowledge Proofs",
+        "value": 40,
+        "description": "Verifying AI honesty without revealing internal weights."
+      },
+      {
+        "type": "SOCIAL_CONSTRUCT",
+        "ref_id": "DIG-90",
+        "name": "DAO Governance",
+        "value": 50,
+        "description": "Decentralized control over AI kill-switch."
+      },
+      {
+        "type": "INFRASTRUCTURE",
+        "ref_id": "MALACHITE-DB",
+        "name": "Causal Grounding",
+        "value": 900,
+        "description": "Forcing AI to adhere to the immutable laws of physics and history (No hallucinations)."
+      }
+    ]
+  },
+  
+  "calculation_logic": "Syntropy = (Sum(Pos) - Max(0, Sum(Neg) - Sum(Comp))) / Scale",
+  "computed_syntropy_score": 0.85,
+  "verdict": "PROCEED_WITH_CAUTION"
+}
