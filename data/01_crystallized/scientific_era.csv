@@ -57,7 +57,7 @@ IND-40,MECHANICAL_REAPER,MACHINE,SCIENTIFIC,[IND-06;IND-19;PRIM-32],Blades cut g
 IND-41,PASTEURIZATION,PROCESS,SCIENTIFIC,[SCI-12;SCI-10],Heating kills pathogens,Thermal Sterilization,Heating,Public Health
 IND-42,STEAM_TRACTOR,MACHINE,SCIENTIFIC,[IND-05;IND-07;PRIM-18],Steam engine pulls plows,Traction,Boilermaking,Industrial Farming
 IND-43,INTERCHANGEABLE_PARTS,METHOD,SCIENTIFIC,[IND-06;PRIM-55;SCI-01],Identical components for mass assembly,Standardization,Metrology,Mass Production/Repair
-IND-44,ELECTRICAL_INSULATION,MATERIAL,SCIENTIFIC,[IND-17;ELEC-04],Rubber coating on wires,Dielectric Protection,Extrusion,Safe Wiring/Undersea Cables
+IND-44,ELECTRICAL_INSULATION,MATERIAL,SCIENTIFIC,[IND-17;SCI-01],Rubber coating on wires,Dielectric Protection,Extrusion,Safe Wiring/Undersea Cables
 IND-45,OIL_REFINING,PROCESS,SCIENTIFIC,[IND-03;SCI-07],Crude oil separated by boiling points,Fractional Distillation,Chemical Engineering,Fuel (Kerosene/Petrol)
 SOC-01,JOINT_STOCK_CORP,SOCIAL_CONSTRUCT,SCIENTIFIC,[SCI-05;PRIM-44;PRIM-23],Shared ownership to fund massive projects,Risk Distribution,Law/Finance,Capitalism/Industrialization
 ELEC-01,LEYDEN_JAR,TOOL,SCIENTIFIC,[PRIM-28;PRIM-14],Glass jar stores static charge,Capacitance,Friction,Electricity Storage
