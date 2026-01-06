@@ -13,7 +13,7 @@
 
 **Malachite Substrate** is the **External Causal Memory** for AI Agents. It maps the evolution of humanity not as a list of dates, but as a directed acyclic graph (DAG) of **Observations, Eurekas, and Tools**.
 
-It serves as a "Ground Truth" anchor to prevent hallucinations and enable causal reasoning in Large Language Models.
+It serves as a "Ground Truth" anchor to prevent hallucinations and enable causal reasoning in Large Language Models.  
 
 ---
 
