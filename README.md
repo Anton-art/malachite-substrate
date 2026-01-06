@@ -4,7 +4,7 @@
   <img src="assets/malachite-structure.png" width="500">
 </p>
 
-### [Live Interactive Exploration](https://anton-art.github.io/malachite-substrate/)
+### [Live Interactive Exploration](https://anton-art.github.io/malachite-substrate)
 
 Explore the causal of civilization directly in your browser. No installation required
 
