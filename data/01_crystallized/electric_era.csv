@@ -28,7 +28,7 @@ IND-55,GRAIN_ELEVATOR,INFRASTRUCTURE,MODERN,[IND-61;IND-05;IND-15],Vertical conv
 IND-56,SCREW_PROPELLER,MACHINE,MODERN,[S-07;IND-05;SCI-06],Twisted blades push water backwards to drive ship,Hydrodynamics/Action-Reaction,Casting/Balancing,Ocean Shipping/Warships
 IND-57,STEAM_TURBINE,MACHINE,MODERN,[IND-05;SCI-07;IND-06],High pressure steam spins blades directly,Aerodynamics/Rotational Force,Precision Machining,Fast Ships/Power Plants
 IND-58,WATERTIGHT_BULKHEAD,STRUCTURE,MODERN,[IND-08;MAT-04;SCI-01],Steel walls divide ship into sealed compartments,Buoyancy Control,Riveting/Welding,Unsinkable Ships/Safety
-IND-59,O_RING_GASKET,COMPONENT,MODERN,[IND-17;IND-51;SCI-07],Rubber loop seals gap between metal parts under pressure,Self-Energized Sealing,Molding/Vulcanization,Hydraulics/Engines/Rockets
+IND-59,O_RING_GASKET,COMPONENT,MODERN,[IND-17;SCI-07;IND-19],Rubber loop seals gap between metal parts under pressure,Self-Energized Sealing,Molding/Vulcanization,Hydraulics/Engines/Rockets
 IND-60,PNEUMATIC_TIRE,MACHINE,MODERN,[IND-17;SCI-07;IND-27],Compressed air inside rubber tube absorbs shock,Air Suspension,Molding/Valves,Automobiles/Aviation/Bicycles
 IND-61,CONVEYOR_BELT,MACHINE,MODERN,[IND-17;PRIM-07;IND-05],Rubberized fabric loop moves bulk material continuously,Friction Drive,Calendering,Mining/Assembly Lines/Logistics
 IND-62,V_BELT_DRIVE,COMPONENT,MODERN,[IND-17;S-06;S-01],Wedge-shaped belt transmits power without slipping,Friction/Wedge Effect,Molding,Engines/Appliances/Lathes
@@ -86,3 +86,7 @@ SCI-18,QUANTUM_MECHANICS,DISCOVERY,MODERN,[SCI-16;SCI-09],Energy comes in packet
 SCI-19,NUCLEAR_FISSION,DISCOVERY,MODERN,[SCI-18;SCI-17],Splitting atom releases massive energy,Mass Defect,Neutron Bombardment,Bomb/Power Plant
 SCI-20,HABER_BOSCH,PROCESS,MODERN,[SCI-07;IND-18],Nitrogen from air -> Ammonia (Fertilizer/Explosives),High Pressure Catalysis,Chemical Engineering,Feeding Billions/Total War
 SCI-21,SEISMIC_SURVEY,METHOD,MODERN,[IND-16;ELEC-10;ELEC-20],Sound waves map underground geology,Reflection Seismology,Signal Processing,Resource Exploration
+MAT-03,PIEZO_CRYSTAL,MATERIAL,MODERN,[SCI-11;F-01],Crystals generate charge when squeezed (Quartz),Piezoelectricity,Crystallography,Sonar/Ultrasound/Watches
+WAR-03,SUBMARINE,MACHINE,MODERN,[IND-08;ELEC-02;IND-04],Ship that travels underwater,Buoyancy Control,Ballast Tanks,Naval Warfare
+WAR-07,MANHATTAN_PROJECT,SOCIAL_ARTIFACT,MODERN,[SCI-19;IND-18;IND-45],Industrial effort to build atomic bomb,Total War/Secrecy,Logistics,Nuclear Age/Teflon
+ECON-03,GLOBAL_TRADE_NET,INFRASTRUCTURE,MODERN,[IND-08;ELEC-04;SOC-01],Standardized shipping and communication,Comparative Advantage,Logistics,Consumerism
