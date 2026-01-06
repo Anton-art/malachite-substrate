@@ -15,7 +15,6 @@ ELEC-19,CRT_SCREEN,COMPONENT,MODERN,[ELEC-11;SCI-16;ELEC-03],Electron beam paint
 ELEC-20,MAGNETIC_TAPE,MEDIA,MODERN,[MAT-01;ELEC-03;IND-19],Plastic film coated with iron oxide stores signal,Magnetic Hysteresis,Coating/Spooling,Audio/Video/Data Storage
 ELEC-21,TUNER_CIRCUIT,COMPONENT,MODERN,[ELEC-01;ELEC-03;SCI-11],Capacitor + Inductor filter specific frequency,Resonance,Circuit Design,Radio/TV/Wireless Comms
 ELEC-22,SONAR,MACHINE,MODERN,[ELEC-10;SCI-06;WAR-03],Sound pulses map underwater objects,Acoustics/Echo,Piezoelectricity,Submarine Hunting/Mapping
-IND-45,OIL_REFINING,PROCESS,MODERN,[IND-03;SCI-07],Crude oil separated by boiling points,Fractional Distillation,Chemical Engineering,Fuel/Plastics
 IND-46,ASSEMBLY_LINE,METHOD,MODERN,[IND-43;ELEC-08;IND-50],Moving conveyor brings work to worker,Flow Efficiency,Logistics/Taylorism,Mass Production (Ford)
 IND-47,THERMAL_CRACKING,PROCESS,MODERN,[IND-45;SCI-07;SCI-10],Heat and pressure break heavy oil molecules into gasoline,Molecular Cracking,High Pressure Vessels,Aviation Fuel/Cheap Gasoline
 IND-48,MICROMETER,TOOL,MODERN,[S-07;IND-39;PRIM-55],Screw thread translates rotation into precise linear measurement,Metrology/Precision,Grinding,Quality Control/Interchangeability
