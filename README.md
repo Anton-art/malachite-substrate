@@ -3,6 +3,15 @@
 <p align="center">
   <img src="assets/malachite-structure.png" width="500">
 </p>
+---
+## 🌐 Live Interactive Exploration
+
+Explore the causal "Crystal of Civilization" directly in your browser. No installation required:
+
+# [🚀 ENTER THE MALACHITE VISUALIZATION](https://anton-art.github.io/malachite-substrate/)
+
+> *Click on nodes to see "Eureka" moments, physical principles, and technological dependencies.*
+---
 <p align="center">
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License"></a>
   <a href="https://github.com/Anton-art/malachite-substrate/actions"><img src="https://github.com/Anton-art/malachite-substrate/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
