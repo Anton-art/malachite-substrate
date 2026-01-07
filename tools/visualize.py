@@ -56,20 +56,20 @@ def generate_interactive_graph():
         parents = list(G.predecessors(node_id))
         parents_str = ", ".join(parents) if parents else "None (Root)"
         
-        # HTML String (Single line, Double quotes inside)
+        # HTML String -> Используем одинарные кавычки внутри, чтобы не ломать JSON
         title_html = (
-            f'<div style="font-family: sans-serif; padding: 10px; background-color: white; color: black; border-radius: 5px; min-width: 250px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">'
-            f'<h3 style="margin: 0 0 5px 0; border-bottom: 2px solid {color};">{nx_node.get("name", node_id)}</h3>'
-            f'<p style="margin: 3px 0;"><b>ID:</b> {node_id} <span style="color: #666;">({nx_node.get("type", "N/A")})</span></p>'
-            f'<p style="margin: 3px 0;"><b>Era:</b> {era}</p>'
-            f'<p style="margin: 5px 0; font-style: italic; background: #f0f0f0; padding: 5px; border-radius: 3px;">"{nx_node.get("trigger", "No trigger")}"</p>'
-            f'<hr style="border: 0; border-top: 1px solid #ccc; margin: 5px 0;">'
-            f'<p style="margin: 3px 0;"><b>Principle:</b> {nx_node.get("principle", "N/A")}</p>'
-            f'<p style="margin: 3px 0;"><b>Parents:</b> {parents_str}</p>'
-            f'</div>'
+            f"<div style='font-family: sans-serif; padding: 10px; background-color: white; color: black; border-radius: 5px; min-width: 250px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);'>"
+            f"<h3 style='margin: 0 0 5px 0; border-bottom: 2px solid {color};'>{nx_node.get('name', node_id)}</h3>"
+            f"<p style='margin: 3px 0;'><b>ID:</b> {node_id} <span style='color: #666;'>({nx_node.get('type', 'N/A')})</span></p>"
+            f"<p style='margin: 3px 0;'><b>Era:</b> {era}</p>"
+            f"<p style='margin: 5px 0; font-style: italic; background: #f0f0f0; padding: 5px; border-radius: 3px;'>\"{nx_node.get('trigger', 'No trigger')}\"</p>"
+            f"<hr style='border: 0; border-top: 1px solid #ccc; margin: 5px 0;'>"
+            f"<p style='margin: 3px 0;'><b>Principle:</b> {nx_node.get('principle', 'N/A')}</p>"
+            f"<p style='margin: 3px 0;'><b>Parents:</b> {parents_str}</p>"
+            f"</div>"
         )
 
-        # Explicitly add node to PyVis (Bypassing NetworkX export to keep HTML safe)
+        # Explicitly add node to PyVis
         net.add_node(
             node_id, 
             label=nx_node.get('name', node_id),
@@ -103,7 +103,22 @@ def generate_interactive_graph():
     # 7. Save
     output_file = os.path.join(root_dir, "malachite_graph.html")
     net.save_graph(output_file)
+    
+    # --- 8. POST-PROCESSING (THE FIX) ---
+    # PyVis/Jinja2 часто экранирует HTML (превращает < в &lt;). 
+    # Мы открываем файл и принудительно возвращаем теги обратно.
+    print("🔧 Fixing HTML escaping...")
+    
+    with open(output_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Возвращаем угловые скобки на место, чтобы браузер понял, что это HTML
+    content = content.replace('&lt;', '<').replace('&gt;', '>')
+    
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(content)
+
     print(f"\n🚀 Success! Graph generated at: {output_file}")
 
 if __name__ == "__main__":
-    generate_interactive_graph() 
+    generate_interactive_graph()
