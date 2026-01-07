@@ -1,68 +1,74 @@
 ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
-SCI-01,SCIENTIFIC_METHOD,METHOD,SCIENTIFIC,[PRIM-40;PRIM-29],Books spread knowledge; Lenses show invisible things,Empiricism/Verification,Observation/Hypothesis,Research
-SCI-02,TELESCOPE,TOOL,SCIENTIFIC,[PRIM-29;PRIM-28],Two lenses in a tube make far things close,Optics/Refraction,Grinding/Assembly,Astronomy/Navigation
-SCI-03,HELIOCENTRISM,DISCOVERY,SCIENTIFIC,[SCI-02;SCI-01],Planets orbit Sun (not Earth),Gravity/Orbital Mechanics,Math/Observation,Navigation/Calendar
-SCI-04,MICROSCOPE,TOOL,SCIENTIFIC,[PRIM-29;SCI-01],Two lenses make small things huge,Optics/Magnification,Grinding/Assembly,Biology/Medicine
-SCI-05,CALCULUS,METHOD,SCIENTIFIC,[PRIM-31;SCI-01],Math for changing rates (Velocity/Acceleration),Integration/Differentiation,Symbolic Logic,Engineering/Physics
-SCI-06,NEWTON_PHYSICS,DISCOVERY,SCIENTIFIC,[SCI-05;SCI-03],Laws of Motion and Gravity,Determinism,Math,Predicting Mechanics
-SCI-07,GAS_LAWS,DISCOVERY,SCIENTIFIC,[SCI-01;PRIM-25],Pressure * Volume = Constant (Boyle),Thermodynamics,Experimentation,Steam Engines
-SCI-08,VACUUM_PUMP,MACHINE,SCIENTIFIC,[SCI-07;PRIM-36],Removing air creates suction force,Pressure Differential,Sealing/Pumping,Steam Engines/Lightbulbs
-SCI-09,ATOMIC_THEORY,DISCOVERY,SCIENTIFIC,[SCI-07;SCI-01],Matter is made of discrete particles,Discreteness,Math/Chemistry,Modern Chemistry
-SCI-10,THERMODYNAMICS_1ST,DISCOVERY,SCIENTIFIC,[IND-05;SCI-06],Energy cannot be created or destroyed,Conservation of Energy,Math,Efficiency Calculation
-SCI-11,ELECTROMAGNETIC_INDUCTION,DISCOVERY,SCIENTIFIC,[ELEC-03;SCI-01],Moving magnet creates current,Field Interaction,Experimentation,Generators/Transformers
-SCI-12,GERM_THEORY,DISCOVERY,SCIENTIFIC,[SCI-04;IND-12],Microorganisms cause rot and disease,Microbiology,Microscopy,Sterilization/Antibiotics
-SCI-13,PERIODIC_TABLE,DISCOVERY,SCIENTIFIC,[SCI-09;PRIM-14],Elements arranged by atomic weight show patterns,Periodicity,Classification,Material Science
-SCI-14,MENDELIAN_GENETICS,DISCOVERY,SCIENTIFIC,[SCI-01;PRIM-17;PRIM-31],Traits are inherited via discrete units,Statistical Probability,Breeding,Modern Biology
-SCI-15,NITROGEN_CYCLE,DISCOVERY,SCIENTIFIC,[SCI-01;IND-18;S-09],Bacteria fix nitrogen; Legumes restore soil,Chemical Cycle,Crop Rotation,Sustainable Agriculture
-IND-01,PENDULUM_CLOCK,MACHINE,SCIENTIFIC,[SCI-06;PRIM-32],Gravity swings weight at constant time,Harmonic Oscillation,Precision Mechanics,Timekeeping
-IND-02,SEXTANT,TOOL,SCIENTIFIC,[SCI-02;PRIM-55;SCI-06],Mirrors measure angle of stars,Triangulation,Precision optics,Global Navigation
-IND-03,COAL_MINING,INDUSTRY,SCIENTIFIC,[PRIM-18;PRIM-52],Wood is scarce; Black rock burns hotter,Energy Density,Digging/Shafts,Fuel Source
-IND-04,STEAM_PUMP,MACHINE,SCIENTIFIC,[SCI-08;IND-03;S-08],Vacuum from condensing steam lifts water,Phase Change/Vacuum,Casting/Boiling,Draining Mines
-IND-05,STEAM_ENGINE_WATT,MACHINE,SCIENTIFIC,[IND-04;SCI-07;PRIM-32],Piston pushed by expanding steam,Expansion Work,Precision Boring,Factory Power
-IND-06,LATHE_METAL,MACHINE,SCIENTIFIC,[PRIM-19;PRIM-27;IND-39],Spinning metal cut by hard tool,Rotational Cutting,Machining,Making Engines
-IND-07,LOCOMOTIVE,MACHINE,SCIENTIFIC,[IND-05;PRIM-42;IND-36],Steam engine on wheels on rails,High Pressure Steam,Boilermaking,Land Transport
-IND-08,STEAMSHIP,MACHINE,SCIENTIFIC,[IND-05;PRIM-51],Steam engine turns paddle/propeller,Propulsion,Shipbuilding,Global Trade
-IND-09,SPINNING_JENNY,MACHINE,SCIENTIFIC,[PRIM-06;PRIM-32],One wheel spins 8+ threads,Mechanization,Carpentry/Gearing,Textile Industry
-IND-10,COTTON_GIN,MACHINE,SCIENTIFIC,[PRIM-32;S-01],Teeth pull fiber through mesh,Mechanical Separation,Carpentry,Textile Industry
-IND-11,JACQUARD_LOOM,MACHINE,SCIENTIFIC,[IND-09;PRIM-06;PRIM-39],Punch cards control thread patterns,Programmability/Binary Logic,Mechanics,Textiles/Computing Ancestor
-IND-12,CANNED_FOOD,INVENTION,SCIENTIFIC,[PRIM-28;SCI-01],Boiled food sealed in glass/tin,Pasteurization/Vacuum,Sealing,Army Logistics
-IND-13,VACCINATION,DISCOVERY,SCIENTIFIC,[SCI-01;PRIM-17],Cowpox protects against Smallpox,Immunology,Inoculation,Public Health
-IND-14,ANESTHESIA,DISCOVERY,SCIENTIFIC,[SCI-01;IND-18],Ether/Chloroform blocks pain,Nervous System Suppression,Chemistry,Surgery
-IND-15,PORTLAND_CEMENT,MATERIAL,SCIENTIFIC,[PRIM-49;PRIM-10],Clay+Lime fired at high temp,Chemical Bonding,Kiln Firing,Modern Construction
-IND-16,DYNAMITE,INVENTION,SCIENTIFIC,[PRIM-24;SCI-01],Stabilized explosive (Nitroglycerin + Clay),Chemical Stability,Mixing,Mining/Tunneling
-IND-17,RUBBER_VULCANIZED,MATERIAL,SCIENTIFIC,[S-08;SCI-01],Sulfur + Heat makes rubber durable,Polymer Cross-linking,Heating,Tires/Seals/Insulation
-IND-18,INDUSTRIAL_ACID,MATERIAL,SCIENTIFIC,[SCI-01;IND-03],Sulfuric Acid / Soda Ash production,Chemical Synthesis,Industrial Chemistry,Textiles/Soap
-IND-19,STEEL_BESSEMER,PROCESS,SCIENTIFIC,[PRIM-26;SCI-01],Air blown through iron burns off carbon,Oxidation,Industrial Smelting,Skyscrapers/Rails
-IND-20,WOOD_PULP_PAPER,MATERIAL,SCIENTIFIC,[IND-18;IND-05],Acid breaks down wood into fiber,Chemical Pulping,Industrial Chemistry,Mass Media
-IND-21,PHOTOGRAPHY,INVENTION,SCIENTIFIC,[SCI-04;SCI-01],Light darkens silver chemicals,Photochemistry,Exposure/Developing,Documentation
-IND-22,SYNTHETIC_DYE,MATERIAL,SCIENTIFIC,[IND-03;IND-18;SCI-09],Coal tar waste turned into color,Organic Synthesis,Chemistry,Pharma Ancestor
-IND-23,BALL_BEARING,MACHINE,SCIENTIFIC,[IND-19;IND-06;S-04],Hardened steel balls reduce friction,Rolling Friction,Precision Grinding,Machinery/Bicycles
-IND-24,INTERNAL_COMBUSTION,MACHINE,SCIENTIFIC,[SCI-07;IND-45;IND-06],Exploding gas pushes piston directly,Thermodynamics/Otto Cycle,Precision Casting,Automobiles
-IND-25,REFRIGERATION,MACHINE,SCIENTIFIC,[SCI-07;IND-04;SCI-08],Compressing and expanding gas removes heat,Thermodynamics,Pumping,Food Logistics
-IND-26,TYPEWRITER,MACHINE,SCIENTIFIC,[PRIM-39;IND-43;PRIM-53],Keys strike inked ribbon,Standardization,Fine Mechanics,Business Efficiency
-IND-27,BICYCLE,MACHINE,SCIENTIFIC,[IND-23;IND-17;IND-19;IND-43],Chain drive + Pneumatic tires,Human Power Efficiency,Welding,Personal Transport
-IND-28,FERTILIZER_CHEM,MATERIAL,SCIENTIFIC,[IND-18;PRIM-10],Dissolving bones/rocks in acid,Chemical Nutrition,Mixing,Industrial Agriculture
-IND-29,SLIDE_RULE,TOOL,SCIENTIFIC,[SCI-05;PRIM-55],Sliding scales for math,Logarithms,Calibration,Engineering
-IND-30,REINFORCED_CONCRETE,MATERIAL,SCIENTIFIC,[IND-15;IND-19;SCI-06],Steel bars inside concrete,Composite Material,Casting,Skyscrapers/Bridges
-IND-31,SANITATION_SYSTEM,INFRASTRUCTURE,SCIENTIFIC,[IND-04;SCI-12;PRIM-35],Pumps and pipes remove waste,Fluid Dynamics,Civil Engineering,Urban Density
-IND-32,GAS_LIGHTING,INFRASTRUCTURE,SCIENTIFIC,[IND-03;SCI-07;PRIM-25],Coal gas piped to lamps,Pyrolysis,Gasworks,Public Safety
-IND-33,ELEVATOR_SAFETY,MACHINE,SCIENTIFIC,[IND-19;SCI-06;S-06],Platform with automatic brake,Mechanics/Safety,Steel Frame,Vertical City
-IND-34,CENTRAL_HEATING,INFRASTRUCTURE,SCIENTIFIC,[IND-05;SCI-10],Boiler steam circulated in pipes,Thermodynamics,Plumbing,Climate Control
-IND-35,BARBED_WIRE,INVENTION,SCIENTIFIC,[IND-19;IND-38],Steel wire with points,Area Denial,Drawing wire,Fencing/War
-IND-36,ROLLING_MILL,MACHINE,SCIENTIFIC,[IND-05;IND-19;S-04],Red-hot steel passed through rollers,Plastic Deformation,Mechanization,Rails/Beams
-IND-37,GALVANIZATION,PROCESS,SCIENTIFIC,[ELEC-02;SCI-01;IND-18],Zinc coating protects steel,Electrochemical Protection,Dipping,Wires/Bridges
-IND-38,WIRE_DRAWING,MACHINE,SCIENTIFIC,[IND-05;IND-19;S-01],Pulling metal through holes,Cold Working,Mechanization,Cables/Wires
-IND-39,TOOL_STEEL,ALLOY,SCIENTIFIC,[IND-19;SCI-13;SCI-01],Tungsten/Chrome added to steel,Alloying,Metallurgy,Cutting Tools
-IND-40,MECHANICAL_REAPER,MACHINE,SCIENTIFIC,[IND-06;IND-19;PRIM-32],Blades cut grain automatically,Mechanization,Assembly,Mass Agriculture
-IND-41,PASTEURIZATION,PROCESS,SCIENTIFIC,[SCI-12;SCI-10],Heating kills pathogens,Thermal Sterilization,Heating,Public Health
-IND-42,STEAM_TRACTOR,MACHINE,SCIENTIFIC,[IND-05;IND-07;PRIM-18],Steam engine pulls plows,Traction,Boilermaking,Industrial Farming
-IND-43,INTERCHANGEABLE_PARTS,METHOD,SCIENTIFIC,[IND-06;PRIM-55;SCI-01],Identical components for mass assembly,Standardization,Metrology,Mass Production/Repair
-IND-44,ELECTRICAL_INSULATION,MATERIAL,SCIENTIFIC,[IND-17;SCI-01],Rubber coating on wires,Dielectric Protection,Extrusion,Safe Wiring/Undersea Cables
-IND-45,OIL_REFINING,PROCESS,SCIENTIFIC,[IND-03;SCI-07],Crude oil separated by boiling points,Fractional Distillation,Chemical Engineering,Fuel (Kerosene/Petrol)
-SOC-01,JOINT_STOCK_CORP,SOCIAL_CONSTRUCT,SCIENTIFIC,[SCI-05;PRIM-44;PRIM-23],Shared ownership to fund massive projects,Risk Distribution,Law/Finance,Capitalism/Industrialization
-ELEC-01,LEYDEN_JAR,TOOL,SCIENTIFIC,[PRIM-28;PRIM-14],Glass jar stores static charge,Capacitance,Friction,Electricity Storage
-ELEC-02,BATTERY_VOLTA,INVENTION,SCIENTIFIC,[PRIM-14;SCI-01;IND-18],Stacked metals + Acid create flow,Chemical Potential -> Electrical,Stacking,Constant Current
-ELEC-03,ELECTROMAGNET,DISCOVERY,SCIENTIFIC,[ELEC-02;PRIM-14;IND-44],Current in coil creates magnet,Electromagnetism,Coiling wire,Motors/Relays
-ELEC-04,TELEGRAPH,MACHINE,SCIENTIFIC,[ELEC-03;PRIM-30;IND-38;IND-44],Electricity sends clicks over wire,Binary Encoding,Wiring,Instant Communication
+ENV-06,DRAFTING_ROOM,ENVIRONMENT,SCIENTIFIC,[ENV-02;PRIM-23;PRIM-55],Tables + Paper + Precision tools,Geometric Abstraction,Planning,Blueprints/Engineering
+ENV-07,ALCHEMY_LAB,ENVIRONMENT,SCIENTIFIC,[ENV-03;PRIM-28;PRIM-10],Glassware + Burners + Reagents,Chemical Reaction,Experimentation,Acids/Dyes/Explosives
+ENV-08,MACHINE_SHOP,ENVIRONMENT,SCIENTIFIC,[ENV-04;IND-06;IND-39],Lathes + Drills + Hardened Steel,Precision Machining,Subtractive Mfg,Engines/Gears
+ENV-09,PRINTING_HOUSE,ENVIRONMENT,SCIENTIFIC,[ENV-02;PRIM-40],Presses + Typesetting + Paper storage,Mass Replication,Distribution,Newspapers/Books
+ENV-SITE-B,HEAVY_SITE,ENVIRONMENT,SCIENTIFIC,[ENV-SITE-A;IND-15;IND-52],Steam cranes + Steel beams,Load Bearing,Structural Engineering,Skyscrapers/Bridges
+ENV-SCI-03,NATURAL_PHIL_LAB,ENVIRONMENT,SCIENTIFIC,[ENV-SCI-02;SCI-04;ENV-07],Microscopes + Collections,Empirical Observation,Scientific Method,Biology/Medicine
+ENV-SCI-04,THEORETICAL_STUDY,ENVIRONMENT,SCIENTIFIC,[ENV-SCI-02;PRIM-31;ENV-09],Books + Blackboard + Calculus,Mathematical Modeling,Deduction,Physics/Relativity
+SCI-01,SCIENTIFIC_METHOD,METHOD,SCIENTIFIC,[ENV-09;PRIM-29;INST-01],Books spread knowledge; Lenses show invisible things,Empiricism/Verification,Observation/Hypothesis,Research
+SCI-02,TELESCOPE,TOOL,SCIENTIFIC,[ENV-02;PRIM-29],Two lenses in a tube make far things close,Optics/Refraction,Grinding/Assembly,Astronomy/Navigation
+SCI-03,HELIOCENTRISM,DISCOVERY,SCIENTIFIC,[ENV-SCI-01;SCI-02],Planets orbit Sun (not Earth),Gravity/Orbital Mechanics,Math/Observation,Navigation/Calendar
+SCI-04,MICROSCOPE,TOOL,SCIENTIFIC,[ENV-02;PRIM-29],Two lenses make small things huge,Optics/Magnification,Grinding/Assembly,Biology/Medicine
+SCI-05,CALCULUS,METHOD,SCIENTIFIC,[ENV-SCI-04;PRIM-31],Math for changing rates (Velocity/Acceleration),Integration/Differentiation,Symbolic Logic,Engineering/Physics
+SCI-06,NEWTON_PHYSICS,DISCOVERY,SCIENTIFIC,[ENV-SCI-04;SCI-05],Laws of Motion and Gravity,Determinism,Math,Predicting Mechanics
+SCI-07,GAS_LAWS,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;PRIM-25],Pressure * Volume = Constant (Boyle),Thermodynamics,Experimentation,Steam Engines
+SCI-08,VACUUM_PUMP,MACHINE,SCIENTIFIC,[ENV-08;SCI-07],Removing air creates suction force,Pressure Differential,Sealing/Pumping,Steam Engines/Lightbulbs
+SCI-09,ATOMIC_THEORY,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;SCI-07],Matter is made of discrete particles,Discreteness,Math/Chemistry,Modern Chemistry
+SCI-10,THERMODYNAMICS_1ST,DISCOVERY,SCIENTIFIC,[ENV-SCI-04;IND-05],Energy cannot be created or destroyed,Conservation of Energy,Math,Efficiency Calculation
+SCI-11,ELECTROMAGNETIC_INDUCTION,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;ELEC-03],Moving magnet creates current,Field Interaction,Experimentation,Generators/Transformers
+SCI-12,GERM_THEORY,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;SCI-04],Microorganisms cause rot and disease,Microbiology,Microscopy,Sterilization/Antibiotics
+SCI-13,PERIODIC_TABLE,DISCOVERY,SCIENTIFIC,[ENV-SCI-04;SCI-09],Elements arranged by atomic weight show patterns,Periodicity,Classification,Material Science
+SCI-14,MENDELIAN_GENETICS,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;PRIM-17],Traits are inherited via discrete units,Statistical Probability,Breeding,Modern Biology
+SCI-15,NITROGEN_CYCLE,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;IND-18],Bacteria fix nitrogen; Legumes restore soil,Chemical Cycle,Crop Rotation,Sustainable Agriculture
+IND-01,PENDULUM_CLOCK,MACHINE,SCIENTIFIC,[ENV-08;SCI-06],Gravity swings weight at constant time,Harmonic Oscillation,Precision Mechanics,Timekeeping
+IND-02,SEXTANT,TOOL,SCIENTIFIC,[ENV-02;SCI-02],Mirrors measure angle of stars,Triangulation,Precision optics,Global Navigation
+IND-03,COAL_MINING,INDUSTRY,SCIENTIFIC,[ENV-SITE-A;PRIM-52;INST-04],Wood is scarce; Black rock burns hotter,Energy Density,Digging/Shafts,Fuel Source
+IND-04,STEAM_PUMP,MACHINE,SCIENTIFIC,[ENV-08;SCI-08;IND-03],Vacuum from condensing steam lifts water,Phase Change/Vacuum,Casting/Boiling,Draining Mines
+IND-05,STEAM_ENGINE_WATT,MACHINE,SCIENTIFIC,[ENV-08;IND-04;SCI-07],Piston pushed by expanding steam,Expansion Work,Precision Boring,Factory Power
+IND-06,LATHE_METAL,MACHINE,SCIENTIFIC,[ENV-04;PRIM-32],Spinning metal cut by hard tool,Rotational Cutting,Machining,Making Engines
+IND-07,LOCOMOTIVE,MACHINE,SCIENTIFIC,[ENV-08;IND-05;IND-36],Steam engine on wheels on rails,High Pressure Steam,Boilermaking,Land Transport
+IND-08,STEAMSHIP,MACHINE,SCIENTIFIC,[ENV-SITE-B;IND-05],Steam engine turns paddle/propeller,Propulsion,Shipbuilding,Global Trade
+IND-09,SPINNING_JENNY,MACHINE,SCIENTIFIC,[ENV-02;PRIM-32],One wheel spins 8+ threads,Mechanization,Carpentry/Gearing,Textile Industry
+IND-10,COTTON_GIN,MACHINE,SCIENTIFIC,[ENV-02;PRIM-32],Teeth pull fiber through mesh,Mechanical Separation,Carpentry,Textile Industry
+IND-11,JACQUARD_LOOM,MACHINE,SCIENTIFIC,[ENV-08;IND-09;PRIM-39],Punch cards control thread patterns,Programmability/Binary Logic,Mechanics,Textiles/Computing Ancestor
+IND-12,CANNED_FOOD,INVENTION,SCIENTIFIC,[ENV-07;PRIM-28],Boiled food sealed in glass/tin,Pasteurization/Vacuum,Sealing,Army Logistics
+IND-13,VACCINATION,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;IND-12],Cowpox protects against Smallpox,Immunology,Inoculation,Public Health
+IND-14,ANESTHESIA,DISCOVERY,SCIENTIFIC,[ENV-07;IND-18],Ether/Chloroform blocks pain,Nervous System Suppression,Chemistry,Surgery
+IND-15,PORTLAND_CEMENT,MATERIAL,SCIENTIFIC,[ENV-03;PRIM-49],Clay+Lime fired at high temp,Chemical Bonding,Kiln Firing,Modern Construction
+IND-16,DYNAMITE,INVENTION,SCIENTIFIC,[ENV-07;PRIM-24],Stabilized explosive (Nitroglycerin + Clay),Chemical Stability,Mixing,Mining/Tunneling
+IND-17,RUBBER_VULCANIZED,MATERIAL,SCIENTIFIC,[ENV-07;S-08],Sulfur + Heat makes rubber durable,Polymer Cross-linking,Heating,Tires/Seals/Insulation
+IND-18,INDUSTRIAL_ACID,MATERIAL,SCIENTIFIC,[ENV-07;IND-03],Sulfuric Acid / Soda Ash production,Chemical Synthesis,Industrial Chemistry,Textiles/Soap
+IND-19,STEEL_BESSEMER,PROCESS,SCIENTIFIC,[ENV-04;SCI-01],Air blown through iron burns off carbon,Oxidation,Industrial Smelting,Skyscrapers/Rails
+IND-20,WOOD_PULP_PAPER,MATERIAL,SCIENTIFIC,[ENV-07;IND-18;IND-05],Acid breaks down wood into fiber,Chemical Pulping,Industrial Chemistry,Mass Media
+IND-21,PHOTOGRAPHY,INVENTION,SCIENTIFIC,[ENV-07;SCI-04],Light darkens silver chemicals,Photochemistry,Exposure/Developing,Documentation
+IND-22,SYNTHETIC_DYE,MATERIAL,SCIENTIFIC,[ENV-07;IND-03],Coal tar waste turned into color,Organic Synthesis,Chemistry,Pharma Ancestor
+IND-23,BALL_BEARING,MACHINE,SCIENTIFIC,[ENV-08;IND-19],Hardened steel balls reduce friction,Rolling Friction,Precision Grinding,Machinery/Bicycles
+IND-24,INTERNAL_COMBUSTION,MACHINE,SCIENTIFIC,[ENV-08;SCI-07;IND-45],Exploding gas pushes piston directly,Thermodynamics/Otto Cycle,Precision Casting,Automobiles
+IND-25,REFRIGERATION,MACHINE,SCIENTIFIC,[ENV-08;SCI-07],Compressing and expanding gas removes heat,Thermodynamics,Pumping,Food Logistics
+IND-26,TYPEWRITER,MACHINE,SCIENTIFIC,[ENV-08;PRIM-39],Keys strike inked ribbon,Standardization,Fine Mechanics,Business Efficiency
+IND-27,BICYCLE,MACHINE,SCIENTIFIC,[ENV-08;IND-23;IND-17],Chain drive + Pneumatic tires,Human Power Efficiency,Welding,Personal Transport
+IND-28,FERTILIZER_CHEM,MATERIAL,SCIENTIFIC,[ENV-07;IND-18],Dissolving bones/rocks in acid,Chemical Nutrition,Mixing,Industrial Agriculture
+IND-29,SLIDE_RULE,TOOL,SCIENTIFIC,[ENV-06;SCI-05],Sliding scales for math,Logarithms,Calibration,Engineering
+IND-30,REINFORCED_CONCRETE,MATERIAL,SCIENTIFIC,[ENV-SITE-B;IND-15;IND-19],Steel bars inside concrete,Composite Material,Casting,Skyscrapers/Bridges
+IND-31,SANITATION_SYSTEM,INFRASTRUCTURE,SCIENTIFIC,[ENV-SITE-B;IND-04;SCI-12],Pumps and pipes remove waste,Fluid Dynamics,Civil Engineering,Urban Density
+IND-32,GAS_LIGHTING,INFRASTRUCTURE,SCIENTIFIC,[ENV-SITE-B;IND-03],Coal gas piped to lamps,Pyrolysis,Gasworks,Public Safety
+IND-33,ELEVATOR_SAFETY,MACHINE,SCIENTIFIC,[ENV-SITE-B;IND-19;S-06],Platform with automatic brake,Mechanics/Safety,Steel Frame,Vertical City
+IND-34,CENTRAL_HEATING,INFRASTRUCTURE,SCIENTIFIC,[ENV-SITE-B;IND-05],Boiler steam circulated in pipes,Thermodynamics,Plumbing,Climate Control
+IND-35,BARBED_WIRE,INVENTION,SCIENTIFIC,[ENV-08;IND-38],Steel wire with points,Area Denial,Drawing wire,Fencing/War
+IND-36,ROLLING_MILL,MACHINE,SCIENTIFIC,[ENV-08;IND-05;IND-19],Red-hot steel passed through rollers,Plastic Deformation,Mechanization,Rails/Beams
+IND-37,GALVANIZATION,PROCESS,SCIENTIFIC,[ENV-07;ELEC-02],Zinc coating protects steel,Electrochemical Protection,Dipping,Wires/Bridges
+IND-38,WIRE_DRAWING,MACHINE,SCIENTIFIC,[ENV-08;IND-19],Pulling metal through holes,Cold Working,Mechanization,Cables/Wires
+IND-39,TOOL_STEEL,ALLOY,SCIENTIFIC,[ENV-04;IND-19;SCI-13],Tungsten/Chrome added to steel,Alloying,Metallurgy,Cutting Tools
+IND-40,MECHANICAL_REAPER,MACHINE,SCIENTIFIC,[ENV-08;IND-06],Blades cut grain automatically,Mechanization,Assembly,Mass Agriculture
+IND-41,PASTEURIZATION,PROCESS,SCIENTIFIC,[ENV-07;SCI-12],Heating kills pathogens,Thermal Sterilization,Heating,Public Health
+IND-42,STEAM_TRACTOR,MACHINE,SCIENTIFIC,[ENV-08;IND-07],Steam engine pulls plows,Traction,Boilermaking,Industrial Farming
+IND-43,INTERCHANGEABLE_PARTS,METHOD,SCIENTIFIC,[ENV-08;IND-06],Identical components for mass assembly,Standardization,Metrology,Mass Production/Repair
+IND-44,ELECTRICAL_INSULATION,MATERIAL,SCIENTIFIC,[ENV-07;IND-17],Rubber coating on wires,Dielectric Protection,Extrusion,Safe Wiring/Undersea Cables
+IND-45,OIL_REFINING,PROCESS,SCIENTIFIC,[ENV-07;IND-03;SCI-07],Crude oil separated by boiling points,Fractional Distillation,Chemical Engineering,Fuel (Kerosene/Petrol)
+ELEC-01,LEYDEN_JAR,TOOL,SCIENTIFIC,[ENV-07;PRIM-28],Glass jar stores static charge,Capacitance,Friction,Electricity Storage
+ELEC-02,BATTERY_VOLTA,INVENTION,SCIENTIFIC,[ENV-07;SCI-01],Stacked metals + Acid create flow,Chemical Potential -> Electrical,Stacking,Constant Current
+ELEC-03,ELECTROMAGNET,DISCOVERY,SCIENTIFIC,[ENV-07;ELEC-02],Current in coil creates magnet,Electromagnetism,Coiling wire,Motors/Relays
+ELEC-04,TELEGRAPH,MACHINE,SCIENTIFIC,[ENV-08;ELEC-03;IND-38],Electricity sends clicks over wire,Binary Encoding,Wiring,Instant Communication
 ELEC-05,MORSE_CODE,SYMBOL,SCIENTIFIC,[ELEC-04;PRIM-30],Dots and dashes represent alphabet,Binary Logic,Encoding,Data Transmission
-ELEC-06,DYNAMO,MACHINE,SCIENTIFIC,[ELEC-03;SCI-11;PRIM-32;IND-23],Spinning magnet creates current,Induction,Rotation,Power Generation
+ELEC-06,DYNAMO,MACHINE,SCIENTIFIC,[ENV-08;ELEC-03;SCI-11],Spinning magnet creates current,Induction,Rotation,Power Generation

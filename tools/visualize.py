@@ -21,7 +21,11 @@ def generate_interactive_graph():
         print("⚠️ Graph is empty! Check your data folder.")
         return
 
-    # 2. Calculate Centrality (Influence) for Sizing
+    # 2. Configure PyVis Network
+    # cdn_resources='remote' is crucial for GitHub Pages
+    net = Network(height="95vh", width="100%", bgcolor="#111111", font_color="white", select_menu=True, filter_menu=True, cdn_resources='remote')
+    
+    # 3. Calculate Centrality
     try:
         centrality = nx.degree_centrality(G)
     except:
@@ -29,10 +33,7 @@ def generate_interactive_graph():
 
     print("✨ Styling nodes and edges...")
 
-    # 3. Enrich NetworkX Graph directly
-    # Вместо того чтобы создавать узлы в PyVis вручную, мы добавим атрибуты прямо в граф G.
-    # PyVis потом сам поймет, как это отрисовать.
-    
+    # 4. Add Nodes MANUALLY (To force HTML rendering)
     for node_id in G.nodes():
         nx_node = G.nodes[node_id]
         
@@ -52,13 +53,10 @@ def generate_interactive_graph():
         size = 15 + (centrality.get(node_id, 0) * 60)
 
         # --- RICH TOOLTIP (HTML) ---
-        # ВАЖНО: Используем двойные кавычки (") внутри HTML тегов.
-        # ВАЖНО: Весь HTML должен быть в одну строку.
-        
         parents = list(G.predecessors(node_id))
         parents_str = ", ".join(parents) if parents else "None (Root)"
         
-        # Формируем строку без переносов
+        # HTML String (Single line, Double quotes inside)
         title_html = (
             f'<div style="font-family: sans-serif; padding: 10px; background-color: white; color: black; border-radius: 5px; min-width: 250px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">'
             f'<h3 style="margin: 0 0 5px 0; border-bottom: 2px solid {color};">{nx_node.get("name", node_id)}</h3>'
@@ -71,19 +69,26 @@ def generate_interactive_graph():
             f'</div>'
         )
 
-        # Записываем атрибуты в узел NetworkX
-        G.nodes[node_id]['title'] = title_html  # PyVis использует это как Tooltip
-        G.nodes[node_id]['label'] = nx_node.get('name', node_id)
-        G.nodes[node_id]['color'] = color
-        G.nodes[node_id]['size'] = size
-        G.nodes[node_id]['borderWidth'] = 1
-        G.nodes[node_id]['borderWidthSelected'] = 3
+        # Explicitly add node to PyVis (Bypassing NetworkX export to keep HTML safe)
+        net.add_node(
+            node_id, 
+            label=nx_node.get('name', node_id),
+            title=title_html, 
+            color=color,
+            size=size,
+            borderWidth=1,
+            borderWidthSelected=3
+        )
 
-    # 4. Configure PyVis Network
-    net = Network(height="95vh", width="100%", bgcolor="#111111", font_color="white", select_menu=True, filter_menu=True, cdn_resources='remote')
-    
-    # 5. Import from NetworkX (Magic happens here)
-    net.from_nx(G)
+    # 5. Add Edges MANUALLY
+    for source, target in G.edges():
+        net.add_edge(
+            source, 
+            target, 
+            color='#555555', 
+            arrows='to',
+            width=1
+        )
 
     # 6. Physics Configuration
     net.barnes_hut(
@@ -101,4 +106,4 @@ def generate_interactive_graph():
     print(f"\n🚀 Success! Graph generated at: {output_file}")
 
 if __name__ == "__main__":
-    generate_interactive_graph()
+    generate_interactive_graph() 

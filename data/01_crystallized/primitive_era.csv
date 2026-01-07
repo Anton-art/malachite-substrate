@@ -1,57 +1,65 @@
 ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
-PRIM-01,RESIN_GLUE,MATERIAL,INTUITIVE,[S-01;F-01;S-08],Tree sap melts in fire and hardens when cool,Phase Change/Adhesion,Heating sap,Fixing tools/Arrowheads
-PRIM-02,BONE_NEEDLE,TOOL,INTUITIVE,[S-01],Fish bones are sharp and have holes,Piercing,Carving bone,Sewing skins
-PRIM-03,THREAD,MATERIAL,INTUITIVE,[S-05],Plant fibers can be twisted thinner than rope,Tensile strength,Spinning,Sewing/Weaving
-PRIM-04,BOW_AND_ARROW,COMPOSITE,INTUITIVE,[S-01;PRIM-03;PRIM-01],Bent wood stores energy; Glue holds tip,Elastic Energy,Wood bending; Gluing,Hunting
-PRIM-05,BASKET,CONTAINER,INTUITIVE,[PRIM-03],Interwoven fibers hold shape,Weaving,Weaving reeds,Storage
-PRIM-06,LOOM_FRAME,MACHINE,INTUITIVE,[S-01;PRIM-03],Holding threads tight makes weaving faster,Tension/Grid,Frame construction,Making Cloth
-PRIM-07,CLOTH,MATERIAL,INTUITIVE,[PRIM-06;PRIM-03],Woven threads create flexible sheet,Surface Area,Weaving,Clothing/Sails
-PRIM-08,CLAY,MATERIAL,INTUITIVE,[F-01;F-02],Wet earth is plastic; Dry earth is hard,Plasticity,Gathering mud,Modeling
-PRIM-09,SUN_BRICK,MATERIAL,INTUITIVE,[PRIM-08;S-03],Mud dried in box shape stacks well,Modularity,Molding,Building Walls
-PRIM-10,KILN,MACHINE,INTUITIVE,[PRIM-09;S-08],Enclosed fire gets hotter than open fire,Heat Concentration,Building oven,Firing/Smelting
-PRIM-11,CERAMICS,INVENTION,INTUITIVE,[PRIM-08;PRIM-10],Fire turns clay into stone,Sintering,Firing,Waterproof storage
-PRIM-12,DUGOUT_CANOE,TRANSPORT,INTUITIVE,[F-01;S-08;S-01],Wood floats; Fire hollows tree,Buoyancy,Burn and Scrape,Water Transport
+ENV-01,HEARTH_WORKSPACE,ENVIRONMENT,INTUITIVE,[S-08;F-01],Controlled fire + Flat stone surface,Heat/Workspace,Clearing,Basic Crafting/Cooking
+ENV-02,CRAFT_BENCH,ENVIRONMENT,INTUITIVE,[ENV-01;S-01;S-02],Dedicated space with vices/stops,Stabilization,Carpentry,Complex Tools/Mechanisms
+ENV-03,POTTERY_SHED,ENVIRONMENT,INTUITIVE,[ENV-01;PRIM-08],Kiln + Wheel + Drying racks,Thermal Cycle,Building,Ceramics/Storage
+ENV-04,FORGE_SMITHY,ENVIRONMENT,INTUITIVE,[ENV-01;PRIM-10;S-01],High temp fire + Anvil + Hammer,Metallurgy,Construction,Metal Tools/Weapons
+ENV-SITE-A,MASONRY_SITE,ENVIRONMENT,INTUITIVE,[ENV-01;SOC-01;S-06],Organized labor + Levers + Ropes,Logistics/Leverage,Organization,Large Structures/Walls
+ENV-SCI-01,OBSERVATION_CIRCLE,ENVIRONMENT,INTUITIVE,[S-10;F-03],Place to watch stars/seasons,Pattern Recognition,Oral Tradition,Calendars/Myths
+ENV-SCI-02,SCRIBERY_ARCHIVE,ENVIRONMENT,INTUITIVE,[ENV-SCI-01;PRIM-23],Storage for scrolls/tablets,External Memory,Cataloging,History/Math/Law
+PRIM-01,RESIN_GLUE,MATERIAL,INTUITIVE,[ENV-01;S-01],Tree sap melts in fire and hardens,Phase Change,Heating,Fixing tools/Composite Bows
+PRIM-02,BONE_NEEDLE,TOOL,INTUITIVE,[ENV-01;S-01],Fish bones are sharp and have holes,Piercing,Carving,Sewing skins
+PRIM-03,THREAD,MATERIAL,INTUITIVE,[S-05],Plant fibers twisted thinner than rope,Tensile strength,Spinning,Sewing/Weaving
+PRIM-04,BOW_AND_ARROW,COMPOSITE,INTUITIVE,[ENV-02;PRIM-03;PRIM-01],Bent wood stores energy,Elastic Energy,Wood bending,Hunting/War
+PRIM-05,BASKET,CONTAINER,INTUITIVE,[PRIM-03],Interwoven fibers hold shape,Weaving,Weaving,Storage
+PRIM-06,LOOM_FRAME,MACHINE,INTUITIVE,[ENV-02;PRIM-03],Holding threads tight makes weaving faster,Tension/Grid,Frame construction,Making Cloth
+PRIM-07,CLOTH,MATERIAL,INTUITIVE,[PRIM-06],Woven threads create flexible sheet,Surface Area,Weaving,Clothing/Sails
+PRIM-08,CLAY,MATERIAL,INTUITIVE,[F-01;F-02],Wet earth is plastic; Dry earth is hard,Plasticity,Gathering,Modeling/Pottery
+PRIM-09,SUN_BRICK,MATERIAL,INTUITIVE,[ENV-01;PRIM-08],Mud dried in box shape stacks well,Modularity,Molding,Building Walls
+PRIM-10,KILN,MACHINE,INTUITIVE,[ENV-01;PRIM-09],Enclosed fire gets hotter than open fire,Heat Concentration,Masonry,Firing/Smelting
+PRIM-11,CERAMICS,INVENTION,INTUITIVE,[ENV-03],Fire turns clay into stone,Sintering,Firing,Waterproof storage
+PRIM-12,DUGOUT_CANOE,TRANSPORT,INTUITIVE,[ENV-01;S-01],Wood floats; Fire hollows tree,Buoyancy,Burn and Scrape,Water Transport
 PRIM-13,SAIL,TOOL,INTUITIVE,[PRIM-07;F-03],Wind pushes large cloth surface,Aerodynamics,Rigging,Wind Energy Capture
-PRIM-14,COPPER_NATIVE,MATERIAL,INTUITIVE,[F-01],Shiny red stone beats into shape,Malleability,Cold hammering,Decoration
-PRIM-15,SMELTING,DISCOVERY,INTUITIVE,[PRIM-14;PRIM-10],Green stones in Kiln turn into red metal,Reduction,Charcoal furnace,Extracting Metal
-PRIM-16,BRONZE,ALLOY,INTUITIVE,[PRIM-15],Mixing soft metals (Copper+Tin) makes hard metal,Alloying,Melting,Weapons/Tools
-PRIM-17,DOMESTICATION,DISCOVERY,INTUITIVE,[S-09],Animals can be tamed for food and work,Symbiosis,Breeding,Energy Source
-PRIM-18,PLOUGH,TOOL,INTUITIVE,[S-01;PRIM-17;PRIM-46],Stick pulled by Ox breaks soil deep,Leverage,Joinery/Harnessing,Agriculture
-PRIM-19,POTTERY_WHEEL,MACHINE,INTUITIVE,[S-04;PRIM-11;PRIM-42],Spinning platform makes rounder pots,Rotational Inertia,Axle mounting,Mass production
-PRIM-20,SILK,MATERIAL,INTUITIVE,[S-09;PRIM-03],Worm cocoon unravels into thread,Protein Fiber,Boiling,Luxury Cloth
-PRIM-21,WRITING_SHELL,SYMBOL,INTUITIVE,[S-10;PRIM-01],Scratches on bone store meaning,Semiotic Encoding,Carving,Record Keeping
-PRIM-22,COMPASS_LODESTONE,DISCOVERY,INTUITIVE,[F-01;S-07;PRIM-02],Magnetized needle floats North in water bowl,Magnetism,Floating,Navigation
-PRIM-23,PAPER,MATERIAL,SCIENTIFIC,[PRIM-07;PRIM-01],Fibers dried on screen with glue size,Hydrogen Bonding,Pulping,Info Storage
-PRIM-24,GUNPOWDER,DISCOVERY,SCIENTIFIC,[S-08;S-07;PRIM-15],Sulfur+Charcoal+Saltpeter in container,Rapid Oxidation,Mixing,Explosives
-PRIM-25,BELLOWS,MACHINE,INTUITIVE,[PRIM-46;S-06],Leather bag pumps air into fire,Oxygen Concentration,Valve/Sewing,Smelting Iron
-PRIM-26,IRON_SMELTING,DISCOVERY,INTUITIVE,[PRIM-25;PRIM-10],High temp fire melts iron,Reduction,Blast Furnace,Tools
-PRIM-27,STEEL,ALLOY,INTUITIVE,[PRIM-26;S-08],Iron heated with charcoal becomes flexible,Carbon infusion,Forging,Swords
-PRIM-28,GLASS,MATERIAL,INTUITIVE,[PRIM-25;F-01],Melted sand becomes transparent stone,Amorphous Solid,Glassblowing,Windows
-PRIM-29,LENS,TOOL,INTUITIVE,[PRIM-28;S-01],Curved glass magnifies,Refraction,Grinding,Magnification
-PRIM-30,ALPHABET,SYMBOL,INTUITIVE,[PRIM-21],Symbols represent sounds not objects,Phonetics,Writing,Literacy
-PRIM-31,ZERO,DISCOVERY,INTUITIVE,[S-10],Symbol for nothing allows complex math,Positional Notation,Math,Calculation
-PRIM-32,GEAR,MACHINE,INTUITIVE,[S-04;PRIM-16],Toothed wheel transmits precise motion,Torque Transmission,Casting/Cutting,Mechanisms
-PRIM-33,WATER_WHEEL,MACHINE,INTUITIVE,[S-04;F-02;PRIM-42],River turns axle to power machines,Kinetic Energy,Axle mounting,Automation
-PRIM-34,ARCH_KEYSTONE,STRUCTURE,INTUITIVE,[S-01;PRIM-09;PRIM-49;PRIM-55],Wedge stones hold up wall by gravity,Compression,Masonry,Bridges
-PRIM-35,CONCRETE,MATERIAL,INTUITIVE,[PRIM-49;F-01;F-02],Ash+Lime+Water turns to stone,Hydration,Mixing,Architecture
-PRIM-36,SCREW_PUMP,MACHINE,INTUITIVE,[S-03;S-04;F-02],Inclined plane wrapped on cylinder lifts water,Helical Plane,Carpentry,Irrigation
-PRIM-37,WINDMILL,MACHINE,INTUITIVE,[PRIM-13;PRIM-32],Sails turn gears to grind grain,Wind Energy,Gearing,Milling
-PRIM-38,PAPER_MILL,FACTORY,INTUITIVE,[PRIM-23;PRIM-33],Water wheel pulps rags,Industrialization,Mechanization,Cheap Paper
-PRIM-39,MOVABLE_TYPE,INVENTION,INTUITIVE,[PRIM-26;S-01;PRIM-55],Metal letters in frame,Standardization,Casting,Printing
-PRIM-40,PRINTING_PRESS,MACHINE,PRE_SCIENTIFIC,[S-03;S-04;PRIM-39;PRIM-23;PRIM-53],Screw press prints inked type,Replication,Mechanics,Mass Info
-PRIM-41,FERMENTATION,DISCOVERY,INTUITIVE,[S-09;F-02],Grain bubbles and changes taste,Anaerobic Digestion,Brewing,Preservation
-PRIM-42,AXLE_GREASE,INVENTION,INTUITIVE,[S-04;PRIM-17],Animal fat reduces friction on axle,Lubrication,Application,Transport
-PRIM-43,ROAD_PAVED,INFRASTRUCTURE,INTUITIVE,[F-01;S-03;PRIM-55],Stones placed on dirt prevent mud,Surface Hardening,Masonry,Logistics
-PRIM-44,COIN,SOCIAL_ARTIFACT,INTUITIVE,[PRIM-16;S-10;PRIM-55],Stamped metal weight guarantees value,Standardization,Minting,Economy
-PRIM-45,MAP,SYMBOL,INTUITIVE,[S-10;PRIM-23;PRIM-22;PRIM-55],World on paper helps navigation,Spatial Abstraction,Drawing,Navigation
-PRIM-46,LEATHER_TANNING,PROCESS,INTUITIVE,[S-01;F-02],Tannins soften skin and stop rot,Preservation,Soaking,Clothing/Armor
-PRIM-47,SALT_CURING,DISCOVERY,INTUITIVE,[F-01;F-02],Salt dries meat and stops rot,Dehydration,Evaporation,Food Storage
+PRIM-14,COPPER_NATIVE,MATERIAL,INTUITIVE,[ENV-01],Shiny red stone beats into shape,Malleability,Cold hammering,Decoration/Early Tools
+PRIM-15,SMELTING,DISCOVERY,INTUITIVE,[ENV-03;PRIM-14],Green stones in Kiln turn into red metal,Reduction,Charcoal furnace,Extracting Metal
+PRIM-16,BRONZE,ALLOY,INTUITIVE,[ENV-04;PRIM-15],Mixing soft metals (Copper+Tin) makes hard metal,Alloying,Melting,Weapons/Tools
+PRIM-17,DOMESTICATION,DISCOVERY,INTUITIVE,[ENV-SCI-01;S-09],Animals can be tamed for food and work,Symbiosis,Breeding,Energy Source
+PRIM-18,PLOUGH,TOOL,INTUITIVE,[ENV-02;PRIM-17],Stick pulled by Ox breaks soil deep,Leverage,Joinery,Agriculture
+PRIM-19,POTTERY_WHEEL,MACHINE,INTUITIVE,[ENV-03;S-04],Spinning platform makes rounder pots,Rotational Inertia,Axle mounting,Mass production
+PRIM-20,SILK,MATERIAL,INTUITIVE,[ENV-01;PRIM-03],Worm cocoon unravels into thread,Protein Fiber,Boiling,Luxury Cloth
+PRIM-21,WRITING_SHELL,SYMBOL,INTUITIVE,[ENV-SCI-01;PRIM-01],Scratches on bone store meaning,Semiotic Encoding,Carving,Record Keeping
+PRIM-22,COMPASS_LODESTONE,DISCOVERY,INTUITIVE,[ENV-SCI-01;PRIM-02],Magnetized needle floats North,Magnetism,Floating,Navigation
+PRIM-23,PAPER,MATERIAL,SCIENTIFIC,[ENV-03;PRIM-07],Fibers dried on screen with glue size,Hydrogen Bonding,Pulping,Info Storage
+PRIM-24,GUNPOWDER,DISCOVERY,SCIENTIFIC,[ENV-07;PRIM-15],Sulfur+Charcoal+Saltpeter,Rapid Oxidation,Mixing,Explosives
+PRIM-25,BELLOWS,MACHINE,INTUITIVE,[ENV-02;PRIM-46],Leather bag pumps air into fire,Oxygen Concentration,Valve/Sewing,Smelting Iron
+PRIM-26,IRON_SMELTING,DISCOVERY,INTUITIVE,[ENV-04;PRIM-25],High temp fire melts iron,Reduction,Blast Furnace,Tools
+PRIM-27,STEEL,ALLOY,INTUITIVE,[ENV-04;PRIM-26],Iron heated with charcoal becomes flexible,Carbon infusion,Forging,Swords
+PRIM-28,GLASS,MATERIAL,INTUITIVE,[ENV-03;PRIM-25],Melted sand becomes transparent stone,Amorphous Solid,Glassblowing,Windows
+PRIM-29,LENS,TOOL,INTUITIVE,[ENV-02;PRIM-28],Curved glass magnifies,Refraction,Grinding,Magnification
+PRIM-30,ALPHABET,SYMBOL,INTUITIVE,[ENV-SCI-02;PRIM-21],Symbols represent sounds not objects,Phonetics,Writing,Literacy
+PRIM-31,ZERO,DISCOVERY,INTUITIVE,[ENV-SCI-02;S-10],Symbol for nothing allows complex math,Positional Notation,Math,Calculation
+PRIM-32,GEAR,MACHINE,INTUITIVE,[ENV-02;PRIM-16],Toothed wheel transmits precise motion,Torque Transmission,Casting/Cutting,Mechanisms
+PRIM-33,WATER_WHEEL,MACHINE,INTUITIVE,[ENV-SITE-A;PRIM-32],River turns axle to power machines,Kinetic Energy,Axle mounting,Automation
+PRIM-34,ARCH_KEYSTONE,STRUCTURE,INTUITIVE,[ENV-SITE-A;PRIM-09],Wedge stones hold up wall by gravity,Compression,Masonry,Bridges
+PRIM-35,CONCRETE,MATERIAL,INTUITIVE,[ENV-SITE-A;PRIM-49],Ash+Lime+Water turns to stone,Hydration,Mixing,Architecture
+PRIM-36,SCREW_PUMP,MACHINE,INTUITIVE,[ENV-02;S-07],Inclined plane wrapped on cylinder lifts water,Helical Plane,Carpentry,Irrigation
+PRIM-37,WINDMILL,MACHINE,INTUITIVE,[ENV-SITE-A;PRIM-32;PRIM-13],Sails turn gears to grind grain,Wind Energy,Gearing,Milling
+PRIM-38,PAPER_MILL,FACTORY,INTUITIVE,[ENV-SITE-A;PRIM-23;PRIM-33],Water wheel pulps rags,Industrialization,Mechanization,Cheap Paper
+PRIM-39,MOVABLE_TYPE,INVENTION,INTUITIVE,[ENV-04;PRIM-26],Metal letters in frame,Standardization,Casting,Printing
+PRIM-40,PRINTING_PRESS,MACHINE,PRE_SCIENTIFIC,[ENV-02;PRIM-39;S-07],Screw press prints inked type,Replication,Mechanics,Mass Info
+PRIM-41,FERMENTATION,DISCOVERY,INTUITIVE,[ENV-03;S-09],Grain bubbles and changes taste,Anaerobic Digestion,Brewing,Preservation
+PRIM-42,AXLE_GREASE,INVENTION,INTUITIVE,[ENV-01;PRIM-17],Animal fat reduces friction on axle,Lubrication,Application,Transport
+PRIM-43,ROAD_PAVED,INFRASTRUCTURE,INTUITIVE,[ENV-SITE-A;SOC-04;F-01],Stones placed on dirt prevent mud,Surface Hardening,Masonry,Logistics
+PRIM-44,COIN,SOCIAL_ARTIFACT,INTUITIVE,[ENV-04;SOC-07],Stamped metal weight guarantees value,Standardization,Minting,Economy
+PRIM-45,MAP,SYMBOL,INTUITIVE,[ENV-SCI-02;PRIM-22],World on paper helps navigation,Spatial Abstraction,Drawing,Navigation
+PRIM-46,LEATHER_TANNING,PROCESS,INTUITIVE,[ENV-01;F-02],Tannins soften skin and stop rot,Preservation,Soaking,Clothing/Armor
+PRIM-47,SALT_CURING,DISCOVERY,INTUITIVE,[ENV-01;F-02],Salt dries meat and stops rot,Dehydration,Evaporation,Food Storage
 PRIM-48,FISHING_NET,TOOL,INTUITIVE,[S-05],Rope grid traps fish,Filtration,Knotting,Food
-PRIM-49,MORTAR_LIME,MATERIAL,INTUITIVE,[PRIM-10;F-01],Burnt lime glues stone,Chemical Bonding,Burning,Architecture
-PRIM-50,STIRRUP,TOOL,INTUITIVE,[PRIM-46;S-05],Foot loop for rider stability,Stability,Leatherworking,Cavalry
-PRIM-51,RUDDER,TOOL,INTUITIVE,[PRIM-08;S-02;PRIM-54],Stern oar steers ship,Hydrodynamics,Carpentry,Navigation
-PRIM-52,CRANE,MACHINE,INTUITIVE,[S-06;S-02;S-05],Pulleys lift stone,Mechanical Advantage,Rigging,Construction
-PRIM-53,INK,MATERIAL,INTUITIVE,[S-08;PRIM-01;F-02],Soot+Glue+Water,Pigmentation,Mixing,Writing
-PRIM-54,NAIL,TOOL,INTUITIVE,[PRIM-16;S-01],Metal spike holds wood,Friction/Shear Strength,Forging,Shipbuilding/Construction
-PRIM-55,RULER,TOOL,INTUITIVE,[S-01;S-10],Standardized stick measures length,Measurement,Carving,Engineering/Trade
-PRIM-56,SAW,TOOL,INTUITIVE,[PRIM-16;S-01],Serrated metal blade cuts wood planks,Friction/Cutting,Forging,Carpentry/Lumber
+PRIM-49,MORTAR_LIME,MATERIAL,INTUITIVE,[ENV-03;F-01],Burnt lime glues stone,Chemical Bonding,Burning,Architecture
+PRIM-50,STIRRUP,TOOL,INTUITIVE,[ENV-02;PRIM-46],Foot loop for rider stability,Stability,Leatherworking,Cavalry
+PRIM-51,RUDDER,TOOL,INTUITIVE,[ENV-02;PRIM-12],Stern oar steers ship,Hydrodynamics,Carpentry,Navigation
+PRIM-52,CRANE,MACHINE,INTUITIVE,[ENV-SITE-A;S-06],Pulleys lift stone,Mechanical Advantage,Rigging,Construction
+PRIM-53,INK,MATERIAL,INTUITIVE,[ENV-01;PRIM-01],Soot+Glue+Water,Pigmentation,Mixing,Writing
+PRIM-54,NAIL,TOOL,INTUITIVE,[ENV-04;PRIM-16],Metal spike holds wood,Friction/Shear Strength,Forging,Shipbuilding/Construction
+PRIM-55,RULER,TOOL,INTUITIVE,[ENV-02;S-10],Standardized stick measures length,Measurement,Carving,Engineering/Trade
+PRIM-56,SAW,TOOL,INTUITIVE,[ENV-04;S-01],Serrated metal blade cuts wood planks,Friction/Cutting,Forging,Carpentry/Lumber
+PRIM-58,ANVIL,TOOL,INTUITIVE,[ENV-04;PRIM-26],Heavy block to hammer against,Rebound,Casting,Smithing
