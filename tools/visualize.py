@@ -4,7 +4,6 @@ import networkx as nx
 from pyvis.network import Network
 
 # --- SETUP PATHS ---
-# Add root directory to path so we can import 'malachite'
 current_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.dirname(current_dir)
 sys.path.append(root_dir)
@@ -23,70 +22,65 @@ def generate_interactive_graph():
         return
 
     # 2. Configure PyVis Network
-    # height="100vh" uses full screen height
-    # bgcolor="#111111" is a sleek dark mode
-    net = Network(height="95vh", width="100%", bgcolor="#111111", font_color="white", select_menu=True, filter_menu=True)
+    # cdn_resources='remote' обеспечивает загрузку скриптов из интернета
+    net = Network(height="95vh", width="100%", bgcolor="#111111", font_color="white", select_menu=True, filter_menu=True, cdn_resources='remote')
     
     # 3. Calculate Centrality (Influence)
-    # Nodes with more descendants will be larger
     try:
-        # Degree centrality is faster and good enough for visualization
         centrality = nx.degree_centrality(G)
     except:
         centrality = {n: 1 for n in G.nodes()}
 
-    # 4. Transform NetworkX to PyVis with Custom Styles
     print("✨ Styling nodes and edges...")
     
+    # 4. Add Nodes manually (Custom Styling)
     for node_id in G.nodes():
         nx_node = G.nodes[node_id]
         
-        # --- COLOR LOGIC (The Era Spectrum) ---
+        # --- COLOR LOGIC ---
         era = nx_node.get('era', 'UNKNOWN').upper()
         color_map = {
-            'ETERNAL':    '#FFD700', # Gold (Foundations)
-            'INTUITIVE':  '#E67E22', # Orange (Primitive)
-            'SCIENTIFIC': '#3498DB', # Blue (Science)
-            'MODERN':     '#9B59B6', # Purple (Industrial/Electric)
-            'DIGITAL':    '#2ECC71', # Green (Digital)
+            'ETERNAL':    '#FFD700', # Gold
+            'INTUITIVE':  '#E67E22', # Orange
+            'SCIENTIFIC': '#3498DB', # Blue
+            'ELECTRIC':   '#9B59B6', # Purple
+            'DIGITAL':    '#2ECC71', # Green
             'UNKNOWN':    '#95A5A6'  # Grey
         }
         color = color_map.get(era, '#95A5A6')
 
         # --- SIZE LOGIC ---
-        # Base size 15 + Influence bonus
-        size = 15 + (centrality.get(node_id, 0) * 100)
+        size = 15 + (centrality.get(node_id, 0) * 60)
 
         # --- RICH TOOLTIP (HTML) ---
-        # This is what appears when you hover
+        # Важно: убираем переносы строк, чтобы JS не ломался
         parents = list(G.predecessors(node_id))
         parents_str = ", ".join(parents) if parents else "None (Root)"
         
         title_html = f"""
-        <div style='font-family: sans-serif; padding: 5px; min-width: 200px;'>
-            <h3 style='margin: 0; border-bottom: 2px solid {color};'>{nx_node.get('name', node_id)}</h3>
-            <p><b>ID:</b> {node_id} <span style='color: #888;'>({nx_node.get('type', 'N/A')})</span></p>
-            <p><b>Era:</b> {era}</p>
-            <p><i>"{nx_node.get('trigger', 'No trigger data')}"</i></p>
-            <hr style='border: 0; border-top: 1px solid #444;'>
-            <p><b>Principle:</b> {nx_node.get('principle', 'N/A')}</p>
-            <p><b>Tech Make:</b> {nx_node.get('tech_make', 'N/A')}</p>
-            <p><b>Parents:</b> {parents_str}</p>
+        <div style='font-family: sans-serif; padding: 10px; background-color: white; color: black; border-radius: 5px; min-width: 250px;'>
+            <h3 style='margin: 0 0 5px 0; border-bottom: 2px solid {color};'>{nx_node.get('name', node_id)}</h3>
+            <p style='margin: 3px 0;'><b>ID:</b> {node_id} <span style='color: #666;'>({nx_node.get('type', 'N/A')})</span></p>
+            <p style='margin: 3px 0;'><b>Era:</b> {era}</p>
+            <p style='margin: 5px 0; font-style: italic; background: #f0f0f0; padding: 3px;'>"{nx_node.get('trigger', 'No trigger')}"</p>
+            <hr style='border: 0; border-top: 1px solid #ccc; margin: 5px 0;'>
+            <p style='margin: 3px 0;'><b>Principle:</b> {nx_node.get('principle', 'N/A')}</p>
+            <p style='margin: 3px 0;'><b>Parents:</b> {parents_str}</p>
         </div>
-        """
+        """.replace("\n", "") # <--- ВОТ ЭТО ИСПРАВЛЯЕТ ОШИБКУ
 
-        # Add Node to PyVis
+        # Add Node
         net.add_node(
             node_id, 
             label=nx_node.get('name', node_id),
-            title=title_html, # HTML Tooltip
+            title=title_html, # Теперь это чистая строка HTML
             color=color,
             size=size,
-            borderWidth=2,
-            borderWidthSelected=4
+            borderWidth=1,
+            borderWidthSelected=3
         )
 
-    # 5. Add Edges (Relationships)
+    # 5. Add Edges
     for source, target in G.edges():
         net.add_edge(
             source, 
@@ -96,26 +90,20 @@ def generate_interactive_graph():
             width=1
         )
 
-    # 6. Physics Configuration (Stabilization)
-    # BarnsHut is best for large datasets (200+ nodes)
+    # 6. Physics Configuration
     net.barnes_hut(
-        gravity=-2000,        # Strong repulsion to spread nodes out
-        central_gravity=0.3,  # Pull back to center
-        spring_length=150,    # Long edges for readability
+        gravity=-2000,
+        central_gravity=0.3,
+        spring_length=150,
         spring_strength=0.05,
-        damping=0.09,         # High damping stops jittering
+        damping=0.09,
         overlap=0
     )
     
-    # Add control buttons to tweak physics in UI
-    # net.show_buttons(filter_=['physics']) 
-
-    # 7. Save and Open
+    # 7. Save
     output_file = os.path.join(root_dir, "malachite_graph.html")
     net.save_graph(output_file)
-    
     print(f"\n🚀 Success! Graph generated at: {output_file}")
-    print("   Open this file in your browser to explore the Crystal.")
 
 if __name__ == "__main__":
     generate_interactive_graph()
