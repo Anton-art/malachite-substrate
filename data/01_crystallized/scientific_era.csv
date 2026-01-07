@@ -2,7 +2,7 @@ ID,Name,Type,Time_Period,Logic,Parents,Trigger,Principle,Tech_Make,Tech_Use
 META-03,SCIENTIFIC_METHOD_META,META_TOOL,SCIENTIFIC,DETERMINISTIC,[META-01;SCI-01],Hypothesis -> Experiment -> Proof,Verification,Documentation,Discovery
 META-04,BLUEPRINT_DRAFT,META_TOOL,SCIENTIFIC,DETERMINISTIC,[META-03;ENV-06;IND-02],2D projection of 3D object with measurements,Standardization,Geometry,Engineering
 ENV-06,DRAFTING_ROOM,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-02;PRIM-23;IND-56],Quiet space + Light + Paper + Instruments,Precision Planning,Design,Architecture/Machines
-ENV-07,ALCHEMY_CHEM_LAB,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-01;IND-58;IND-59],Glassware + Burners + Scales,Isolation/Reaction,Distillation,Chemistry/Medicine
+ENV-07,ALCHEMY_CHEM_LAB,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-01;IND-58;PRIM-01],Glassware + Burners + Scales,Isolation/Reaction,Distillation,Chemistry/Medicine
 ENV-08,MACHINE_SHOP,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-04;IND-06;IND-39],Lathes + Drills + Hardened Steel Cutters,Subtractive Mfg,Precision Machining,Steam Engines/Gears
 ENV-09,PRINTING_HOUSE,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-02;PRIM-40;PRIM-53],Presses + Type Cases + Ink mixing,Replication,Typesetting,Books/Newspapers
 ENV-TEXTILE,TEXTILE_MILL,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-02;IND-09;IND-33],Large hall + Power source + Rows of machines,Automation,Mass Production,Clothing

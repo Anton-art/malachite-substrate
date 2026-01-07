@@ -43,7 +43,7 @@ IND-64,AUTO_COUPLER,MACHINE,ELECTRIC,HYBRID,[ENV-08;IND-06;IND-19;S-02],Steel kn
 IND-65,DIESEL_ELECTRIC,MACHINE,ELECTRIC,HYBRID,[ENV-08;IND-24;ELEC-06;ELEC-08],Diesel engine turns generator -> motors drive wheels,Power Transmission,Hybrid Drive,Modern Locomotives/Ships
 IND-66,ELECTRIC_TRACTION,INFRASTRUCTURE,ELECTRIC,HYBRID,[ELEC-09;ELEC-08;IND-36],Trains powered by overhead wires or third rail,External Power,Grid Load,Subways/High-Speed Rail
 IND-67,ROTARY_DRILLING,MACHINE,ELECTRIC,HYBRID,[ENV-12;IND-05;IND-39;IND-04],Rotating tricone bit crushes rock; Mud pumps remove debris,Abrasion/Hydrostatics,Hardening/Pumping,Deep Oil/Gas Extraction
-IND-68,PIPELINE,INFRASTRUCTURE,ELECTRIC,HYBRID,[ENV-12;MAT-04;IND-36;IND-04],Welded steel tubes transport fluids over continents,Fluid Dynamics,Welding/Pumping,Energy Logistics/Water Supply
+IND-68,PIPELINE,INFRASTRUCTURE,ELECTRIC,HYBRID,[ENV-SITE;MAT-04;IND-36;IND-04],Welded steel tubes transport fluids over continents,Fluid Dynamics,Welding/Pumping,Energy Logistics/Water Supply
 IND-69,BLOWOUT_PREVENTER,MACHINE,ELECTRIC,HYBRID,[ENV-12;IND-51;IND-59;IND-19],Hydraulic rams seal well against extreme pressure,Hydrostatics/Shear Force,Heavy Casting/Sealing,Oil Safety/Deep Sea Drilling
 IND-70,PLYWOOD,MATERIAL,ELECTRIC,HYBRID,[ENV-11;IND-06;PRIM-01;IND-51],Wood veneer layers glued cross-grain,Composite Material,Rotary Peeling/Pressing,Construction/Aviation/Furniture
 IND-71,CHAINSAW,MACHINE,ELECTRIC,HYBRID,[ENV-08;IND-24;IND-27;PRIM-56],Engine drives cutting chain around guide bar,Portable Power,Mechanization,Forestry/Logging
