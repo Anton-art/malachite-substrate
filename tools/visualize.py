@@ -106,4 +106,4 @@ def generate_interactive_graph():
     print(f"\n🚀 Success! Graph generated at: {output_file}")
 
 if __name__ == "__main__":
-    generate_interactive_graph()
+    generate_interactive_graph() 
