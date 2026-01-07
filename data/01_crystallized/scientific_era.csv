@@ -5,7 +5,7 @@ ENV-08,MACHINE_SHOP,ENVIRONMENT,SCIENTIFIC,[ENV-04;IND-06;IND-39],Lathes + Drill
 ENV-09,PRINTING_HOUSE,ENVIRONMENT,SCIENTIFIC,[ENV-02;PRIM-40],Presses + Typesetting + Paper storage,Mass Replication,Distribution,Newspapers/Books
 ENV-SITE-B,HEAVY_SITE,ENVIRONMENT,SCIENTIFIC,[ENV-SITE-A;IND-15;IND-52],Steam cranes + Steel beams,Load Bearing,Structural Engineering,Skyscrapers/Bridges
 ENV-SCI-03,NATURAL_PHIL_LAB,ENVIRONMENT,SCIENTIFIC,[ENV-SCI-02;SCI-04;ENV-07],Microscopes + Collections,Empirical Observation,Scientific Method,Biology/Medicine
-ENV-SCI-04,THEORETICAL_STUDY,ENVIRONMENT,SCIENTIFIC,[ENV-SCI-02;SCI-05;ENV-09],Books + Blackboard + Calculus,Mathematical Modeling,Deduction,Physics/Relativity
+ENV-SCI-04,THEORETICAL_STUDY,ENVIRONMENT,SCIENTIFIC,[ENV-SCI-02;PRIM-31;ENV-09],Books + Blackboard + Calculus,Mathematical Modeling,Deduction,Physics/Relativity
 SCI-01,SCIENTIFIC_METHOD,METHOD,SCIENTIFIC,[ENV-09;PRIM-29;INST-01],Books spread knowledge; Lenses show invisible things,Empiricism/Verification,Observation/Hypothesis,Research
 SCI-02,TELESCOPE,TOOL,SCIENTIFIC,[ENV-02;PRIM-29],Two lenses in a tube make far things close,Optics/Refraction,Grinding/Assembly,Astronomy/Navigation
 SCI-03,HELIOCENTRISM,DISCOVERY,SCIENTIFIC,[ENV-SCI-01;SCI-02],Planets orbit Sun (not Earth),Gravity/Orbital Mechanics,Math/Observation,Navigation/Calendar
