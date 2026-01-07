@@ -1,15 +1,15 @@
-ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
-F-00,ENVIRONMENT,RESOURCE,ETERNAL,NULL,Given by Nature,Existence,NULL,Habitat
-F-01,EARTH,RESOURCE,ETERNAL,[F-00],Differentiation,Matter/Gravity,NULL,Resource Base
-F-02,WATER,RESOURCE,ETERNAL,[F-00],Differentiation,Fluidity,NULL,Transport/Life
-F-03,SKY,RESOURCE,ETERNAL,[F-00],Differentiation,Energy/Time,NULL,Cycles/Light
-S-01,WEDGE,SEED,INTUITIVE,[F-01],Sharp stone cuts soft material,Separation,Fracturing,Cutting/Splitting
-S-02,LEVER,SEED,INTUITIVE,[F-01],Stick moves heavy stone,Torque/Moment,Selection,Lifting
-S-03,INCLINED_PLANE,SEED,INTUITIVE,[F-01],Easier to walk up a hill,Distance/Force Tradeoff,Observation,Lifting
-S-04,WHEEL,SEED,INTUITIVE,[F-01],Log rolls easier than it slides,Rolling Friction,Cutting Log,Transport
-S-05,ROPE,SEED,INTUITIVE,[F-01],Twisted grass is strong,Tension/Binding,Twisting,Connecting
-S-06,PULLEY,SEED,INTUITIVE,[S-04;S-05],Rope over branch changes force direction,Direction Change,Assembly,Lifting
-S-07,SCREW,SEED,INTUITIVE,[S-03;S-04],Plane wrapped around cylinder,Linear to Rotational,Carving,Fixing/Pressing
-S-08,FIRE,SEED,INTUITIVE,[F-03;F-01],Lightning strikes tree,Exothermic Reaction,Capture/Feeding,Heat/Protection
-S-09,GRAIN,SEED,INTUITIVE,[F-01;F-02;F-03],Seeds grow where water flows,Photosynthesis,Planting,Food Storage
-S-10,SYMBOL,SEED,INTUITIVE,[F-03],Moon cycles repeat,Abstraction,Marking,Timekeeping/Memory
+ID,Name,Type,Time_Period,Logic,Parents,Trigger,Principle,Tech_Make,Tech_Use
+F-00,ENVIRONMENT,RESOURCE,ETERNAL,NATURAL,NULL,Given by Nature,Existence,NULL,Habitat
+F-01,EARTH,RESOURCE,ETERNAL,NATURAL,[F-00],Differentiation,Matter/Gravity,NULL,Resource Base
+F-02,WATER,RESOURCE,ETERNAL,NATURAL,[F-00],Differentiation,Fluidity,NULL,Transport/Life
+F-03,SKY,RESOURCE,ETERNAL,NATURAL,[F-00],Differentiation,Energy/Time,NULL,Cycles/Light
+S-01,WEDGE,SEED,PRIMITIVE,INTUITIVE,[F-01],Sharp stone cuts soft material,Separation,Fracturing,Cutting/Splitting
+S-02,LEVER,SEED,PRIMITIVE,INTUITIVE,[F-01],Stick moves heavy stone,Torque/Moment,Selection,Lifting
+S-03,INCLINED_PLANE,SEED,PRIMITIVE,INTUITIVE,[F-01],Easier to walk up a hill,Distance/Force Tradeoff,Observation,Lifting
+S-04,WHEEL,SEED,PRIMITIVE,INTUITIVE,[F-01],Log rolls easier than it slides,Rolling Friction,Cutting Log,Transport
+S-05,ROPE,SEED,PRIMITIVE,INTUITIVE,[F-01],Twisted grass is strong,Tension/Binding,Twisting,Connecting
+S-06,PULLEY,SEED,PRIMITIVE,INTUITIVE,[S-04;S-05],Rope over branch changes force direction,Direction Change,Assembly,Lifting
+S-07,SCREW,SEED,PRIMITIVE,INTUITIVE,[S-03;S-04],Plane wrapped around cylinder,Linear to Rotational,Carving,Fixing/Pressing
+S-08,FIRE,SEED,PRIMITIVE,INTUITIVE,[F-03;F-01],Lightning strikes tree,Exothermic Reaction,Capture/Feeding,Heat/Protection
+S-09,GRAIN,SEED,PRIMITIVE,INTUITIVE,[F-01;F-02;F-03],Seeds grow where water flows,Photosynthesis,Planting,Food Storage
+S-10,SYMBOL,SEED,PRIMITIVE,INTUITIVE,[F-03],Moon cycles repeat,Abstraction,Marking,Timekeeping/Memory
