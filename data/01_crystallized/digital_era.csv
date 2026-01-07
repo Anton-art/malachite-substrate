@@ -10,7 +10,7 @@ DIG-02,INFORMATION_THEORY,DISCOVERY,DIGITAL,SCIENTIFIC,[ELEC-04;SCI-05;S-10],Dat
 DIG-03,LOGIC_GATE,COMPONENT,DIGITAL,COMPUTATIONAL,[DIG-01;SCI-05],Physical switch representing Boolean logic (AND/OR/NOT),Boolean Algebra,Circuit Design,Computing
 DIG-04,INTEGRATED_CIRCUIT,COMPONENT,DIGITAL,SCIENTIFIC,[ENV-13;DIG-01;ELEC-18;MAT-06;DIG-00],Many transistors on one silicon chip,Miniaturization,Photolithography,Computers
 DIG-05,MOSFET,COMPONENT,DIGITAL,SCIENTIFIC,[DIG-01;SCI-18],Field-effect transistor allows high density scaling,Field Effect,Oxidation/Etching,Modern CPUs/Memory
-DIG-06,SOFTWARE,SYMBOL,DIGITAL,COMPUTATIONAL,[ENV-15;DIG-08;S-10;IND-11],Instructions separated from hardware,Abstraction/Turing Completeness,Coding,Controlling Hardware
+DIG-06,SOFTWARE,SYMBOL,DIGITAL,COMPUTATIONAL,[DIG-08;S-10;IND-11],Instructions separated from hardware,Abstraction/Turing Completeness,Coding,Controlling Hardware
 DIG-07,SILICON_WAFER,MATERIAL,DIGITAL,SCIENTIFIC,[ENV-13;MAT-06;SCI-13;IND-06],Purest crystal needed for chips,Czochralski Process,Crystal Pulling/Slicing,Substrate for ICs
 DIG-08,MICROPROCESSOR,MACHINE,DIGITAL,COMPUTATIONAL,[ENV-13;DIG-04;DIG-05;IND-11;DIG-00],CPU on a single chip; Programmable instructions,Von Neumann Architecture,VLSI Design,Personal Computing
 DIG-09,RAM_MEMORY,COMPONENT,DIGITAL,SCIENTIFIC,[ENV-13;DIG-05;ELEC-01],Fast temporary storage for CPU,Capacitance/Switching,Lithography,Working Memory
