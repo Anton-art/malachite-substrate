@@ -102,13 +102,3 @@ def generate_interactive_graph():
 
 if __name__ == "__main__":
     generate_interactive_graph()
-```
-
-### 🚀 Как применить
-
-1.  Замените код в `tools/visualize.py`.
-2.  Сделайте коммит и пуш:
-    ```bash
-    git add tools/visualize.py
-    git commit -m "Fix: HTML quotes in tooltips"
-    git push
