@@ -6,7 +6,7 @@ SOC-03,BARTER_TRADE,ECONOMY,PRIMITIVE,[SOC-00;S-09],Direct exchange of goods,Coi
 SOC-04,CITY_STATE,ORGANIZATION,PRIMITIVE,[SOC-01;ENV-SITE-A],Dense population center with walls,Urbanization,Specialization of Labor,Civilization Base
 SOC-05,WRITTEN_LAW,INSTITUTION,PRIMITIVE,[SOC-04;ENV-SCI-02;PRIM-21],Rules carved in stone (Hammurabi),Standardization of Justice,Deterrence,Stability/Contracts
 SOC-06,SLAVERY_SERFDOM,ECONOMY,PRIMITIVE,[SOC-04;WAR-01],Forced labor powers early economy,Exploitation,Coercion,Mega-Structures/Agriculture
-SOC-07,MONEY_COMMODITY,ECONOMY,PRIMITIVE,[SOC-03;PRIM-44;PRIM-14],Gold/Silver/Grain as universal value,Store of Value,Standardization,Trade Networks
+SOC-07,MONEY_COMMODITY,ECONOMY,PRIMITIVE,[SOC-03;PRIM-14],Gold/Silver/Grain as universal value,Store of Value,Standardization,Trade Networks
 SOC-08,IMPERIAL_BUREAUCRACY,ORGANIZATION,PRIMITIVE,[SOC-05;ENV-SCI-02;PRIM-43],Administering vast territory via scribes,Delegation,Record Keeping,Taxation/Logistics
 WAR-01,ORGANIZED_ARMY,INSTITUTION,PRIMITIVE,[SOC-01;ENV-04;PRIM-16],Professional soldiers instead of mob,Discipline/Drill,Logistics,Conquest/Defense
 INST-01,UNIVERSITY,INSTITUTION,SCIENTIFIC,[SOC-02;ENV-SCI-02;SOC-04],Community of scholars and teachers,Academic Freedom,Peer Review,Preservation of Knowledge
