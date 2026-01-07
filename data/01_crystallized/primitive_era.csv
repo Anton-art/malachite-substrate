@@ -1,4 +1,6 @@
 ID,Name,Type,Time_Period,Logic,Parents,Trigger,Principle,Tech_Make,Tech_Use
+I-00,INTELLIGENCE,RESOURCE,PRIMITIVE,NATURAL,[F-00],The spark of consciousness and pattern recognition,Evolution,Biology,Observation/Invention
+M-02,RAW_STONE,MATERIAL,PRIMITIVE,NATURAL,[F-01],Hard mineral found on ground,Geology,Gathering,Early Tools
 META-01,OBSERVATION_LOOP,META_TOOL,PRIMITIVE,INTUITIVE,[I-00],Look -> Try -> Fail -> Learn,Empiricism,Trial & Error,All Invention
 META-02,ORAL_TRADITION,META_TOOL,PRIMITIVE,INTUITIVE,[S-10;META-01],Passing knowledge via speech/rhyme,Memory,Storytelling,Education/Preservation
 ENV-00_FIELD,AGRI_FIELD,ENVIRONMENT,PRIMITIVE,INTUITIVE,[F-01;F-02;S-09],Cleared land + Irrigation + Crops,Domestication of Land,Farming,Food Production

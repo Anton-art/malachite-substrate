@@ -4,7 +4,7 @@ ENV-10,ELEC_LAB_19C,ENVIRONMENT,ELECTRIC,HYBRID,[ENV-08;ELEC-02;ELEC-03],Machine
 ENV-11,ASSEMBLY_LINE_FLOOR,ENVIRONMENT,ELECTRIC,HYBRID,[ENV-08;IND-46;ELEC-09],Conveyors + Power Tools + Specialized Stations,Flow Efficiency,Logistics,Automobiles/Appliances
 ENV-12,REFINERY_PLANT,ENVIRONMENT,ELECTRIC,HYBRID,[ENV-07;IND-45;IND-68],Massive scale chemical plumbing + Heat,Continuous Flow,Chemical Eng,Fuel/Plastics
 ENV-MED,SURGICAL_THEATRE,ENVIRONMENT,ELECTRIC,HYBRID,[ENV-07;IND-13;ELEC-07],Sterile room + Bright Light + Anesthesia,Asepsis,Life Support,Medicine/Surgery
-ENV-AERO,AEROSPACE_HANGAR,ENVIRONMENT,ELECTRIC,HYBRID,[ENV-11;AV-06;MAT-02],Massive open space + Gantries + Precision tools,Systems Integration,Assembly,Aircraft/Rockets
+ENV-AERO,AEROSPACE_HANGAR,ENVIRONMENT,ELECTRIC,HYBRID,[ENV-11;IND-30;MAT-02],Massive open space + Gantries + Precision tools,Systems Integration,Assembly,Aircraft/Rockets
 ELEC-07,LIGHTBULB,INVENTION,ELECTRIC,HYBRID,[ENV-10;SCI-08;ELEC-06;IND-38],Filament glows in vacuum without burning,Joule Heating/Incandescence,Glassblowing/Vacuum Sealing,Lighting/Night Shift
 ELEC-08,AC_MOTOR,MACHINE,ELECTRIC,HYBRID,[ENV-10;SCI-11;ELEC-06],Rotating magnetic field pulls rotor (Tesla),Electromagnetic Induction,Coiling/Lamination,Industrial Power/Appliances
 ELEC-09,POWER_GRID,INFRASTRUCTURE,ELECTRIC,HYBRID,[ELEC-08;ELEC-14;IND-44],High voltage travels far; low voltage enters home,Transformer/Transmission,Wiring/Substations,Universal Energy Access
