@@ -16,7 +16,7 @@ DIG-08,MICROPROCESSOR,MACHINE,DIGITAL,COMPUTATIONAL,[ENV-13;DIG-04;DIG-05;IND-11
 DIG-09,RAM_MEMORY,COMPONENT,DIGITAL,SCIENTIFIC,[ENV-13;DIG-05;ELEC-01],Fast temporary storage for CPU,Capacitance/Switching,Lithography,Working Memory
 DIG-10,HARD_DISK_DRIVE,MACHINE,DIGITAL,HYBRID,[ENV-13;ELEC-20;IND-23;ELEC-08],Spinning magnetic platters store massive data,Magnetic Hysteresis/Aerodynamics,Precision Machining,Data Storage
 DIG-11,COMPILER,TOOL,DIGITAL,COMPUTATIONAL,[DIG-08;DIG-02;S-10;SCI-05],Translating human code to machine zeros/ones,Abstraction/Parsing,Software Engineering,Programming
-DIG-12,OPERATING_SYSTEM,SYSTEM,DIGITAL,COMPUTATIONAL,[ENV-15;DIG-11;DIG-08;IND-46],Managing hardware resources for software,Resource Allocation/Scheduling,Coding (C/Assembly),Running Computers
+DIG-12,OPERATING_SYSTEM,SYSTEM,DIGITAL,COMPUTATIONAL,[DIG-11;DIG-08;IND-46],Managing hardware resources for software,Resource Allocation/Scheduling,Coding (C/Assembly),Running Computers
 DIG-13,MOUSE_INTERFACE,MACHINE,DIGITAL,HYBRID,[ELEC-10;IND-23;DIG-08],Hand movement controls screen cursor,X-Y Mapping,Encoding,Human-Computer Interaction
 DIG-14,GUI_WINDOWS,METHOD,DIGITAL,COMPUTATIONAL,[DIG-13;DIG-12;PRIM-45],Visual metaphors (Desktop/Files) instead of text,Visual Abstraction,Raster Graphics,Mass Adoption of PCs
 DIG-15,LASER_DIODE,COMPONENT,DIGITAL,SCIENTIFIC,[ENV-13;SCI-18;DIG-07;MAT-06],Semiconductor emits coherent light,Stimulated Emission,Doping,Fiber Optics/CD/DVD
