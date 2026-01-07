@@ -1,6 +1,6 @@
 ID,Name,Type,Time_Period,Logic,Parents,Trigger,Principle,Tech_Make,Tech_Use
 META-06,DIGITAL_TWIN_SIM,META_TOOL,DIGITAL,COMPUTATIONAL,[META-04;DIG-06;DIG-45],Virtual physics simulation before physical build,Modeling,Finite Element Analysis,Aerospace/Chips
-ENV-13,CLEAN_ROOM_FAB,ENVIRONMENT,DIGITAL,SCIENTIFIC,[ENV-07;DIG-06;SCI-18],Air filtered to zero dust + Lithography,Nano-scale Mfg,Photolithography,Microprocessors/Sensors
+ENV-13,CLEAN_ROOM_FAB,ENVIRONMENT,DIGITAL,SCIENTIFIC,[ENV-07;IND-31;SCI-18],Air filtered to zero dust + Lithography,Nano-scale Mfg,Photolithography,Microprocessors/Sensors 
 ENV-14,SERVER_FARM,ENVIRONMENT,DIGITAL,COMPUTATIONAL,[ENV-10;URB-01;DIG-18],Racks of computers + Cooling + Backup Power,High Density Compute,Networking,Internet/Cloud
 ENV-15,DEV_ENV_IDE,ENVIRONMENT,DIGITAL,COMPUTATIONAL,[DIG-12;DIG-06;DIG-14],Virtual workspace: Editor + Compiler + Debugger,Abstraction,Coding,Software/AI
 ENV-16,BIO_HACK_LAB,ENVIRONMENT,DIGITAL,SCIENTIFIC,[ENV-07;DIG-20;DIG-40],Gene sequencers + CRISPR + AI analysis,Bio-Engineering,Genetic Editing,Vaccines/GMO
