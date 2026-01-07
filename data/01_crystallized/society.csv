@@ -1,0 +1,31 @@
+ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
+SOC-00,TRIBE_BAND,ORGANIZATION,PRIMITIVE,[S-10;F-00],Survival in small groups (Dunbar's number),Kinship/Altruism,Social Cohesion,Hunting/Gathering
+SOC-01,CHIEFDOM,ORGANIZATION,PRIMITIVE,[SOC-00;PRIM-18],Hierarchy allows managing more people,Centralized Authority,Leadership,Public Works/Defense
+SOC-02,RELIGION_MYTH,INSTITUTION,PRIMITIVE,[SOC-00;ENV-SCI-01;S-10],Shared stories bind strangers together,Common Belief,Ritual,Cooperation > 150 people
+SOC-03,BARTER_TRADE,ECONOMY,PRIMITIVE,[SOC-00;S-09],Direct exchange of goods,Coincidence of Wants,Negotiation,Early Trade
+SOC-04,CITY_STATE,ORGANIZATION,PRIMITIVE,[SOC-01;ENV-SITE-A],Dense population center with walls,Urbanization,Specialization of Labor,Civilization Base
+SOC-05,WRITTEN_LAW,INSTITUTION,PRIMITIVE,[SOC-04;ENV-SCI-02;PRIM-21],Rules carved in stone (Hammurabi),Standardization of Justice,Deterrence,Stability/Contracts
+SOC-06,SLAVERY_SERFDOM,ECONOMY,PRIMITIVE,[SOC-04;WAR-01],Forced labor powers early economy,Exploitation,Coercion,Mega-Structures/Agriculture
+SOC-07,MONEY_COMMODITY,ECONOMY,PRIMITIVE,[SOC-03;PRIM-44;PRIM-14],Gold/Silver/Grain as universal value,Store of Value,Standardization,Trade Networks
+SOC-08,IMPERIAL_BUREAUCRACY,ORGANIZATION,PRIMITIVE,[SOC-05;ENV-SCI-02;PRIM-43],Administering vast territory via scribes,Delegation,Record Keeping,Taxation/Logistics
+WAR-01,ORGANIZED_ARMY,INSTITUTION,PRIMITIVE,[SOC-01;ENV-04;PRIM-16],Professional soldiers instead of mob,Discipline/Drill,Logistics,Conquest/Defense
+INST-01,UNIVERSITY,INSTITUTION,SCIENTIFIC,[SOC-02;ENV-SCI-02;SOC-04],Community of scholars and teachers,Academic Freedom,Peer Review,Preservation of Knowledge
+INST-02,BANKING_SYSTEM,ECONOMY,SCIENTIFIC,[SOC-07;PRIM-31;PRIM-23],Lending money at interest (Medici),Credit Creation,Risk Assessment,Funding Expeditions/Trade
+INST-03,PATENT_COPYRIGHT,INSTITUTION,SCIENTIFIC,[SOC-05;ENV-09;SOC-08],Legal monopoly on invention,Intellectual Property,Incentive,Innovation Acceleration
+INST-04,JOINT_STOCK_CORP,ECONOMY,SCIENTIFIC,[INST-02;SOC-05;PRIM-31],Shared ownership limits liability (VOC),Risk Distribution,Capital Accumulation,Global Trade/Industrialization
+SOC-09,NATION_STATE,ORGANIZATION,SCIENTIFIC,[ENV-09;SOC-08],Sovereignty defined by borders and language,Nationalism,Centralization,Total War/Infrastructure
+SOC-10,PUBLIC_EDUCATION,INSTITUTION,MODERN,[SOC-09;ENV-09;IND-26],Standardized schooling for masses,Literacy/Obedience,Curriculum,Industrial Workforce/Voters
+SOC-11,DEMOCRACY_REPRESENTATIVE,ORGANIZATION,MODERN,[SOC-09;ENV-09;SOC-05],Citizens vote for leaders,Feedback Loop,Checks and Balances,Political Stability/Rights
+SOC-12,FIAT_CURRENCY,ECONOMY,MODERN,[INST-02;SOC-09;ENV-09],Money backed by state trust, not gold,Monetary Policy,Inflation Control,Modern Economy/Stimulus
+SOC-13,INSURANCE,ECONOMY,MODERN,[SCI-05;SOC-04],Pooling risk against catastrophe,Probability/Actuarial Science,Safety Net,Stability/Investment
+WAR-02,TOTAL_WAR,CRISIS,MODERN,[SOC-09;IND-11;IND-45],Mobilization of entire economy for war,Industrial Warfare,Mass Production,Tech Acceleration (Radar/Jet/Nuke)
+SOC-14,CONSUMERISM,CULTURE,MODERN,[IND-11;SOC-12;ELEC-12],Identity built on purchasing goods,Demand Generation,Marketing,Economic Growth Driver
+INST-05,GLOBAL_STANDARDS,INSTITUTION,MODERN,[SOC-09;ECON-03;SCI-01],ISO/Metric system agreed globally,Interoperability,Coordination,Global Supply Chain
+SOC-15,WELFARE_STATE,INSTITUTION,MODERN,[SOC-11;SOC-10;IND-11],Safety net for citizens (Pension/Health),Social Contract,Redistribution,Social Stability
+SOC-16,GLOBALIZATION,ORGANIZATION,DIGITAL,[INST-05;DIG-19;ECON-03],Interconnected world economy,Comparative Advantage,Logistics,Offshoring/Cultural Exchange
+SOC-17,OPEN_SOURCE_CULTURE,CULTURE,DIGITAL,[DIG-19;INST-01;DIG-38],Free sharing of knowledge/code,Gift Economy,Collaboration,Linux/Wikipedia/Science
+SOC-18,GIG_ECONOMY,ECONOMY,DIGITAL,[DIG-32;DIG-61;SOC-12],Labor as a service on demand,Algorithmic Management,Flexibility,Uber/Freelancing
+SOC-19,SURVEILLANCE_CAPITALISM,ECONOMY,DIGITAL,[DIG-40;DIG-39;SOC-14],Personal data as raw material,Behavioral Prediction,Data Mining,Targeted Ads/Control
+SOC-20,DECENTRALIZED_AUTONOMY,ORGANIZATION,DIGITAL,[DIG-51;DIG-52;SOC-17],Governance by code (DAO),Consensus/Trustless,Smart Contracts,Crypto/Coordination
+WAR-03,COLD_WAR,CRISIS,MODERN,[WAR-02;SCI-19;SOC-09],Competition without direct conflict,Deterrence,Spying,Space Race/Internet/GPS
+WAR-04,CYBER_WARFARE,CRISIS,DIGITAL,[DIG-19;SOC-09;DIG-25],Attacks on infrastructure via code,Asymmetric Warfare,Zero-Day Exploits,Destabilization/Espionage
