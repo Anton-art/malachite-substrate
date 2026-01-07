@@ -1,8 +1,8 @@
 ID,Name,Type,Time_Period,Logic,Parents,Trigger,Principle,Tech_Make,Tech_Use
 META-03,SCIENTIFIC_METHOD_META,META_TOOL,SCIENTIFIC,DETERMINISTIC,[META-01;SCI-01],Hypothesis -> Experiment -> Proof,Verification,Documentation,Discovery
 META-04,BLUEPRINT_DRAFT,META_TOOL,SCIENTIFIC,DETERMINISTIC,[META-03;ENV-06;IND-02],2D projection of 3D object with measurements,Standardization,Geometry,Engineering
-ENV-06,DRAFTING_ROOM,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-02;PRIM-23;IND-56],Quiet space + Light + Paper + Instruments,Precision Planning,Design,Architecture/Machines
-ENV-07,ALCHEMY_CHEM_LAB,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-01;IND-58;PRIM-01],Glassware + Burners + Scales,Isolation/Reaction,Distillation,Chemistry/Medicine
+ENV-06,DRAFTING_ROOM,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-02;PRIM-23;IND-80],Quiet space + Light + Paper + Instruments,Precision Planning,Design,Architecture/Machines
+ENV-07,ALCHEMY_CHEM_LAB,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-01;IND-82;IND-83],Glassware + Burners + Scales,Isolation/Reaction,Distillation,Chemistry/Medicine
 ENV-08,MACHINE_SHOP,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-04;IND-06;IND-39],Lathes + Drills + Hardened Steel Cutters,Subtractive Mfg,Precision Machining,Steam Engines/Gears
 ENV-09,PRINTING_HOUSE,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-02;PRIM-40;PRIM-53],Presses + Type Cases + Ink mixing,Replication,Typesetting,Books/Newspapers
 ENV-TEXTILE,TEXTILE_MILL,ENVIRONMENT,SCIENTIFIC,DETERMINISTIC,[ENV-02;IND-09;IND-33],Large hall + Power source + Rows of machines,Automation,Mass Production,Clothing
@@ -74,8 +74,8 @@ ELEC-03,ELECTROMAGNET,DISCOVERY,SCIENTIFIC,DETERMINISTIC,[ELEC-02;PRIM-14;IND-44
 ELEC-04,TELEGRAPH,MACHINE,SCIENTIFIC,DETERMINISTIC,[ELEC-03;PRIM-30;IND-38;IND-44],Electricity sends clicks over wire,Binary Encoding,Wiring,Instant Communication
 ELEC-05,MORSE_CODE,SYMBOL,SCIENTIFIC,DETERMINISTIC,[ELEC-04;PRIM-30],Dots and dashes represent alphabet,Binary Logic,Encoding,Data Transmission
 ELEC-06,DYNAMO,MACHINE,SCIENTIFIC,DETERMINISTIC,[ELEC-03;SCI-11;PRIM-32;IND-23],Spinning magnet creates current,Induction,Rotation,Power Generation
-IND-56,DRAFTING_COMPASS,TOOL,SCIENTIFIC,DETERMINISTIC,[PRIM-02;S-02],Two legs pivot to draw perfect circle,Geometry,Machining,Blueprints/Navigation
-IND-57,RULER_SQUARE,TOOL,SCIENTIFIC,DETERMINISTIC,[S-03;PRIM-31],Straight edge with standardized markings,Measurement/Standardization,Carpentry,Engineering
-IND-58,GLASS_FLASK,TOOL,SCIENTIFIC,DETERMINISTIC,[PRIM-28;S-08],Transparent vessel withstands heat/chemicals,Inertness,Glassblowing,Chemistry/Alchemy
-IND-59,LAB_BURNER,TOOL,SCIENTIFIC,DETERMINISTIC,[IND-32;S-08],Gas flame with adjustable air intake (Bunsen),Combustion Control,Metalworking,Chemistry
-IND-60,THERMOMETER,TOOL,SCIENTIFIC,DETERMINISTIC,[PRIM-28;SCI-07;F-02],Liquid expands in tube with heat,Thermal Expansion,Calibration,Chemistry/Medicine
+IND-80,DRAFTING_COMPASS,TOOL,SCIENTIFIC,DETERMINISTIC,[PRIM-02;S-02],Two legs pivot to draw perfect circle,Geometry,Machining,Blueprints/Navigation
+IND-81,RULER_SQUARE,TOOL,SCIENTIFIC,DETERMINISTIC,[S-03;PRIM-31],Straight edge with standardized markings,Measurement/Standardization,Carpentry,Engineering
+IND-82,GLASS_FLASK,TOOL,SCIENTIFIC,DETERMINISTIC,[PRIM-28;S-08],Transparent vessel withstands heat/chemicals,Inertness,Glassblowing,Chemistry/Alchemy
+IND-83,LAB_BURNER,TOOL,SCIENTIFIC,DETERMINISTIC,[IND-32;S-08],Gas flame with adjustable air intake (Bunsen),Combustion Control,Metalworking,Chemistry
+IND-84,THERMOMETER,TOOL,SCIENTIFIC,DETERMINISTIC,[PRIM-28;SCI-07;F-02],Liquid expands in tube with heat,Thermal Expansion,Calibration,Chemistry/Medicine
