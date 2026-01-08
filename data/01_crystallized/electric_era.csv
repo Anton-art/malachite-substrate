@@ -56,7 +56,7 @@ MAT-01,PLASTIC_BAKELITE,MATERIAL,MODERN,[ENV-12;IND-45;IND-18],Synthetic polymer
 MAT-02,ALUMINUM_SMELTING,PROCESS,MODERN,[ENV-12;ELEC-06;SCI-09],Electricity separates metal from ore (Hall-Heroult),Electrolysis,Industrial Arc,Lightweight Structures/Planes
 MAT-03,PIEZO_CRYSTAL,MATERIAL,MODERN,[ENV-10;SCI-11;F-01],Crystals generate charge when squeezed (Quartz),Piezoelectricity,Crystallography,Sonar/Ultrasound/Watches
 MAT-04,ARC_WELDING,PROCESS,MODERN,[ENV-10;ELEC-06;IND-19],Electric arc melts metal edges to fuse them into one piece,Fusion Joining,Electrodes/High Current,Tanks/Ships/Pipelines
-MAT-05,STAINLESS_STEEL,ALLOY,MODERN,[ENV-12;IND-19;SCI-13],Steel + Chromium resists corrosion indefinitely,Passivation,Electric Arc Furnace,Surgery/Food/Chemicals
+MAT-05,STAINLESS_STEEL,ALLOY,MODERN,[ENV-08;IND-19;SCI-13],Steel + Chromium resists corrosion indefinitely,Passivation,Electric Arc Furnace,Surgery/Food/Chemicals
 MAT-06,TITANIUM_REFINING,PROCESS,MODERN,[ENV-12;SCI-09;ELEC-06],Extracting light/strong metal from ore using magnesium/chlorine,Kroll Process,Vacuum Metallurgy,Supersonic Jets/Submarines
 MAT-07,SUPERALLOYS,ALLOY,MODERN,[ENV-12;SCI-13;MAT-06],Nickel-based alloys stay hard at white heat,Crystal Structure Engineering,Vacuum Casting,Jet Turbines/Rocket Nozzles
 MAT-08,POLYETHYLENE,MATERIAL,MODERN,[ENV-12;IND-47;SCI-09],Gas molecules linked into long plastic chains,Polymerization,Chemical Reactor,Packaging/Radar Insulation/Pipes
