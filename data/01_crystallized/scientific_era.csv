@@ -1,11 +1,12 @@
 ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
 ENV-06,DRAFTING_ROOM,ENVIRONMENT,SCIENTIFIC,[ENV-02;PRIM-23;PRIM-55],Tables + Paper + Precision tools,Geometric Abstraction,Planning,Blueprints/Engineering
 ENV-07,ALCHEMY_LAB,ENVIRONMENT,SCIENTIFIC,[ENV-03;PRIM-28;PRIM-10],Glassware + Burners + Reagents,Chemical Reaction,Experimentation,Acids/Dyes/Explosives
-ENV-08,MACHINE_SHOP,ENVIRONMENT,SCIENTIFIC,[ENV-04;IND-06;IND-39],Lathes + Drills + Hardened Steel,Precision Machining,Subtractive Mfg,Engines/Gears
+ENV-08,MACHINE_SHOP,ENVIRONMENT,SCIENTIFIC,[ENV-04;IND-06;IND-39;ENV-06],Lathes + Drills + Hardened Steel,Precision Machining,Subtractive Mfg,Engines/Gears
 ENV-09,PRINTING_HOUSE,ENVIRONMENT,SCIENTIFIC,[ENV-02;PRIM-40],Presses + Typesetting + Paper storage,Mass Replication,Distribution,Newspapers/Books
 ENV-SITE-B,HEAVY_SITE,ENVIRONMENT,SCIENTIFIC,[ENV-SITE-A;IND-15;IND-52],Steam cranes + Steel beams,Load Bearing,Structural Engineering,Skyscrapers/Bridges
 ENV-SCI-03,NATURAL_PHIL_LAB,ENVIRONMENT,SCIENTIFIC,[ENV-SCI-02;SCI-04;ENV-07],Microscopes + Collections,Empirical Observation,Scientific Method,Biology/Medicine
 ENV-SCI-04,THEORETICAL_STUDY,ENVIRONMENT,SCIENTIFIC,[ENV-SCI-02;PRIM-31;ENV-09],Books + Blackboard + Calculus,Mathematical Modeling,Deduction,Physics/Relativity
+ENV-SCI-06,CHEMICAL_LAB,ENVIRONMENT,SCIENTIFIC,[ENV-07;SCI-09;SCI-13;IND-18;SCI-23],Alchemy is inconsistent; need precise stoichiometry,Stoichiometry/Synthesis,Titration/Distillation,Synthetics/Pharma/Explosives
 SCI-01,SCIENTIFIC_METHOD,METHOD,SCIENTIFIC,[ENV-09;PRIM-29;INST-01],Books spread knowledge; Lenses show invisible things,Empiricism/Verification,Observation/Hypothesis,Research
 SCI-02,TELESCOPE,TOOL,SCIENTIFIC,[ENV-02;PRIM-29],Two lenses in a tube make far things close,Optics/Refraction,Grinding/Assembly,Astronomy/Navigation
 SCI-03,HELIOCENTRISM,DISCOVERY,SCIENTIFIC,[ENV-SCI-01;SCI-02],Planets orbit Sun (not Earth),Gravity/Orbital Mechanics,Math/Observation,Navigation/Calendar
@@ -21,6 +22,11 @@ SCI-12,GERM_THEORY,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;SCI-04],Microorganisms cause
 SCI-13,PERIODIC_TABLE,DISCOVERY,SCIENTIFIC,[ENV-SCI-04;SCI-09],Elements arranged by atomic weight show patterns,Periodicity,Classification,Material Science
 SCI-14,MENDELIAN_GENETICS,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;PRIM-17],Traits are inherited via discrete units,Statistical Probability,Breeding,Modern Biology
 SCI-15,NITROGEN_CYCLE,DISCOVERY,SCIENTIFIC,[ENV-SCI-03;IND-18],Bacteria fix nitrogen; Legumes restore soil,Chemical Cycle,Crop Rotation,Sustainable Agriculture
+SCI-23,THERMOMETER_MERCURY,TOOL,SCIENTIFIC,[ENV-07;PRIM-28;SCI-07],Need to quantify 'hot' and 'cold' objectively,Thermal Expansion,Glassblowing/Calibration,Chemistry/Medicine/Weather
+SCI-24,BAROMETER,TOOL,SCIENTIFIC,[ENV-07;SCI-08;PRIM-28],Air has weight; vacuum pulls liquid up,Atmospheric Pressure,Glassblowing/Mercury,Weather Prediction/Altitude
+SCI-25,SPECTROSCOPE,TOOL,SCIENTIFIC,[ENV-07;SCI-02;PRIM-29],Burning elements emit unique light colors (Fingerprints),Refraction/Spectral Lines,Prism Grinding,Chemical Analysis/Astronomy
+SCI-26,CHROMATOGRAPHY,METHOD,SCIENTIFIC,[ENV-SCI-06;PRIM-23;SCI-09],Need to separate complex mixtures into pure components,Capillary Action/Adsorption,Paper/Solvents,Forensics/Purifying Drugs
+SCI-29,X_RAY_CRYSTALLOGRAPHY,METHOD,SCIENTIFIC,[ENV-SCI-03;SCI-16;IND-21],Shooting X-rays through crystal creates pattern,Diffraction,Film/High Voltage,Discovering DNA/Material Science
 IND-01,PENDULUM_CLOCK,MACHINE,SCIENTIFIC,[ENV-08;SCI-06],Gravity swings weight at constant time,Harmonic Oscillation,Precision Mechanics,Timekeeping
 IND-02,SEXTANT,TOOL,SCIENTIFIC,[ENV-02;SCI-02],Mirrors measure angle of stars,Triangulation,Precision optics,Global Navigation
 IND-03,COAL_MINING,INDUSTRY,SCIENTIFIC,[ENV-SITE-A;PRIM-52;INST-04],Wood is scarce; Black rock burns hotter,Energy Density,Digging/Shafts,Fuel Source
@@ -42,7 +48,7 @@ IND-18,INDUSTRIAL_ACID,MATERIAL,SCIENTIFIC,[ENV-07;IND-03],Sulfuric Acid / Soda 
 IND-19,STEEL_BESSEMER,PROCESS,SCIENTIFIC,[ENV-04;SCI-01],Air blown through iron burns off carbon,Oxidation,Industrial Smelting,Skyscrapers/Rails
 IND-20,WOOD_PULP_PAPER,MATERIAL,SCIENTIFIC,[ENV-07;IND-18;IND-05],Acid breaks down wood into fiber,Chemical Pulping,Industrial Chemistry,Mass Media
 IND-21,PHOTOGRAPHY,INVENTION,SCIENTIFIC,[ENV-07;SCI-04],Light darkens silver chemicals,Photochemistry,Exposure/Developing,Documentation
-IND-22,SYNTHETIC_DYE,MATERIAL,SCIENTIFIC,[ENV-07;IND-03],Coal tar waste turned into color,Organic Synthesis,Chemistry,Pharma Ancestor
+IND-22,SYNTHETIC_DYE,MATERIAL,SCIENTIFIC,[ENV-SCI-06;IND-03],Coal tar waste turned into color,Organic Synthesis,Chemistry,Pharma Ancestor
 IND-23,BALL_BEARING,MACHINE,SCIENTIFIC,[ENV-08;IND-19],Hardened steel balls reduce friction,Rolling Friction,Precision Grinding,Machinery/Bicycles
 IND-24,INTERNAL_COMBUSTION,MACHINE,SCIENTIFIC,[ENV-08;SCI-07;IND-45],Exploding gas pushes piston directly,Thermodynamics/Otto Cycle,Precision Casting,Automobiles
 IND-25,REFRIGERATION,MACHINE,SCIENTIFIC,[ENV-08;SCI-07],Compressing and expanding gas removes heat,Thermodynamics,Pumping,Food Logistics
@@ -61,11 +67,14 @@ IND-37,GALVANIZATION,PROCESS,SCIENTIFIC,[ENV-07;ELEC-02],Zinc coating protects s
 IND-38,WIRE_DRAWING,MACHINE,SCIENTIFIC,[ENV-08;IND-19],Pulling metal through holes,Cold Working,Mechanization,Cables/Wires
 IND-39,TOOL_STEEL,ALLOY,SCIENTIFIC,[ENV-04;IND-19;SCI-13],Tungsten/Chrome added to steel,Alloying,Metallurgy,Cutting Tools
 IND-40,MECHANICAL_REAPER,MACHINE,SCIENTIFIC,[ENV-08;IND-06],Blades cut grain automatically,Mechanization,Assembly,Mass Agriculture
-IND-41,PASTEURIZATION,PROCESS,SCIENTIFIC,[ENV-07;SCI-12],Heating kills pathogens,Thermal Sterilization,Heating,Public Health
+IND-41,PASTEURIZATION,PROCESS,SCIENTIFIC,[ENV-SCI-06;SCI-12],Heating kills pathogens,Thermal Sterilization,Heating,Public Health
 IND-42,STEAM_TRACTOR,MACHINE,SCIENTIFIC,[ENV-08;IND-07],Steam engine pulls plows,Traction,Boilermaking,Industrial Farming
 IND-43,INTERCHANGEABLE_PARTS,METHOD,SCIENTIFIC,[ENV-08;IND-06],Identical components for mass assembly,Standardization,Metrology,Mass Production/Repair
 IND-44,ELECTRICAL_INSULATION,MATERIAL,SCIENTIFIC,[ENV-07;IND-17],Rubber coating on wires,Dielectric Protection,Extrusion,Safe Wiring/Undersea Cables
 IND-45,OIL_REFINING,PROCESS,SCIENTIFIC,[ENV-07;IND-03;SCI-07],Crude oil separated by boiling points,Fractional Distillation,Chemical Engineering,Fuel (Kerosene/Petrol)
+IND-75,FLOW_METER,MACHINE,SCIENTIFIC,[ENV-08;SCI-07;AV-01],Need to measure water/gas moving in pipes,Bernoulli Principle/Turbine,Casting/Machining,Utilities/Pipelines/Engines
+IND-76,SPIRIT_LEVEL,TOOL,SCIENTIFIC,[ENV-07;PRIM-28;PRIM-61],Bubble in alcohol tube shows level,Fluid Mechanics/Buoyancy,Glassblowing/Sealing,Construction/Carpentry
+IND-77,THEODOLITE,TOOL,SCIENTIFIC,[ENV-08;SCI-02;IND-48],Telescope mounted on rotating protractor,Triangulation/Optics,Precision Machining,Mapping/Railroads/Tunnels
 ELEC-01,LEYDEN_JAR,TOOL,SCIENTIFIC,[ENV-07;PRIM-28],Glass jar stores static charge,Capacitance,Friction,Electricity Storage
 ELEC-02,BATTERY_VOLTA,INVENTION,SCIENTIFIC,[ENV-07;SCI-01],Stacked metals + Acid create flow,Chemical Potential -> Electrical,Stacking,Constant Current
 ELEC-03,ELECTROMAGNET,DISCOVERY,SCIENTIFIC,[ENV-07;ELEC-02],Current in coil creates magnet,Electromagnetism,Coiling wire,Motors/Relays

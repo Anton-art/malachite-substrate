@@ -63,3 +63,12 @@ PRIM-54,NAIL,TOOL,INTUITIVE,[ENV-04;PRIM-16],Metal spike holds wood,Friction/She
 PRIM-55,RULER,TOOL,INTUITIVE,[ENV-02;S-10],Standardized stick measures length,Measurement,Carving,Engineering/Trade
 PRIM-56,SAW,TOOL,INTUITIVE,[ENV-04;S-01],Serrated metal blade cuts wood planks,Friction/Cutting,Forging,Carpentry/Lumber
 PRIM-58,ANVIL,TOOL,INTUITIVE,[ENV-04;PRIM-26],Heavy block to hammer against,Rebound,Casting,Smithing
+PRIM-59,BALANCE_SCALE,TOOL,INTUITIVE,[ENV-02;S-02;PRIM-09],Comparing weight against stones/grain,Leverage/Equilibrium,Carpentry/Carving,Trade/Chemistry
+PRIM-60,PLUMB_BOB,TOOL,INTUITIVE,[S-05;F-01;S-01],Heavy stone on string hangs straight down,Gravity/Verticality,Knotting,Masonry/Pyramids
+PRIM-61,WATER_LEVEL,TOOL,INTUITIVE,[PRIM-05;F-02;ENV-SITE-A],Water surface is always flat relative to earth,Hydrostatics,Pottery/Digging,Aqueducts/Foundations
+PRIM-62,SET_SQUARE,TOOL,INTUITIVE,[ENV-02;PRIM-55;S-10],Triangle with sides 3-4-5 makes perfect corner,Geometry/Pythagoras,Carpentry,Masonry/Joinery
+PRIM-63,GROMA_SURVEY,TOOL,INTUITIVE,[ENV-02;PRIM-60;S-10],Cross with plumb bobs to sight straight lines,Geometry/Sighting,Carpentry,Roads/Agriculture/City Planning
+PRIM-64,SURVEY_CHAIN,TOOL,INTUITIVE,[ENV-04;PRIM-55;PRIM-54],Metal chain of fixed length measures land,Standardization/Non-stretching,Forging,Land Tax/Mapping
+PRIM-65,GNOMON_SUNDIAL,TOOL,INTUITIVE,[ENV-SCI-01;S-01;F-03],Stick shadow moves with the sun,Planetary Rotation,Observation,Daily Schedule
+PRIM-66,WATER_CLOCK,MACHINE,INTUITIVE,[PRIM-05;F-02;PRIM-55],Water drips at constant rate through hole,Flow Rate,Pottery,Night Watch/Court Limits
+PRIM-67,CROSS_STAFF,TOOL,INTUITIVE,[ENV-SCI-01;PRIM-55;S-10],Measuring angle between star and horizon,Trigonometry,Carpentry,Ocean Navigation

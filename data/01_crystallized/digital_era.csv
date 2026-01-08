@@ -1,8 +1,8 @@
 ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
-ENV-13,CLEAN_ROOM,ENVIRONMENT,DIGITAL,[ENV-10;IND-31;URB-01],Dust destroys microchips; Need absolute purity,Air Filtration/Positive Pressure,HEPA Filters,Semiconductor Mfg
+ENV-13,CLEAN_ROOM,ENVIRONMENT,DIGITAL,[ENV-10;IND-31;URB-01;IND-21;SCI-22],Dust destroys microchips; Need absolute purity,Air Filtration/Photochemistry,HEPA Filters/Lithography,Semiconductor Mfg
 ENV-14,SERVER_FARM,ENVIRONMENT,DIGITAL,[ENV-10;URB-01;ELEC-09],Factory for computing; Concentrated power & cooling,Heat Dissipation/Density,Rack Mounting,Cloud/AI Training
 ENV-15,DEV_IDE,ENVIRONMENT,DIGITAL,[ENV-14;DIG-12;DIG-11],Virtual environment for writing code,Abstraction/Virtualization,Software Engineering,Building Apps/AI
-ENV-16,BIO_LAB,ENVIRONMENT,DIGITAL,[ENV-13;SCI-12;DIG-40],Sterile environment with sequencers,Genetic Engineering,Sterility,CRISPR/Vaccines
+ENV-16,BIO_LAB,ENVIRONMENT,DIGITAL,[ENV-13;ENV-SCI-06;SCI-22;DIG-40],Sterile environment with sequencers,Genetic Engineering,Sterility,CRISPR/Vaccines
 ENV-SCI-05,SIMULATION_GRID,ENVIRONMENT,DIGITAL,[ENV-14;DIG-40;SCI-05],Modeling complex systems in silico,Simulation,High Compute,Climate Models/Nuclear Sim
 DIG-00,MOORES_LAW,OBSERVATION,DIGITAL,[ENV-13;DIG-01],Transistor count doubles every 2 years,Exponential Growth,Lithography,Roadmap for Industry
 DIG-01,TRANSISTOR,COMPONENT,DIGITAL,[ENV-13;ELEC-11;SCI-18],Vacuum tubes are too hot/big; Need cold switch,Semiconductivity/Quantum Tunneling,Doping/Crystal Growth,Logic Gates/Amplification
@@ -15,7 +15,7 @@ DIG-08,MICROPROCESSOR,MACHINE,DIGITAL,[ENV-13;DIG-04;DIG-05],CPU on a single chi
 DIG-09,RAM_MEMORY,COMPONENT,DIGITAL,[ENV-13;DIG-05;ELEC-01],Fast temporary storage for CPU,Capacitance/Switching,Lithography,Working Memory
 DIG-10,HARD_DISK_DRIVE,MACHINE,DIGITAL,[ENV-13;ELEC-20;IND-23],Spinning magnetic platters store massive data,Magnetic Hysteresis/Aerodynamics,Precision Machining,Data Storage
 DIG-11,COMPILER,TOOL,DIGITAL,[DIG-08;DIG-02;S-10],Translating human code to machine zeros/ones,Abstraction/Parsing,Software Engineering,Programming
-DIG-12,OPERATING_SYSTEM,SYSTEM,DIGITAL,[DIG-11;DIG-08],Managing hardware resources for software,Resource Allocation/Scheduling,Coding (C/Assembly),Running Computers
+DIG-12,OPERATING_SYSTEM,SYSTEM,DIGITAL,[DIG-11;DIG-08;ENV-14],Managing hardware resources for software,Resource Allocation/Scheduling,Coding (C/Assembly),Running Computers
 DIG-13,MOUSE_INTERFACE,MACHINE,DIGITAL,[ENV-10;ELEC-10;IND-23],Hand movement controls screen cursor,X-Y Mapping,Encoding,Human-Computer Interaction
 DIG-14,GUI_WINDOWS,METHOD,DIGITAL,[ENV-15;DIG-13;DIG-12],Visual metaphors (Desktop/Files) instead of text,Visual Abstraction,Raster Graphics,Mass Adoption of PCs
 DIG-15,LASER_DIODE,COMPONENT,DIGITAL,[ENV-13;SCI-18;DIG-07],Semiconductor emits coherent light,Stimulated Emission,Doping,Fiber Optics/CD/DVD
@@ -48,7 +48,7 @@ DIG-41,GPU,COMPONENT,DIGITAL,[ENV-13;DIG-04;ELEC-19],Parallel processing for gra
 DIG-42,NEURAL_NETWORK,METHOD,DIGITAL,[ENV-15;SCI-14;SCI-05],Software mimicking brain neurons learns from data,Backpropagation,Matrix Multiplication,Pattern Recognition
 DIG-43,DEEP_LEARNING,METHOD,DIGITAL,[ENV-14;DIG-42;DIG-41],Many-layered networks find complex patterns,Gradient Descent,High Compute,Computer Vision/Speech
 DIG-44,TRANSFORMER_ARCH,METHOD,DIGITAL,[ENV-15;DIG-43;DIG-02],Attention mechanism predicts next token contextually,Self-Attention,Matrix Math,LLM/Generative AI
-DIG-45,CNC_MACHINE,MACHINE,DIGITAL,[ENV-08;IND-06;DIG-08],Computer controls cutting tools precisely,G-Code/Automation,Servomotors,Precision Manufacturing
+DIG-45,CNC_MACHINE,MACHINE,DIGITAL,[ENV-08;IND-06;DIG-08;IND-48],Computer controls cutting tools precisely,G-Code/Automation,Servomotors,Precision Manufacturing
 DIG-46,3D_PRINTING,MACHINE,DIGITAL,[ENV-10;DIG-45;MAT-08],Building objects layer by layer,Additive Manufacturing,Extrusion/Sintering,Prototyping/Custom Parts
 DIG-47,MEMS_SENSOR,COMPONENT,DIGITAL,[ENV-13;DIG-04;IND-48],Micro-machines etched on silicon (Accelerometer),Micro-machining,Etching,Screen Rotation/Airbags
 DIG-48,DRONE_QUADCOPTER,MACHINE,DIGITAL,[ENV-10;DIG-47;DIG-31],Stable flight via computer adjustment of 4 props,Feedback Loop/PID Control,Brushless Motors,Aerial Photography/War
@@ -96,3 +96,4 @@ DIG-90,DAO_ORG,SOCIAL_ARTIFACT,DIGITAL,[ENV-15;DIG-52;SOC-20],Organization gover
 DIG-91,ZERO_KNOWLEDGE_PROOF,METHOD,DIGITAL,[ENV-SCI-04;DIG-25;SCI-05],Proving you know a secret without revealing it,Advanced Math,Cryptography,Privacy/Scaling
 DIG-92,DIGITAL_ASSET_TOKEN,SOCIAL_ARTIFACT,DIGITAL,[ENV-14;DIG-51;DIG-25],Making digital data scarce and ownable (NFT/Coins),Digital Scarcity,Ledger Entry,Digital Economy/Metaverse
 DIG-93,DIGITAL_WALLET,TOOL,DIGITAL,[ENV-15;DIG-25;ENV-13],Self-sovereign identity and bank in software,Public Key Infrastructure,Key Management,Login/Payments
+DIG-94,LIDAR_LASER,SENSOR,DIGITAL,[ENV-10;DIG-15;ELEC-13],Measuring distance via light reflection time,Time of Flight,Laser/Sensor,Mapping/Self-Driving Cars
