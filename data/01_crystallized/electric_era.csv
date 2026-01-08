@@ -1,7 +1,7 @@
 ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
 ENV-10,ELEC_LAB,ENVIRONMENT,MODERN,[ENV-02;ELEC-02;ELEC-06],Workbench + Oscilloscope + Soldering,Circuit Assembly,Prototyping,Radio/TV/Electronics
 ENV-11,ASSEMBLY_LINE,ENVIRONMENT,MODERN,[ENV-08;IND-43;SOC-10],Conveyor belt + Specialized stations,Flow Efficiency,Logistics,Mass Production (Ford)
-ENV-12,REFINERY_PLANT,ENVIRONMENT,MODERN,[ENV-07;IND-45;IND-68],Massive distillation columns + Pipes,Chemical Engineering,High Pressure,Plastics/Fuel/Fertilizer
+ENV-12,REFINERY_PLANT,ENVIRONMENT,MODERN,[ENV-SCI-06;IND-45;IND-68;ELEC-23],Massive distillation columns + Pipes,Chemical Engineering,High Pressure,Plastics/Fuel/Fertilizer
 ELEC-07,LIGHTBULB,INVENTION,MODERN,[ENV-10;SCI-08;IND-38],Filament glows in vacuum without burning,Joule Heating/Incandescence,Glassblowing/Vacuum Sealing,Lighting/Night Shift
 ELEC-08,AC_MOTOR,MACHINE,MODERN,[ENV-08;SCI-11;ELEC-06],Rotating magnetic field pulls rotor (Tesla),Electromagnetic Induction,Coiling/Lamination,Industrial Power/Appliances
 ELEC-09,POWER_GRID,INFRASTRUCTURE,MODERN,[ENV-SITE-B;ELEC-08;ELEC-14],High voltage travels far; low voltage enters home,Transformer/Transmission,Wiring/Substations,Universal Energy Access
@@ -18,6 +18,11 @@ ELEC-19,CRT_SCREEN,COMPONENT,MODERN,[ENV-10;ELEC-11;SCI-16],Electron beam paints
 ELEC-20,MAGNETIC_TAPE,MEDIA,MODERN,[ENV-10;MAT-01;ELEC-03],Plastic film coated with iron oxide stores signal,Magnetic Hysteresis,Coating/Spooling,Audio/Video/Data Storage
 ELEC-21,TUNER_CIRCUIT,COMPONENT,MODERN,[ENV-10;ELEC-01;ELEC-03],Capacitor + Inductor filter specific frequency,Resonance,Circuit Design,Radio/TV/Wireless Comms
 ELEC-22,SONAR,MACHINE,MODERN,[ENV-10;ELEC-10;SCI-06],Sound pulses map underwater objects,Acoustics/Echo,Piezoelectricity,Submarine Hunting/Mapping
+ELEC-23,THERMOCOUPLE,SENSOR,MODERN,[ENV-10;SCI-11;MAT-05],Need to measure heat inside engines/furnaces electronically,Seebeck Effect,Welding dissimilar metals,Industrial Automation/Safety
+ELEC-24,STRAIN_GAUGE,SENSOR,MODERN,[ENV-10;ELEC-01;MAT-01],Need to measure stress/weight on structures electronically,Piezoresistivity,Etching foil,Digital Scales/Bridge Safety/Robotics
+ELEC-25,OSCILLOSCOPE,MACHINE,MODERN,[ENV-10;ELEC-11;ELEC-19],Need to see electricity change over time (Waves),Electron Deflection,CRT Screen/Vacuum Tube,Electronics Debugging/Medical ECG
+ELEC-26,GEIGER_COUNTER,SENSOR,MODERN,[ENV-10;SCI-19;ELEC-11],Detecting invisible deadly particles,Ionization of Gas,High Voltage Tube,Nuclear Safety/Mining
+ELEC-28,QUARTZ_CLOCK,COMPONENT,MODERN,[ENV-10;MAT-03;ELEC-25],Crystal vibrates at precise frequency when charged,Piezoelectricity/Resonance,Crystal Cutting,Watches/Computers
 IND-46,ASSEMBLY_LINE_METHOD,METHOD,MODERN,[ENV-11],Moving conveyor brings work to worker,Flow Efficiency,Logistics/Taylorism,Mass Production (Ford)
 IND-47,THERMAL_CRACKING,PROCESS,MODERN,[ENV-12;SCI-07;SCI-10],Heat and pressure break heavy oil molecules into gasoline,Molecular Cracking,High Pressure Vessels,Aviation Fuel/Cheap Gasoline
 IND-48,MICROMETER,TOOL,MODERN,[ENV-08;S-07],Screw thread translates rotation into precise linear measurement,Metrology/Precision,Grinding,Quality Control/Interchangeability
@@ -40,7 +45,7 @@ IND-64,AUTO_COUPLER,MACHINE,MODERN,[ENV-08;IND-19;S-02],Steel knuckles lock auto
 IND-65,DIESEL_ELECTRIC,MACHINE,MODERN,[ENV-11;IND-24;ELEC-08],Diesel engine turns generator -> motors drive wheels,Power Transmission,Hybrid Drive,Modern Locomotives/Ships
 IND-66,ELECTRIC_TRACTION,INFRASTRUCTURE,MODERN,[ENV-SITE-B;ELEC-09;ELEC-08],Trains powered by overhead wires or third rail,External Power,Grid Load,Subways/High-Speed Rail
 IND-67,ROTARY_DRILLING,MACHINE,MODERN,[ENV-SITE-B;IND-05;IND-39],Rotating tricone bit crushes rock; Mud pumps remove debris,Abrasion/Hydrostatics,Hardening/Pumping,Deep Oil/Gas Extraction
-IND-68,PIPELINE,INFRASTRUCTURE,MODERN,[ENV-SITE-B;MAT-04;IND-36],Welded steel tubes transport fluids over continents,Fluid Dynamics,Welding/Pumping,Energy Logistics/Water Supply
+IND-68,PIPELINE,INFRASTRUCTURE,MODERN,[ENV-SITE-B;MAT-04;IND-36;IND-75],Welded steel tubes transport fluids over continents,Fluid Dynamics,Welding/Pumping,Energy Logistics/Water Supply
 IND-69,BLOWOUT_PREVENTER,MACHINE,MODERN,[ENV-08;IND-51;IND-59],Hydraulic rams seal well against extreme pressure,Hydrostatics/Shear Force,Heavy Casting/Sealing,Oil Safety/Deep Sea Drilling
 IND-70,PLYWOOD,MATERIAL,MODERN,[ENV-11;IND-06;PRIM-01],Wood veneer layers glued cross-grain,Composite Material,Rotary Peeling/Pressing,Construction/Aviation/Furniture
 IND-71,CHAINSAW,MACHINE,MODERN,[ENV-08;IND-24;PRIM-56],Engine drives cutting chain around guide bar,Portable Power,Mechanization,Forestry/Logging
@@ -49,8 +54,9 @@ IND-73,BAND_SAW_MILL,MACHINE,MODERN,[ENV-11;IND-19;PRIM-56],Continuous steel loo
 IND-74,INJECTION_MOLDING,MACHINE,MODERN,[ENV-11;IND-51;MAT-08],Screw forces molten plastic into mold under high pressure,Plasticity/Thermal Cycle,Precision Machining,Mass Consumer Goods/Toys
 MAT-01,PLASTIC_BAKELITE,MATERIAL,MODERN,[ENV-12;IND-45;IND-18],Synthetic polymer from oil/coal,Polymerization,Molding,Insulation/Consumer Goods
 MAT-02,ALUMINUM_SMELTING,PROCESS,MODERN,[ENV-12;ELEC-06;SCI-09],Electricity separates metal from ore (Hall-Heroult),Electrolysis,Industrial Arc,Lightweight Structures/Planes
+MAT-03,PIEZO_CRYSTAL,MATERIAL,MODERN,[ENV-10;SCI-11;F-01],Crystals generate charge when squeezed (Quartz),Piezoelectricity,Crystallography,Sonar/Ultrasound/Watches
 MAT-04,ARC_WELDING,PROCESS,MODERN,[ENV-10;ELEC-06;IND-19],Electric arc melts metal edges to fuse them into one piece,Fusion Joining,Electrodes/High Current,Tanks/Ships/Pipelines
-MAT-05,STAINLESS_STEEL,ALLOY,MODERN,[ENV-12;IND-19;SCI-13],Steel + Chromium resists corrosion indefinitely,Passivation,Electric Arc Furnace,Surgery/Food/Chemicals
+MAT-05,STAINLESS_STEEL,ALLOY,MODERN,[ENV-08;IND-19;SCI-13],Steel + Chromium resists corrosion indefinitely,Passivation,Electric Arc Furnace,Surgery/Food/Chemicals
 MAT-06,TITANIUM_REFINING,PROCESS,MODERN,[ENV-12;SCI-09;ELEC-06],Extracting light/strong metal from ore using magnesium/chlorine,Kroll Process,Vacuum Metallurgy,Supersonic Jets/Submarines
 MAT-07,SUPERALLOYS,ALLOY,MODERN,[ENV-12;SCI-13;MAT-06],Nickel-based alloys stay hard at white heat,Crystal Structure Engineering,Vacuum Casting,Jet Turbines/Rocket Nozzles
 MAT-08,POLYETHYLENE,MATERIAL,MODERN,[ENV-12;IND-47;SCI-09],Gas molecules linked into long plastic chains,Polymerization,Chemical Reactor,Packaging/Radar Insulation/Pipes
@@ -89,7 +95,9 @@ SCI-18,QUANTUM_MECHANICS,DISCOVERY,MODERN,[ENV-SCI-04;SCI-16;SCI-09],Energy come
 SCI-19,NUCLEAR_FISSION,DISCOVERY,MODERN,[ENV-SCI-03;SCI-18;SCI-17],Splitting atom releases massive energy,Mass Defect,Neutron Bombardment,Bomb/Power Plant
 SCI-20,HABER_BOSCH,PROCESS,MODERN,[ENV-12;SCI-07;IND-18],Nitrogen from air -> Ammonia (Fertilizer/Explosives),High Pressure Catalysis,Chemical Engineering,Feeding Billions/Total War
 SCI-21,SEISMIC_SURVEY,METHOD,MODERN,[ENV-SITE-B;IND-16;ELEC-10],Sound waves map underground geology,Reflection Seismology,Signal Processing,Resource Exploration
-MAT-03,PIEZO_CRYSTAL,MATERIAL,MODERN,[ENV-10;SCI-11;F-01],Crystals generate charge when squeezed (Quartz),Piezoelectricity,Crystallography,Sonar/Ultrasound/Watches
+SCI-22,ELECTRON_MICROSCOPE,MACHINE,MODERN,[ENV-10;SCI-18;ELEC-19;SCI-08],Light waves are too big to see viruses/atoms,Wave-Particle Duality/Electron Beam,Magnetic Lenses/Vacuum,Virology/Nanotech/Material Science
+SCI-27,MASS_SPECTROMETER,MACHINE,MODERN,[ENV-10;SCI-16;SCI-08;ELEC-03],Weighing individual molecules to identify them,Lorentz Force,Vacuum/Electromagnets,Isotope Separation/Drug Testing
+SCI-28,INTERFEROMETER,MACHINE,MODERN,[ENV-10;SCI-02;SCI-18],Measuring distance by counting light waves,Interference Patterns,Precision Optics/Mirrors,LIGO/Metrology/Chip Lithography
 WAR-03,SUBMARINE,MACHINE,MODERN,[ENV-SITE-B;IND-08;ELEC-02],Ship that travels underwater,Buoyancy Control,Ballast Tanks,Naval Warfare
 WAR-07,MANHATTAN_PROJECT,SOCIAL_ARTIFACT,MODERN,[ENV-SITE-B;SCI-19;WAR-02],Industrial effort to build atomic bomb,Total War/Secrecy,Logistics,Nuclear Age/Teflon
 ECON-03,GLOBAL_TRADE_NET,INFRASTRUCTURE,MODERN,[ENV-SITE-B;IND-08;ELEC-04],Standardized shipping and communication,Comparative Advantage,Logistics,Consumerism
