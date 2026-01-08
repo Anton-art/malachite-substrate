@@ -1,5 +1,5 @@
 ID,Name,Type,Era,Parents,Trigger,Principle,Tech_Make,Tech_Use
-ENV-13,CLEAN_ROOM,ENVIRONMENT,DIGITAL,[ENV-10;IND-31;URB-01;IND-21;SCI-22],Dust destroys microchips; Need absolute purity,Air Filtration/Photochemistry,HEPA Filters/Lithography,Semiconductor Mfg
+ENV-13,SEMICONDUCTOR_FAB,ENVIRONMENT,DIGITAL,[ENV-10;IND-31;URB-01;IND-21;SCI-22],Sterile factory with Lithography Steppers & Etching baths,Air Filtration/Photochemistry,HEPA Filters/Lithography,Semiconductor Mfg
 ENV-14,SERVER_FARM,ENVIRONMENT,DIGITAL,[ENV-10;URB-01;ELEC-09],Factory for computing; Concentrated power & cooling,Heat Dissipation/Density,Rack Mounting,Cloud/AI Training
 ENV-15,DEV_IDE,ENVIRONMENT,DIGITAL,[ENV-14;DIG-12;DIG-11],Virtual environment for writing code,Abstraction/Virtualization,Software Engineering,Building Apps/AI
 ENV-16,BIO_LAB,ENVIRONMENT,DIGITAL,[ENV-13;ENV-SCI-06;SCI-22;DIG-40],Sterile environment with sequencers,Genetic Engineering,Sterility,CRISPR/Vaccines
