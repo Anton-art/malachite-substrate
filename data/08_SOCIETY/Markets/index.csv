@@ -1,0 +1,28 @@
+ID,Name,Description,Level,Parent_Group,Req_Science,Req_Design,Req_Resource,Req_Material,Req_Infrastructure,Req_Process,Req_Artifact,Req_Society
+SOC-00,TRIBE_BAND,Survival in small groups (Dunbar number) | Kinship/Altruism,SPECIFIC,NULL,,,F-00,,S-10,,,
+SOC-01,CHIEFDOM,Hierarchy allows managing more people | Centralized Authority,SPECIFIC,NULL,,,,PRIM-18,,,,SOC-00
+SOC-02,RELIGION_MYTH,Shared stories bind strangers together | Common Belief,SPECIFIC,NULL,,,,,ENV-SCI-01;S-10,,,SOC-00
+SOC-03,BARTER_TRADE,Direct exchange of goods | Coincidence of Wants,SPECIFIC,NULL,,,,,S-09,,,SOC-00
+SOC-04,CITY_STATE,Dense population center with walls | Urbanization,SPECIFIC,NULL,,,,,ENV-SITE-A,,,SOC-01
+SOC-05,WRITTEN_LAW,Rules carved in stone (Hammurabi) | Standardization of Justice,SPECIFIC,NULL,,,,PRIM-21,ENV-SCI-02,,,SOC-04
+SOC-06,SLAVERY_SERFDOM,Forced labor powers early economy | Exploitation,SPECIFIC,NULL,,,,,,,WAR-01,SOC-04
+SOC-07,MONEY_COMMODITY,Gold/Silver/Grain as universal value | Store of Value,SPECIFIC,NULL,,,,PRIM-14;PRIM-59,,,,SOC-03
+SOC-08,IMPERIAL_BUREAUCRACY,Administering vast territory via scribes | Delegation,SPECIFIC,NULL,,,,PRIM-43;PRIM-64,ENV-SCI-02,,,SOC-05
+WAR-01,ORGANIZED_ARMY,Professional soldiers instead of mob | Discipline/Drill,SPECIFIC,NULL,,,,PRIM-16,ENV-04,,,SOC-01
+INST-01,UNIVERSITY,Community of scholars and teachers | Academic Freedom,SPECIFIC,NULL,,,,,ENV-SCI-02,,,SOC-02;SOC-04
+INST-02,BANKING_SYSTEM,Lending money at interest (Medici) | Credit Creation,SPECIFIC,NULL,,,,PRIM-31;PRIM-23,,,,SOC-07
+INST-03,PATENT_COPYRIGHT,Legal monopoly on invention | Intellectual Property,SPECIFIC,NULL,,,,,ENV-09,,,SOC-05;SOC-08
+INST-04,JOINT_STOCK_CORP,Shared ownership limits liability (VOC) | Risk Distribution,SPECIFIC,NULL,,,,PRIM-31,,,,INST-02;SOC-05
+SOC-09,NATION_STATE,Sovereignty defined by borders and language | Nationalism,SPECIFIC,NULL,,,,,ENV-09,,,SOC-08
+SOC-10,PUBLIC_EDUCATION,Standardized schooling for masses | Literacy/Obedience,SPECIFIC,NULL,,,,,ENV-09;IND-26,,,SOC-09
+SOC-11,DEMOCRACY_REPRESENTATIVE,Citizens vote for leaders | Feedback Loop,SPECIFIC,NULL,,,,,ENV-09,,,SOC-09;SOC-05
+SOC-12,FIAT_CURRENCY,Money backed by state trust not gold | Monetary Policy,SPECIFIC,NULL,,,,,ENV-09,,,INST-02;SOC-09
+SOC-13,INSURANCE,Pooling risk against catastrophe | Probability/Actuarial Science,SPECIFIC,NULL,SCI-05,,,,,,,SOC-04
+SOC-14,CONSUMERISM,Identity built on purchasing goods | Demand Generation,SPECIFIC,NULL,,,,,IND-11,,ELEC-12,SOC-12
+INST-05,GLOBAL_STANDARDS,ISO/Metric system agreed globally | Interoperability,SPECIFIC,NULL,SCI-01,,,,,,,SOC-09;ECON-03
+SOC-15,WELFARE_STATE,Safety net for citizens (Pension/Health) | Social Contract,SPECIFIC,NULL,,,,,IND-11,,,SOC-11;SOC-10
+SOC-16,GLOBALIZATION,Interconnected world economy | Comparative Advantage,SPECIFIC,NULL,,,,,,,DIG-19,INST-05;ECON-03
+SOC-17,OPEN_SOURCE_CULTURE,Free sharing of knowledge/code | Gift Economy,SPECIFIC,NULL,,,,,,,DIG-19;DIG-38,INST-01
+SOC-18,GIG_ECONOMY,Labor as a service on demand | Algorithmic Management,SPECIFIC,NULL,,,,,,,DIG-32;DIG-61,SOC-12
+SOC-19,SURVEILLANCE_CAPITALISM,Personal data as raw material | Behavioral Prediction,SPECIFIC,NULL,,,,,,,DIG-40;DIG-39,SOC-14
+SOC-20,DECENTRALIZED_AUTONOMY,Governance by code (DAO) | Consensus/Trustless,SPECIFIC,NULL,,,,,,,DIG-51;DIG-52,SOC-17

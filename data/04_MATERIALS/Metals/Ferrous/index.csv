@@ -1,0 +1,6 @@
+ID,Name,Description,Level,Parent_Group,Req_Science,Req_Design,Req_Resource,Req_Material,Req_Infrastructure,Req_Process,Req_Artifact,Req_Society
+MAT-05,STAINLESS_STEEL,Steel + Chromium resists corrosion indefinitely | Passivation,SPECIFIC,NULL,SCI-13,,,,ENV-08;IND-19,,,
+MAT-07,SUPERALLOYS,Nickel-based alloys stay hard at white heat | Crystal Structure Engineering,SPECIFIC,NULL,SCI-13,,,MAT-06,ENV-12,,,
+PRIM-16,BRONZE,Mixing soft metals (Copper+Tin) makes hard metal | Alloying,SPECIFIC,NULL,,,,PRIM-15,ENV-04,,,
+PRIM-27,STEEL,Iron heated with charcoal becomes flexible | Carbon infusion,SPECIFIC,NULL,,,,PRIM-26,ENV-04,,,
+IND-39,TOOL_STEEL,Tungsten/Chrome added to steel | Alloying,SPECIFIC,NULL,SCI-13,,,,ENV-04;IND-19,,,

@@ -1,0 +1,12 @@
+ID,Name,Description,Level,Parent_Group,Req_Science,Req_Design,Req_Resource,Req_Material,Req_Infrastructure,Req_Process,Req_Artifact,Req_Society
+ELEC-16,SOLDERING,Lead-Tin alloy melts to join wires permanently | Wetting/Conductivity,SPECIFIC,NULL,,,,PRIM-16,ENV-10,,,
+IND-47,THERMAL_CRACKING,Heat and pressure break heavy oil molecules into gasoline | Molecular Cracking,SPECIFIC,NULL,SCI-07;SCI-10,,,,ENV-12,,,
+MAT-02,ALUMINUM_SMELTING,Electricity separates metal from ore (Hall-Heroult) | Electrolysis,SPECIFIC,NULL,SCI-09,,,,ENV-12,,ELEC-06,
+MAT-04,ARC_WELDING,Electric arc melts metal edges to fuse them into one piece | Fusion Joining,SPECIFIC,NULL,,,,,ENV-10;IND-19,,ELEC-06,
+MAT-06,TITANIUM_REFINING,Extracting light/strong metal from ore using magnesium/chlorine | Kroll Process,SPECIFIC,NULL,SCI-09,,,,ENV-12,,ELEC-06,
+SCI-20,HABER_BOSCH,Nitrogen from air -> Ammonia (Fertilizer/Explosives) | High Pressure Catalysis,SPECIFIC,NULL,SCI-07,,,,ENV-12;IND-18,,,
+PRIM-46,LEATHER_TANNING,Tannins soften skin and stop rot | Preservation,SPECIFIC,NULL,,,F-02,,ENV-01,,,
+IND-19,STEEL_BESSEMER,Air blown through iron burns off carbon | Oxidation,SPECIFIC,NULL,SCI-01,,,,ENV-04,,,
+IND-37,GALVANIZATION,Zinc coating protects steel | Electrochemical Protection,SPECIFIC,NULL,,,,,ENV-07,,ELEC-02,
+IND-41,PASTEURIZATION,Heating kills pathogens | Thermal Sterilization,SPECIFIC,NULL,SCI-12,,,,ENV-SCI-06,,,
+IND-45,OIL_REFINING,Crude oil separated by boiling points | Fractional Distillation,SPECIFIC,NULL,SCI-07,,,,ENV-07;IND-03,,,

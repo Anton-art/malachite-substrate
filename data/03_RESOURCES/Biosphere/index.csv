@@ -1,0 +1,11 @@
+ID,Name,Description,Level,Parent_Group,Req_Science,Req_Design,Req_Resource,Req_Material,Req_Infrastructure,Req_Process,Req_Artifact,Req_Society
+S-01,WEDGE,Sharp stone cuts soft material | Separation,SPECIFIC,NULL,,,F-01,,,,,
+S-02,LEVER,Stick moves heavy stone | Torque/Moment,SPECIFIC,NULL,,,F-01,,,,,
+S-03,INCLINED_PLANE,Easier to walk up a hill | Distance/Force Tradeoff,SPECIFIC,NULL,,,F-01,,,,,
+S-04,WHEEL,Log rolls easier than it slides | Rolling Friction,SPECIFIC,NULL,,,F-01,,,,,
+S-05,ROPE,Twisted grass is strong | Tension/Binding,SPECIFIC,NULL,,,F-01,,,,,
+S-06,PULLEY,Rope over branch changes force direction | Direction Change,SPECIFIC,NULL,,,,,S-04;S-05,,,
+S-07,SCREW,Plane wrapped around cylinder | Linear to Rotational,SPECIFIC,NULL,,,,,S-03;S-04,,,
+S-08,FIRE,Lightning strikes tree | Exothermic Reaction,SPECIFIC,NULL,,,F-03;F-01,,,,,
+S-09,GRAIN,Seeds grow where water flows | Photosynthesis,SPECIFIC,NULL,,,F-01;F-02;F-03,,,,,
+S-10,SYMBOL,Moon cycles repeat | Abstraction,SPECIFIC,NULL,,,F-03,,,,,

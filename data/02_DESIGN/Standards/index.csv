@@ -1,0 +1,6 @@
+ID,Name,Description,Level,Parent_Group,Req_Science,Req_Design,Req_Resource,Req_Material,Req_Infrastructure,Req_Process,Req_Artifact,Req_Society
+DIG-20,TCP_IP,Universal language for networks to talk | Handshake Protocol,SPECIFIC,NULL,,,,,ENV-15;S-05,,DIG-19,
+DIG-36,BLUETOOTH,Short-range low-power device connection | Frequency Hopping,SPECIFIC,NULL,,,,,ENV-10,,ELEC-12;DIG-08,
+DIG-74,URI_URL,Unique address for every resource on the network | Global Namespace,SPECIFIC,NULL,,,,,ENV-15;S-10,,DIG-20,
+DIG-77,API_INTERFACE,Standard way for software to talk to software (REST/JSON) | Abstraction/Interoperability,SPECIFIC,NULL,,,,,ENV-15,,DIG-20;DIG-11,
+IND-50,SCREW_THREAD_STD,Universal angle and pitch for fasteners | Standardization,SPECIFIC,NULL,,,,,ENV-08;IND-43;IND-48,,,
