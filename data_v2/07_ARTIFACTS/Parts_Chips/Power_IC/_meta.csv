@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-IC_PWR,Power Management,GROUP,BR-PART_IC,"Regulators, Converters."

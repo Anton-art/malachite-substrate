@@ -1,9 +1,20 @@
-    # Python
-    __pycache__/
-    *.py[cod]
-    *.so
-    .env
-    venv/
-    .vscode/
-    .idea/
-    .DS_Store
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs & Reports
+*.log
+syntropy_report.txt
+
+# Backups & Archives
+*.bak
+_ARCHIVE_v1/ 

@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+BR-PART_MECH,Mechanical Parts,BRANCH,DOM-ART,Simple mechanical components.

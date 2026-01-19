@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+DOM-MAT,Materials,DOMAIN,ROOT,Processed substances with defined properties.

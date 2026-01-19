@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-IND_MED,Medical Devices,GROUP,BR-PROD_IND,"MRI, Ventilators."

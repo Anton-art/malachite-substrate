@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-PHYS_THERM,Thermodynamics,GROUP,BR-PHYS,"Heat, work, and entropy."

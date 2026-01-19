@@ -1,0 +1,2 @@
+ID,Name,Description,Era,Predecessor_ID,Status,Syntropy_Score,Catalytic_Potential,Structural_Pattern,Invention_Reason,Social_Context,Drawbacks,Side_Effects,Impact_Map,Properties,External_Data_Link,Prerequisite_Knowledge,Key_Formula,Discovered_By,Experimental_Proof
+SCI-LAW_PERIODIC,Periodic Law,Properties of elements depend on atomic weight.,ERA-04_INDUSTRIAL,NULL,AXIOM,2000.0,5000.0,ABSTRACT_FORMULA,CURIOSITY,ACADEMIA,,,MAT-ALL:ENABLE:+1000,{},NULL,,Table Structure,Dmitri Mendeleev,

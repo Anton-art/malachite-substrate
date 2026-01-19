@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-GEAR,Gears,GROUP,BR-PART_MECH,"Spur, Helical, Bevel gears."

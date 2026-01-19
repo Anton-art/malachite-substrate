@@ -1,113 +1,140 @@
-# Malachite Substrate 🟢
-### The Causal Ontology of Civilization
-<p align="center">
-  <img src="assets/malachite-structure.png" width="500">
-</p>
+﻿README.md
 
-## [<u>Live Interactive Exploration</u>](https://anton-art.github.io/malachite-substrate/)
-
-Explore the causal of civilization directly in your browser. No installation required
-
-> *Click on nodes to see "Eureka" moments, physical principles, and technological dependencies.*
----
-<p align="center">
-  <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License"></a>
-  <a href="https://github.com/Anton-art/malachite-substrate/actions"><img src="https://github.com/Anton-art/malachite-substrate/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python Version"></a>
-</p>
-
-> *"Current AI models are gas: volatile, expansive, and amnesic. To build true AGI, we need a solid state. We need Malachite."*
-
-**Malachite Substrate** is the **External Causal Memory** for AI Agents. It maps the evolution of humanity not as a list of dates, but as a directed acyclic graph (DAG) of **Observations, Eurekas, and Tools**.
-
-It serves as a "Ground Truth" anchor to prevent hallucinations and enable causal reasoning in Large Language Models.  
 
 ---
 
-## 💎 The Philosophy: The Evolution of Reason
 
-We structure the database into **3 Logic Eras**, reflecting how Intelligence interacts with the Universe:
+# 💎 Project Malachite (v4.0)
 
-1.  **Intuitive Era (The Hand):**
-    *   *Logic:* Observation + Surprise = **Idea** → Tool.
-    *   *Example:* Fire, The Wheel, Lever.
-2.  **Scientific Era (The Eye):**
-    *   *Logic:* Idea + Proof = **Law** (Abstract Tool).
-    *   *Example:* Thermodynamics, Electromagnetism, Germ Theory.
-3.  **Syntropy Era (The Mind):**
-    *   *Logic:* Invention + Social Simulation = **Harmonious Future**.
-    *   *Example:* AI Alignment, Sustainable Energy, DAO.
+
+> **The Engineering Core of the Syntropic Civilization.**
+> *A generative knowledge graph optimized for AGI training and evolutionary simulation.*
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status: Active](https://img.shields.io/badge/Status-Active-green.svg)]()
+[![Alignment: Syntropy Protocol](https://img.shields.io/badge/Alignment-Syntropy_Protocol-blue.svg)](https://github.com/YOUR_ORG/SYNTROPY_PROTOCOL)
+
 
 ---
+
+
+## 🌍 Mission
+
+
+**Malachite** is not just a database of facts. It is a digital model of the **Technosphere**, designed to teach Artificial Intelligence the causal links between:
+*   **Resources** (What we have)
+*   **Science** (What is possible)
+*   **Technology** (How to build)
+*   **Society** (Why we need it)
+
+
+This repository provides the **"Hard Skills"** (Memory & Logic) for the Global Intelligence.
+For the **"Soft Skills"** (Ethics, Goals, & Alignment), please refer to the **[SYNTROPY PROTOCOL](https://github.com/YOUR_ORG/SYNTROPY_PROTOCOL)** repository.
+
+
+---
+
 
 ## 🏗️ Architecture
 
-The repository consists of two parts:
-1.  **The Substrate (`data/`)**: Immutable CSV ledgers of history, physics, and digital evolution.
-2.  **The Engine (`malachite/`)**: Python SDK to traverse the graph, validate causality, and visualize the crystal.
 
-### Data Layers
-*   **FOUNDATIONS:** Earth, Water, Sky (The Environment).
-*   **CRYSTALLIZED:** Verified History (Hard Constraints). Includes *Primitive*, *Scientific*, *Electric*, and *Digital* eras.
-*   **HYPOTHESIS:** Latent space for AI exploration (Future).
-*   **SIMULATION:** "Package Deals" (Tech + Law) waiting for deployment.
+The system is built on the **"Start Flat, Grow Deep"** principle.
 
----
 
-## 🛠️ Quick Start
+### 1. The 8 Fundamental Domains
+The world is mapped into a strict directory structure (`data_v2/`):
+*   **`01_SCIENCE`**: Laws, Axioms, and Effects.
+*   **`02_DESIGN`**: Standards, Code, and Methodologies.
+*   **`03_RESOURCES`**: Raw Matter (Ores, Energy, Biosphere).
+*   **`04_MATERIALS`**: Processed Matter (Alloys, Polymers).
+*   **`05_INFRASTRUCTURE`**: Tools, Factories, Power Plants.
+*   **`06_PROCESSES`**: Technologies (Verbs: Casting, Coding).
+*   **`07_ARTIFACTS`**: Products (The Goal).
+*   **`08_SOCIETY`**: Context, History, and Needs.
 
-### 1. Installation
-Clone the repository and install the dependencies (including the `pyvis` visualization engine).
 
-```bash
-git clone https://github.com/Anton-art/malachite-substrate.git
-cd malachite-substrate
-pip install -r requirements.txt
-```
+### 2. Storage Format
+*   **Dense CSV:** We use optimized CSV tables (1k-5k rows) to maximize **Token Efficiency** for LLM training. No JSONL bloat.
+*   **Generative Core:** Data is not static. It is grown by Python simulators located in `_generators/`.
 
-### 2. Visualize the Crystal 
-Generate an interactive 3D-like graph of civilization in your browser.
-
-```bash
-python tools/visualize.py
-```
-*Output: Opens `malachite_graph.html`. You can zoom, drag nodes, and explore the causal chains from the Stone Age to the AI Age.*
-
-### 3. Validate Integrity (The Sheriff)
-Ensure the causal chain is unbroken (no time loops, no orphan technologies).
-
-```bash
-python tools/validate.py
-```
 
 ---
 
-## 📊 Data Schema
 
-We use a strict CSV schema to ensure machine readability.
+## 🧠 The Syntropy Engine
 
-| Column | Description | Example |
-| :--- | :--- | :--- |
-| **ID** | Unique Identifier | `DIG-42` |
-| **Name** | Human-readable name | `NEURAL_NETWORK` |
-| **Type** | Entity category | `METHOD` |
-| **Era** | Logic Era | `DIGITAL` |
-| **Parents** | Causal dependencies | `[SCI-14;DIG-06;SCI-05]` |
-| **Trigger** | The "Eureka" moment | `Software mimicking brain neurons` |
+
+The repository includes a logic core (`_generators/syntropy_engine.py`) that evaluates every object based on the **Law of Syntropy**:
+
+
+$$ S = \frac{E_{acc} - E_{cost}}{E_{create}} $$
+
+
+*   **Syntropy Score ($S$):** Energy Efficiency. (>1.0 = Good).
+*   **Catalytic Potential ($C$):** Information Leverage.
+*   **Verdict:** The system automatically tags objects as `HERO`, `INVEST`, `BAN`, or `SIMULATE`.
+
 
 ---
 
-## 🤖 Advanced: Neuro-Symbolic Integration
 
-Malachite is designed to be the bridge between **Connectionist AI** (DeepMind/LLMs) and **Symbolic AI** (OpenCog).
-*   **LLMs** use it for context and grounding.
-*   **Symbolic Engines** use it for logical validation.
+## 🚀 Quick Start
 
-*(See `docs/` for integration patterns - coming soon)*
 
-## 🤝 Contribution
+### 1. Initialize Structure
+Create the folder skeleton (The "Shelves").
+```bash
+python init_genesis.py
+```
+*(Warning: This will wipe existing data in `data_v2`)*
 
-We are reconstructing the causal chain of humanity.
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the **Genesis Protocol**.
 
-**License:** CC-BY-4.0 (Open Knowledge for a Post-Information Civilization).
+### 2. Apply Schema
+Add columns and headers to all CSV files.
+```bash
+python update_headers.py
+```
+
+
+### 3. Seed the World (Simulation)
+Launch the factory to generate 5,000+ objects with calculated physics.
+```bash
+python run_all_seeds.py
+```
+
+
+### 4. Analyze Syntropy
+Run the "Judge" to evaluate the energy efficiency of the civilization.
+```bash
+python _generators/analyze_syntropy.py
+```
+
+
+---
+
+
+## 🔗 Integration with Syntropy Protocol
+
+
+This database implements the axioms defined in the **Syntropy Protocol**:
+1.  **The Syntropic Square:** The DB structure mirrors the interaction between Human, AI, Biosphere, and Technosphere.
+2.  **The Simulation Barrier:** In the Digital Era (Era-06+), unknown resources are flagged as `SIMULATE` instead of `RISK`.
+3.  **The Bonfire Paradox:** Projects with negative energy balance are allowed if `Catalytic_Potential` is high.
+
+
+---
+
+
+## 🤝 Contributing
+
+
+1.  **Do not edit `index.csv` manually** if a generator exists. Update the generator logic instead.
+2.  **Respect the Era:** Do not introduce Digital tech in the Primitive Era.
+3.  **Check Syntropy:** If your addition increases Entropy without Catalytic Potential, it will be rejected by the Judge.
+
+
+---
+
+
+*Project Malachite © 2025. Built for the future of Intelligence.*

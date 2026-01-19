@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-IC_MCU,Microcontrollers,GROUP,BR-PART_IC,"CPUs, MCUs."

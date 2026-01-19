@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-EFF_OPT,Optical Effects,GROUP,BR-PHEN,"Interaction of light with matter (Refraction, Diffraction)."

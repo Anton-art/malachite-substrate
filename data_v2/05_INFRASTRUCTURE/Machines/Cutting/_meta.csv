@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-MACH_CUT,Cutting,GROUP,BR-MACH,"Laser, Plasma, Waterjet."

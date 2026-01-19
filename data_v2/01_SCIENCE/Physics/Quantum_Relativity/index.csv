@@ -1,0 +1,2 @@
+ID,Name,Description,Era,Predecessor_ID,Status,Syntropy_Score,Catalytic_Potential,Structural_Pattern,Invention_Reason,Social_Context,Drawbacks,Side_Effects,Impact_Map,Properties,External_Data_Link,Prerequisite_Knowledge,Key_Formula,Discovered_By,Experimental_Proof
+SCI-LAW_E_MC2,Mass-Energy Equivalence,Matter is condensed energy.,ERA-05_ELECTRICAL,NULL,ACTIVE,5000.0,10000.0,ABSTRACT_FORMULA,CURIOSITY,ACADEMIA,,,FAC-NPP:ENABLE:+1000,{},NULL,,E = mc^2,Albert Einstein,

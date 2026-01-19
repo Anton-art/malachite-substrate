@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-CHEM_PHYS,Physical Chemistry,GROUP,BR-CHEM,"Physics of chemical systems (Kinetics, Thermo)."

@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-IC_LOGIC,Logic ICs,GROUP,BR-PART_IC,"Gates, Flip-flops."

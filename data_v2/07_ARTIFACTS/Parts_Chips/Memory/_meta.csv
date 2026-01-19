@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-IC_MEM,Memory,GROUP,BR-PART_IC,"RAM, ROM, Flash."

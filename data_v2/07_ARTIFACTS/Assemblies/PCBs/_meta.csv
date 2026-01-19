@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-ASM_PCB,PCB Modules,GROUP,BR-ASM,Assembled circuit boards.

@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-STR_RES,Residential Buildings,GROUP,BR-STRUCT,"Houses, Apartments."

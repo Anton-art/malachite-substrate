@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-MACH_ADD,Industrial 3D Printers,GROUP,BR-MACH,"FDM, SLA, SLS printers."

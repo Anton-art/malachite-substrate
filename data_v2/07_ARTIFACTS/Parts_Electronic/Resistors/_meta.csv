@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-RES,Resistors,GROUP,BR-PART_ELEC,Fixed and variable resistors.

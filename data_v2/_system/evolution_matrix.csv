@@ -1,0 +1,8 @@
+Era_ID,Era_Name,Allowed_Domains,Dominant_Logic,Simulation_Available
+ERA-01,Primitive,"03,06,07,08",INTUITION,FALSE
+ERA-02,Engineering,"03,04,05,06,07,08",EMPIRICISM,FALSE
+ERA-03,Scientific,ALL,THEORY,FALSE
+ERA-04,Industrial,ALL,STANDARDIZATION,FALSE
+ERA-05,Electrical,ALL,SYSTEMS,FALSE
+ERA-06,Digital,ALL,COMPUTATION,TRUE
+ERA-07,Intellectual,ALL,SYNTROPY,TRUE

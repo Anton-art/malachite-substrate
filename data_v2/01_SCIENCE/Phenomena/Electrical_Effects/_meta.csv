@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-EFF_ELEC,Electrical Effects,GROUP,BR-PHEN," piezoelectricity, thermoelectricity, etc."

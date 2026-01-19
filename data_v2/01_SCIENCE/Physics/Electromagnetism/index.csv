@@ -1,0 +1,2 @@
+ID,Name,Description,Era,Predecessor_ID,Status,Syntropy_Score,Catalytic_Potential,Structural_Pattern,Invention_Reason,Social_Context,Drawbacks,Side_Effects,Impact_Map,Properties,External_Data_Link,Prerequisite_Knowledge,Key_Formula,Discovered_By,Experimental_Proof
+SCI-LAW_OHM,Ohm's Law,Voltage equals current times resistance.,ERA-05_ELECTRICAL,NULL,ACTIVE,500.0,,ABSTRACT_FORMULA,CURIOSITY,ACADEMIA,,,GRID-ALL:ENABLE:+100,{},NULL,,V = IR,Georg Ohm,

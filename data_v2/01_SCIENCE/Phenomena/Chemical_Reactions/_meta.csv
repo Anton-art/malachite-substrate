@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-EFF_CHEM,Named Reactions,GROUP,BR-PHEN,"Specific chemical transformations (Haber-Bosch, etc)."

@@ -1,0 +1,2 @@
+ID,Name,Type,Parent_ID,Description
+GRP-TOOL_CUT,Cutting Tools,GROUP,BR-TOOL,"Drills, Endmills, Inserts."
