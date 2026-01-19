@@ -1,1 +1,4 @@
 ID,Name,Description,Level,Parent_Group,Req_Science,Req_Design,Req_Resource,Req_Material,Req_Infrastructure,Req_Process,Req_Artifact,Req_Society
+SCI-CHEMISTRY,Chemistry,Наука о веществах,SPECIFIC,DOM-CHEM,,,,,,,
+SCI-METALLURGY,Metallurgy,Наука о металлах,SPECIFIC,DOM-CHEM,SCI-CHEMISTRY,,,,,,
+SCI-GEOLOGY,Geology,Наука о Земле,SPECIFIC,DOM-PHYS,,,,,,,
