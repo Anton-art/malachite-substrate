@@ -19,11 +19,8 @@
 
 Malachite includes a physics-based rendering engine that generates an interactive 3D map of the civilization's metabolism. It visualizes the flow of Matter (Orange), Energy (Red), and Knowledge (Blue).
 
-To launch the Holoscope:
-```bash
-python tools/visualize_holoscope.py
-```
-*This will generate `malachite_holoscope.html`. Open it in your browser to explore the Technosphere.*
+### [🔴 LAUNCH LIVE HOLOSCOPE](https://anton-art.github.io/malachite-substrate/malachite_holoscope.html)
+*(Click to open interactive graph in browser)*
 
 ---
 
