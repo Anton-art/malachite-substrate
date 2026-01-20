@@ -57,7 +57,7 @@ def generate_grade(poly, index):
         "Properties": f"{{'MFI': '{mfi}', 'Density': '{poly['density']} g/cm3', 'Tm': '{poly['tm']} C', 'Recyclable': '{poly['recycle']*100}%'}}",
         "Chemical_Formula": "C-H-O-N Chain",
         "Req_Resource": "RES-FUEL_OIL_BRENT;RES-FUEL_GAS_NGL",
-        "Req_Process": "PROC-SYNTH_POLYMERIZATION",
+        "Req_Process": "PROC-SYN_POLYMERIZATION_STANDARD",
         "Invention_Reason": "SOC-NEED_LIGHTWEIGHT",
         "Social_Context": "MKT-CONSUMER_GOODS",
         "Drawbacks": "Microplastics; UV Degradation",

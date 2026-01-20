@@ -108,7 +108,7 @@ def generate_row(grade, cond, mfg, index):
         "External_Data_Link": "NULL",
         "Chemical_Formula": f"Fe, C:{grade['c']}%, Mn:0.6%",
         "Req_Resource": "RES-ORE_IRON_HEMATITE;RES-COAL_COKE",
-        "Req_Process": "PROC-SMELTING_BF"
+        "Req_Process": "PROC-MET_SMELTING_BF_STANDARD"
     }
 
 

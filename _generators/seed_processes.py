@@ -2,23 +2,22 @@
 import csv
 import math
 
-
 # =================================================================================
 # НАСТРОЙКИ И ПУТИ
 # =================================================================================
 
-
 BASE_DIR = os.path.join("data_v2", "06_PROCESSES")
 
-
-# Пути к подпапкам (согласно taxonomy_config.py)
+# Пути к подпапкам
 PATHS = {
     "MACHINING":    os.path.join(BASE_DIR, "Manufacturing", "Material_Removal", "index.csv"),
+    "DEFORMATION":  os.path.join(BASE_DIR, "Manufacturing", "Deformation", "index.csv"),
     "CASTING":      os.path.join(BASE_DIR, "Manufacturing", "Primary_Shaping", "index.csv"),
     "JOINING":      os.path.join(BASE_DIR, "Manufacturing", "Joining", "index.csv"),
     "ADDITIVE":     os.path.join(BASE_DIR, "Manufacturing", "Additive", "index.csv"),
     "TREATMENT":    os.path.join(BASE_DIR, "Manufacturing", "Treatment", "index.csv"),
     "SYNTHESIS":    os.path.join(BASE_DIR, "Synthesis", "Chemical", "index.csv"),
+    "METALLURGY":   os.path.join(BASE_DIR, "Synthesis", "Metallurgy", "index.csv"),
     "LOGISTICS":    os.path.join(BASE_DIR, "Logistics", "Transport", "index.csv"),
     "EXTRACTION":   os.path.join(BASE_DIR, "Extraction", "Mining", "index.csv"),
     "GENERATION":   os.path.join(BASE_DIR, "Energy", "Generation", "index.csv"),
@@ -26,29 +25,36 @@ PATHS = {
     "COMPUTATION":  os.path.join(BASE_DIR, "Information", "Computing", "index.csv")
 }
 
-
-# Полная схема заголовков (v4.1)
 HEADERS = [
     "ID", "Name", "Description", 
     "Era", "Predecessor_ID", "Status", 
     "Syntropy_Score", "Catalytic_Potential", "Structural_Pattern",
     "Invention_Reason", "Social_Context", 
     "Drawbacks", "Side_Effects", "Impact_Map",
-    "Scarcity_Score", "Properties", "External_Data_Link", # <--- Scarcity добавлено сюда
+    "Scarcity_Score", "Properties", "External_Data_Link",
     "Input_State", "Output_State", "Physics_Law", "Energy_Type", "Energy_Cost_Estimate", "Req_Infrastructure"
 ]
 
-
 # =================================================================================
-# БАЗА ЗНАНИЙ ТЕХНОЛОГА (ШАБЛОНЫ)
+# БАЗА ЗНАНИЙ ТЕХНОЛОГА
 # =================================================================================
-
 
 PROCESS_TEMPLATES = {
     "MACHINING": [
-        {"code": "TURN", "name": "Turning", "prec": 0.05, "waste": 0.4, "nrg": 2.0, "desc": "Lathe operation (Rotational)."},
-        {"code": "MILL", "name": "Milling", "prec": 0.02, "waste": 0.5, "nrg": 3.0, "desc": "CNC milling (Prismatic)."},
+        {"code": "TURN", "name": "Turning", "prec": 0.05, "waste": 0.4, "nrg": 2.0, "desc": "Lathe operation."},
+        {"code": "MILL", "name": "Milling", "prec": 0.02, "waste": 0.5, "nrg": 3.0, "desc": "CNC milling."},
         {"code": "GRIND", "name": "Grinding", "prec": 0.005, "waste": 0.1, "nrg": 5.0, "desc": "Abrasive finishing."},
+        {"code": "THREAD_ROLLING", "name": "Thread Rolling", "prec": 0.01, "waste": 0.0, "nrg": 1.0, "desc": "Cold forming of threads."},
+    ],
+    "DEFORMATION": [
+        {"code": "STAMPING", "name": "Stamping", "prec": 0.1, "waste": 0.1, "nrg": 2.0, "desc": "Sheet metal punching."},
+        {"code": "FORGING", "name": "Forging", "prec": 0.5, "waste": 0.0, "nrg": 4.0, "desc": "Hot metal shaping."},
+        {"code": "ROLLING", "name": "Rolling", "prec": 1.0, "waste": 0.0, "nrg": 3.0, "desc": "Metal flattening."},
+    ],
+    "METALLURGY": [
+        {"code": "SMELTING_BF", "name": "Blast Furnace Smelting", "prec": 10.0, "waste": 0.05, "nrg": 50.0, "desc": "Reduction of iron ore."},
+        {"code": "REFINING_BOF", "name": "Basic Oxygen Refining", "prec": 1.0, "waste": 0.02, "nrg": 20.0, "desc": "Converting iron to steel."},
+        {"code": "RECYCLING", "name": "EAF Recycling", "prec": 1.0, "waste": 0.02, "nrg": 30.0, "desc": "Melting scrap."},
     ],
     "CASTING": [
         {"code": "SAND", "name": "Sand Casting", "prec": 1.0, "waste": 0.2, "nrg": 4.0, "desc": "Molten metal into sand mold."},
@@ -69,6 +75,7 @@ PROCESS_TEMPLATES = {
     "SYNTHESIS": [
         {"code": "POLYMERIZATION", "name": "Polymerization", "prec": 0.0, "waste": 0.05, "nrg": 3.0, "desc": "Monomer linking."},
         {"code": "DISTILLATION", "name": "Distillation", "prec": 0.0, "waste": 0.1, "nrg": 4.0, "desc": "Fractional separation."},
+        {"code": "REFINING", "name": "Oil Refining", "prec": 0.0, "waste": 0.1, "nrg": 5.0, "desc": "Crude oil separation."},
     ],
     "LOGISTICS": [
         {"code": "SHIPPING", "name": "Sea Freight", "prec": 0.0, "waste": 0.0, "nrg": 0.5, "desc": "Global container transport."},
@@ -93,97 +100,72 @@ PROCESS_TEMPLATES = {
     ]
 }
 
-
 # =================================================================================
 # ЛОГИКА СИМУЛЯЦИИ
 # =================================================================================
 
-
 def calculate_syntropy(category, precision_mm, waste_ratio, energy_cost):
-    """
-    Рассчитывает коэффициент Синтропии (Эффективности).
-    """
-    # 1. Генерация энергии: Синтропия = Выработка / (1 + Отходы)
     if category == "GENERATION":
-        output = abs(energy_cost) # energy_cost здесь отрицательный
+        output = abs(energy_cost)
         return round(output / (1 + waste_ratio * 10), 2)
-
-
-    # 2. Вычисления: Синтропия = Катализ / Энергия
     if category == "COMPUTATION":
         return round(100.0 / max(energy_cost, 0.1), 2)
-
-
-    # 3. Производство: (Точность * Эффективность Материала) / Энергия
-    if precision_mm <= 0.0: 
-        precision_score = 5.0 # Для процессов без размеров (нагрев, логистика)
-    else: 
-        precision_score = 1.0 / max(precision_mm, 0.001)
+    
+    if precision_mm <= 0.0: precision_score = 5.0
+    else: precision_score = 1.0 / max(precision_mm, 0.001)
     
     material_efficiency = 1.0 - waste_ratio
-    
-    # Формула: Log(Точность) поощряет высокую точность, но не линейно
     score = (math.log(max(precision_score, 1.1)) * 10 * material_efficiency) / max(energy_cost, 0.1)
-    
-    # Штраф за разрушение ландшафта
     if category == "EXTRACTION": score -= 5.0
-    
     return round(score, 2)
-
 
 def generate_rows(category):
     rows = []
     templates = PROCESS_TEMPLATES.get(category, [])
     
     for tmpl in templates:
-        # Вариации качества (только для мехобработки и аддитивки)
-        if category in ["MACHINING", "ADDITIVE"]:
+        # Вариации качества
+        if category in ["MACHINING", "ADDITIVE", "DEFORMATION", "METALLURGY"]:
             variants = [
                 {"type": "Rough", "prec_mod": 5.0, "nrg_mod": 0.5, "waste_mod": 1.2},
-                {"type": "Precision", "prec_mod": 1.0, "nrg_mod": 1.0, "waste_mod": 1.0},
-                {"type": "Ultra", "prec_mod": 0.2, "nrg_mod": 3.0, "waste_mod": 0.8}
+                {"type": "Standard", "prec_mod": 1.0, "nrg_mod": 1.0, "waste_mod": 1.0},
+                {"type": "Precision", "prec_mod": 0.2, "nrg_mod": 3.0, "waste_mod": 0.8}
             ]
         else:
             variants = [{"type": "Standard", "prec_mod": 1, "nrg_mod": 1, "waste_mod": 1}]
-
 
         for var in variants:
             real_prec = tmpl['prec'] * var['prec_mod']
             real_nrg = tmpl['nrg'] * var['nrg_mod']
             real_waste = min(tmpl['waste'] * var['waste_mod'], 0.99)
-            
             syn = calculate_syntropy(category, real_prec, real_waste, real_nrg)
             
-            # Каталитический потенциал (Вклад в будущее)
             cat = 10.0
-            if category == "COMPUTATION": cat = 1000.0 # ИИ создает будущее
-            if category == "GENERATION": cat = 100.0   # Энергия питает всё
-            if category == "RECYCLING": cat = 50.0     # Замыкание цикла
-            if category == "ADDITIVE": cat = 30.0      # Свобода формы
+            if category == "COMPUTATION": cat = 1000.0
+            if category == "GENERATION": cat = 100.0
+            if category == "METALLURGY": cat = 50.0
 
-
-            # Определение Эры
             era = "ERA-04_INDUSTRIAL"
             if category == "COMPUTATION": era = "ERA-06_DIGITAL"
             if category == "ADDITIVE": era = "ERA-05_ELECTRICAL"
-            if category == "GENERATION" and tmpl['code'] == "FISSION": era = "ERA-05_ELECTRICAL"
 
-
+            # --- ИСПРАВЛЕНИЕ ПРЕФИКСА ---
+            # По умолчанию берем 3 буквы (MET, DEF)
+            prefix = category[:3]
+            # Но для MACHINING принудительно ставим MACH (4 буквы)
+            if category == "MACHINING": prefix = "MACH"
+            
             row = {
-                "ID": f"PROC-{category[:3]}_{tmpl['code']}_{var['type'].upper()}",
+                "ID": f"PROC-{prefix}_{tmpl['code']}_{var['type'].upper()}",
                 "Name": f"{tmpl['name']} ({var['type']})",
                 "Description": f"{tmpl['desc']} Waste: {int(real_waste*100)}%.",
                 "Era": era,
                 "Predecessor_ID": "PROC-HAND_CRAFT",
                 "Status": "ACTIVE",
-                
                 "Syntropy_Score": syn,
                 "Catalytic_Potential": cat,
                 "Structural_Pattern": category,
-                
-                # ВАЖНО: Scarcity = 0.0, так как процессы — это информация (неконкурентный ресурс)
                 "Scarcity_Score": 0.0,
-                
                 "Properties": f"{{'Precision': '{real_prec} mm', 'Waste': '{int(real_waste*100)}%', 'Energy': '{real_nrg} units'}}",
                 "Impact_Map": "SOC-PROGRESS:ENABLE:+10",
                 "Invention_Reason": "SOC-NEED_EFFICIENCY",
@@ -191,7 +173,6 @@ def generate_rows(category):
                 "Drawbacks": "Pollution" if real_waste > 0.5 else "None",
                 "Side_Effects": "None",
                 "External_Data_Link": "NULL",
-                
                 "Input_State": "VARIES",
                 "Output_State": "VARIES",
                 "Physics_Law": "SCI-LAW_THERMO_2",
@@ -200,30 +181,19 @@ def generate_rows(category):
                 "Req_Infrastructure": "FAC-GENERIC"
             }
             rows.append(row)
-            
     return rows
 
-
 def main():
-    print("⚙️ Генерация Полного Цикла Процессов (v7.0 - Scarcity Fix)...")
-    
+    print("⚙️ Генерация Полного Цикла Процессов (v9.0 - MACH Prefix Fix)...")
     for category, path in PATHS.items():
-        # Создаем папку, если её нет
-        if not os.path.exists(os.path.dirname(path)):
-            os.makedirs(os.path.dirname(path))
-            
+        if not os.path.exists(os.path.dirname(path)): os.makedirs(os.path.dirname(path))
         data = generate_rows(category)
-        
         with open(path, 'w', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=HEADERS, extrasaction='ignore')
             writer.writeheader()
             writer.writerows(data)
-        
         print(f"   - {category}: {len(data)} процессов.")
-
-
-    print("✅ Процессы сгенерированы (Scarcity_Score = 0.0 applied).")
-
+    print("✅ Процессы сгенерированы.")
 
 if __name__ == "__main__":
     main()

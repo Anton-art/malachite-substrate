@@ -5,12 +5,15 @@ import datetime
 
 
 SCRIPTS = [
+    "_generators/seed_foundations.py",
     "_generators/seed_science_laws.py",
     "_generators/seed_ferrous_extended.py",
     "_generators/seed_energy.py",
+    "_generators/seed_infrastructure.py",
     "_generators/seed_materials_massive.py",
     "_generators/seed_polymers.py",
     "_generators/seed_processes.py",
+    "_generators/seed_logistics.py",
     "_generators/seed_components.py",
 ]
 
