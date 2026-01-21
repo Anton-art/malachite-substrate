@@ -1,14 +1,20 @@
 ID,Name,Description,Era,Predecessor_ID,Status,Syntropy_Score,Catalytic_Potential,Structural_Pattern,Invention_Reason,Social_Context,Impact_Map,Properties,External_Data_Link
-RES-ORE_IRON_HEMATITE,Iron Ore (Generic Hematite),Standard trade grade iron ore.,ERA-02_ENGINEERING,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-ORE_COPPER_SULFIDE,Copper Ore (Chalcopyrite),Source of copper and bronze.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-COAL_COKE,Coking Coal,Fuel for blast furnaces.,ERA-04_INDUSTRIAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-FUEL_OIL_BRENT,Crude Oil (Benchmark),Global oil price benchmark.,ERA-05_ELECTRICAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-FUEL_GAS_NGL,Natural Gas Liquids,Feedstock for plastics.,ERA-05_ELECTRICAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-BIO_ANCIENT_FOREST,Ancient Biomass,Source of fossil fuels.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-MAT-RUBBER_NATURAL,Natural Rubber,Harvested latex.,ERA-04_INDUSTRIAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-FIBER_COTTON,Raw Cotton,Basis of early industrialization.,ERA-02_ENGINEERING,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-MIN_LIMESTONE,Limestone,Flux for steel and base for cement.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-COAL_BITUMINOUS,Bituminous Coal,Thermal coal for power plants.,ERA-04_INDUSTRIAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-FUEL_GAS_METHANE,Methane,Natural gas fuel.,ERA-05_ELECTRICAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-RES-FUEL_URANIUM,Uranium-235,Nuclear fuel.,ERA-05_ELECTRICAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-ENV-SUNLIGHT,Solar Irradiance,Renewable energy source.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
+RES-ORE_IRON_HEMATITE,Iron Ore (Generic),Standard trade grade iron ore.,ERA-02_ENGINEERING,,,,,,,,,,
+RES-ORE_COPPER_SULFIDE,Copper Ore,Source of copper.,ERA-01_PRIMITIVE,,,,,,,,,,
+RES-COAL_COKE,Coking Coal,Fuel for blast furnaces.,ERA-04_INDUSTRIAL,,,,,,,,,,
+RES-FUEL_OIL_BRENT,Crude Oil (Benchmark),Global oil price benchmark.,ERA-05_ELECTRICAL,,,,,,,,,,
+RES-FUEL_GAS_NGL,Natural Gas Liquids,Feedstock for plastics.,ERA-05_ELECTRICAL,,,,,,,,,,
+RES-BIO_ANCIENT_FOREST,Ancient Biomass,Source of fossil fuels.,ERA-01_PRIMITIVE,,,,,,,,,,
+MAT-RUBBER_NATURAL,Natural Rubber,Harvested latex.,ERA-04_INDUSTRIAL,,,,,,,,,,
+RES-FIBER_COTTON,Raw Cotton,Textile basis.,ERA-02_ENGINEERING,,,,,,,,,,
+RES-MIN_LIMESTONE,Limestone,Flux and cement base.,ERA-01_PRIMITIVE,,,,,,,,,,
+RES-MIN_SILICA,Silica Sand,Glass and silicon base.,ERA-01_PRIMITIVE,,,,,,,,,,
+RES-MIN_BAUXITE,Bauxite,Aluminum ore.,ERA-02_ENGINEERING,,,,,,,,,,
+RES-FUEL_URANIUM,Uranium-235,Nuclear fuel.,ERA-05_ELECTRICAL,,,,,,,,,,
+ENV-SUNLIGHT,Solar Irradiance,Renewable energy source.,ERA-01_PRIMITIVE,,,,,,,,,,
+MAT-AL_6061_T6,Aluminum 6061-T6,Structural aluminum alloy.,ERA-05_ELECTRICAL,,,,,,,,,,
+MAT-RUBBER_SYNTHETIC,Synthetic Rubber,Petrochemical elastomer.,ERA-04_INDUSTRIAL,,,,,,,,,,
+PART-TRANSISTOR_MOSFET,Discrete MOSFET,Basic transistor.,ERA-05_ELECTRICAL,,,,,,,,,,
+MAT-CER_CLAY_BRICK,Clay Brick,Fired clay.,ERA-01_PRIMITIVE,,,,,,,,,,
+MAT-CER_SILICON_CARBIDE,Silicon Carbide,Hard ceramic.,ERA-06_DIGITAL,,,,,,,,,,
+MAT-STL_52100_VAC_ARC,Bearing Steel 52100,High hardness steel.,ERA-04_INDUSTRIAL,,,,,,,,,,

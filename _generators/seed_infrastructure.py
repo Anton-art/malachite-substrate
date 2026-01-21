@@ -160,6 +160,7 @@ def generate_heavy():
         {"code": "EAF", "name": "Electric Arc Furnace", "cap": 2000, "proc": "PROC-MET_RECYCLING_STANDARD"},
         {"code": "ROLLING_MILL", "name": "Rolling Mill", "cap": 3000, "proc": "PROC-DEF_ROLLING_STANDARD"},
         {"code": "REFINERY", "name": "Oil Refinery", "cap": 10000, "proc": "PROC-SYN_REFINING_STANDARD"},
+        {"code": "FAB_CLEANROOM", "name": "Semicon Cleanroom", "cap": 1000, "proc": "PROC-MIC_LITHOGRAPHY_STANDARD"},
     ]
     rows = []
     for h in base_heavy:

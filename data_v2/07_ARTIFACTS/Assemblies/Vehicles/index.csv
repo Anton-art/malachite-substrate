@@ -1,0 +1,2 @@
+ID,Name,Description,Era,Predecessor_ID,Status,Syntropy_Score,Catalytic_Potential,Structural_Pattern,Properties,Req_Material,Req_Process,Impact_Map,Invention_Reason,Social_Context,Bill_of_Materials,Potential_Realization_Rate
+PROD-VEH_TRUCK_HEAVY,Heavy Duty Truck,Logistics transport vehicle.,ERA-05_ELECTRICAL,NULL,ACTIVE,100.0,1000.0,TRANSPORT_SYSTEM,{},NULL,PROC-ASS_HEAVY_STANDARD,SOC-STANDARD_OF_LIVING:RAISE:+10,SOC-NEED_COMPLEXITY,MKT-GLOBAL,ASSY-UNIT_ICE_8CYL:1;ASSY-UNIT_CHASSIS_STEEL:1;PART-WHEEL_TRUCK:6,0.95

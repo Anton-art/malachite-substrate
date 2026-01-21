@@ -2,23 +2,20 @@
 import csv
 import math
 
-# =================================================================================
-# НАСТРОЙКИ И ПУТИ
-# =================================================================================
-
 BASE_DIR = os.path.join("data_v2", "06_PROCESSES")
 
-# Пути к подпапкам
 PATHS = {
     "MACHINING":    os.path.join(BASE_DIR, "Manufacturing", "Material_Removal", "index.csv"),
     "DEFORMATION":  os.path.join(BASE_DIR, "Manufacturing", "Deformation", "index.csv"),
     "CASTING":      os.path.join(BASE_DIR, "Manufacturing", "Primary_Shaping", "index.csv"),
+    "MOLDING":      os.path.join(BASE_DIR, "Manufacturing", "Molding", "index.csv"),
+    "MICROFABRICATION": os.path.join(BASE_DIR, "Manufacturing", "Microfabrication", "index.csv"),
     "JOINING":      os.path.join(BASE_DIR, "Manufacturing", "Joining", "index.csv"),
+    "ASSEMBLY":     os.path.join(BASE_DIR, "Manufacturing", "Assembly", "index.csv"),
     "ADDITIVE":     os.path.join(BASE_DIR, "Manufacturing", "Additive", "index.csv"),
     "TREATMENT":    os.path.join(BASE_DIR, "Manufacturing", "Treatment", "index.csv"),
     "SYNTHESIS":    os.path.join(BASE_DIR, "Synthesis", "Chemical", "index.csv"),
     "METALLURGY":   os.path.join(BASE_DIR, "Synthesis", "Metallurgy", "index.csv"),
-    "LOGISTICS":    os.path.join(BASE_DIR, "Logistics", "Transport", "index.csv"),
     "EXTRACTION":   os.path.join(BASE_DIR, "Extraction", "Mining", "index.csv"),
     "GENERATION":   os.path.join(BASE_DIR, "Energy", "Generation", "index.csv"),
     "RECYCLING":    os.path.join(BASE_DIR, "Recycling", "Waste_Mgmt", "index.csv"),
@@ -26,18 +23,12 @@ PATHS = {
 }
 
 HEADERS = [
-    "ID", "Name", "Description", 
-    "Era", "Predecessor_ID", "Status", 
+    "ID", "Name", "Description", "Era", "Predecessor_ID", "Status", 
     "Syntropy_Score", "Catalytic_Potential", "Structural_Pattern",
-    "Invention_Reason", "Social_Context", 
-    "Drawbacks", "Side_Effects", "Impact_Map",
+    "Invention_Reason", "Social_Context", "Drawbacks", "Side_Effects", "Impact_Map",
     "Scarcity_Score", "Properties", "External_Data_Link",
     "Input_State", "Output_State", "Physics_Law", "Energy_Type", "Energy_Cost_Estimate", "Req_Infrastructure"
 ]
-
-# =================================================================================
-# БАЗА ЗНАНИЙ ТЕХНОЛОГА
-# =================================================================================
 
 PROCESS_TEMPLATES = {
     "MACHINING": [
@@ -45,11 +36,13 @@ PROCESS_TEMPLATES = {
         {"code": "MILL", "name": "Milling", "prec": 0.02, "waste": 0.5, "nrg": 3.0, "desc": "CNC milling."},
         {"code": "GRIND", "name": "Grinding", "prec": 0.005, "waste": 0.1, "nrg": 5.0, "desc": "Abrasive finishing."},
         {"code": "THREAD_ROLLING", "name": "Thread Rolling", "prec": 0.01, "waste": 0.0, "nrg": 1.0, "desc": "Cold forming of threads."},
+        {"code": "CUTTING", "name": "Laser/Plasma Cutting", "prec": 0.1, "waste": 0.1, "nrg": 3.0, "desc": "Sheet cutting."},
     ],
     "DEFORMATION": [
         {"code": "STAMPING", "name": "Stamping", "prec": 0.1, "waste": 0.1, "nrg": 2.0, "desc": "Sheet metal punching."},
         {"code": "FORGING", "name": "Forging", "prec": 0.5, "waste": 0.0, "nrg": 4.0, "desc": "Hot metal shaping."},
         {"code": "ROLLING", "name": "Rolling", "prec": 1.0, "waste": 0.0, "nrg": 3.0, "desc": "Metal flattening."},
+        {"code": "EXTRUSION_AL", "name": "Alu Extrusion", "prec": 0.1, "waste": 0.0, "nrg": 3.0, "desc": "Profile creation."},
     ],
     "METALLURGY": [
         {"code": "SMELTING_BF", "name": "Blast Furnace Smelting", "prec": 10.0, "waste": 0.05, "nrg": 50.0, "desc": "Reduction of iron ore."},
@@ -60,9 +53,25 @@ PROCESS_TEMPLATES = {
         {"code": "SAND", "name": "Sand Casting", "prec": 1.0, "waste": 0.2, "nrg": 4.0, "desc": "Molten metal into sand mold."},
         {"code": "DIE", "name": "Die Casting", "prec": 0.1, "waste": 0.1, "nrg": 3.5, "desc": "High pressure injection."},
     ],
+    "MOLDING": [
+        {"code": "INJECTION", "name": "Injection Molding", "prec": 0.05, "waste": 0.01, "nrg": 2.0, "desc": "Plastic into mold."},
+        {"code": "COMPOSITE_LAYUP", "name": "Composite Layup", "prec": 1.0, "waste": 0.1, "nrg": 2.0, "desc": "Layering fibers and resin."},
+    ],
+    "MICROFABRICATION": [
+        {"code": "LITHOGRAPHY", "name": "Photolithography", "prec": 0.00001, "waste": 0.1, "nrg": 50.0, "desc": "UV patterning on silicon."},
+        {"code": "DOPING", "name": "Ion Implantation", "prec": 0.00001, "waste": 0.0, "nrg": 20.0, "desc": "Modifying conductivity."},
+        {"code": "ETCHING", "name": "Plasma Etching", "prec": 0.00001, "waste": 0.2, "nrg": 30.0, "desc": "Removing material."},
+    ],
     "JOINING": [
         {"code": "WELD_ARC", "name": "Arc Welding", "prec": 1.0, "waste": 0.05, "nrg": 2.5, "desc": "Fusion via electric arc."},
+        {"code": "WELD_SPOT", "name": "Spot Welding", "prec": 1.0, "waste": 0.0, "nrg": 1.0, "desc": "Sheet metal joining."},
         {"code": "BOLT", "name": "Bolting", "prec": 0.1, "waste": 0.0, "nrg": 0.1, "desc": "Mechanical assembly."},
+    ],
+    "ASSEMBLY": [
+        {"code": "MANUAL", "name": "Manual Assembly", "prec": 1.0, "waste": 0.0, "nrg": 0.5, "desc": "Hand tools."},
+        {"code": "LINE", "name": "Assembly Line", "prec": 0.5, "waste": 0.01, "nrg": 2.0, "desc": "Conveyor belt."},
+        {"code": "PRECISION", "name": "Precision Assembly", "prec": 0.01, "waste": 0.0, "nrg": 3.0, "desc": "Cleanroom assembly."},
+        {"code": "HEAVY", "name": "Heavy Assembly", "prec": 2.0, "waste": 0.0, "nrg": 5.0, "desc": "Crane assisted."},
     ],
     "ADDITIVE": [
         {"code": "FDM", "name": "FDM Printing", "prec": 0.2, "waste": 0.01, "nrg": 1.5, "desc": "Plastic extrusion layering."},
@@ -71,15 +80,13 @@ PROCESS_TEMPLATES = {
     "TREATMENT": [
         {"code": "QUENCH", "name": "Quenching", "prec": 0.0, "waste": 0.0, "nrg": 3.0, "desc": "Rapid cooling for hardening."},
         {"code": "ANNEAL", "name": "Annealing", "prec": 0.0, "waste": 0.0, "nrg": 2.0, "desc": "Slow cooling for softening."},
+        {"code": "SINTERING", "name": "Sintering", "prec": 0.05, "waste": 0.0, "nrg": 5.0, "desc": "Thermal fusion of powder."},
     ],
     "SYNTHESIS": [
         {"code": "POLYMERIZATION", "name": "Polymerization", "prec": 0.0, "waste": 0.05, "nrg": 3.0, "desc": "Monomer linking."},
         {"code": "DISTILLATION", "name": "Distillation", "prec": 0.0, "waste": 0.1, "nrg": 4.0, "desc": "Fractional separation."},
         {"code": "REFINING", "name": "Oil Refining", "prec": 0.0, "waste": 0.1, "nrg": 5.0, "desc": "Crude oil separation."},
-    ],
-    "LOGISTICS": [
-        {"code": "SHIPPING", "name": "Sea Freight", "prec": 0.0, "waste": 0.0, "nrg": 0.5, "desc": "Global container transport."},
-        {"code": "TRUCKING", "name": "Road Freight", "prec": 0.0, "waste": 0.0, "nrg": 2.0, "desc": "Last mile delivery."},
+        {"code": "CRYSTAL_GROWTH", "name": "Crystal Growth", "prec": 0.0001, "waste": 0.3, "nrg": 10.0, "desc": "Czochralski process."},
     ],
     "EXTRACTION": [
         {"code": "MINING_OPEN", "name": "Open Pit Mining", "prec": 0.0, "waste": 0.9, "nrg": 2.0, "desc": "Surface excavation."},
@@ -99,10 +106,6 @@ PROCESS_TEMPLATES = {
         {"code": "SIMULATION", "name": "Physics Simulation", "prec": 0.0, "waste": 0.0, "nrg": 5.0, "desc": "Virtual testing."},
     ]
 }
-
-# =================================================================================
-# ЛОГИКА СИМУЛЯЦИИ
-# =================================================================================
 
 def calculate_syntropy(category, precision_mm, waste_ratio, energy_cost):
     if category == "GENERATION":
@@ -124,8 +127,7 @@ def generate_rows(category):
     templates = PROCESS_TEMPLATES.get(category, [])
     
     for tmpl in templates:
-        # Вариации качества
-        if category in ["MACHINING", "ADDITIVE", "DEFORMATION", "METALLURGY"]:
+        if category in ["MACHINING", "ADDITIVE", "DEFORMATION", "METALLURGY", "MOLDING", "ASSEMBLY", "MICROFABRICATION"]:
             variants = [
                 {"type": "Rough", "prec_mod": 5.0, "nrg_mod": 0.5, "waste_mod": 1.2},
                 {"type": "Standard", "prec_mod": 1.0, "nrg_mod": 1.0, "waste_mod": 1.0},
@@ -144,16 +146,22 @@ def generate_rows(category):
             if category == "COMPUTATION": cat = 1000.0
             if category == "GENERATION": cat = 100.0
             if category == "METALLURGY": cat = 50.0
+            if category == "ASSEMBLY": cat = 20.0
+            if category == "MICROFABRICATION": cat = 500.0
 
             era = "ERA-04_INDUSTRIAL"
             if category == "COMPUTATION": era = "ERA-06_DIGITAL"
             if category == "ADDITIVE": era = "ERA-05_ELECTRICAL"
+            if category == "ASSEMBLY" and tmpl['code'] == "ROBOTIC": era = "ERA-06_DIGITAL"
+            if category == "MICROFABRICATION": era = "ERA-06_DIGITAL"
 
             # --- ИСПРАВЛЕНИЕ ПРЕФИКСА ---
-            # По умолчанию берем 3 буквы (MET, DEF)
             prefix = category[:3]
-            # Но для MACHINING принудительно ставим MACH (4 буквы)
             if category == "MACHINING": prefix = "MACH"
+            if category == "ASSEMBLY": prefix = "ASS"
+            if category == "MOLDING": prefix = "MOLD" # <--- FIXED
+            if category == "MICROFABRICATION": prefix = "MIC" # <--- FIXED
+            if category == "JOINING": prefix = "JOIN"
             
             row = {
                 "ID": f"PROC-{prefix}_{tmpl['code']}_{var['type'].upper()}",
@@ -176,7 +184,7 @@ def generate_rows(category):
                 "Input_State": "VARIES",
                 "Output_State": "VARIES",
                 "Physics_Law": "SCI-LAW_THERMO_2",
-                "Energy_Type": "ELECTRIC" if category in ["COMPUTATION", "ADDITIVE"] else "KINETIC",
+                "Energy_Type": "ELECTRIC" if category in ["COMPUTATION", "ADDITIVE", "ASSEMBLY", "MICROFABRICATION"] else "KINETIC",
                 "Energy_Cost_Estimate": "High" if real_nrg > 5 else "Medium",
                 "Req_Infrastructure": "FAC-GENERIC"
             }
@@ -184,7 +192,7 @@ def generate_rows(category):
     return rows
 
 def main():
-    print("⚙️ Генерация Полного Цикла Процессов (v9.0 - MACH Prefix Fix)...")
+    print("⚙️ Генерация Полного Цикла Процессов (v10.1 - Prefixes Fixed)...")
     for category, path in PATHS.items():
         if not os.path.exists(os.path.dirname(path)): os.makedirs(os.path.dirname(path))
         data = generate_rows(category)

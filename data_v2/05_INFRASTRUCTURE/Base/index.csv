@@ -1,4 +1,4 @@
 ID,Name,Description,Era,Predecessor_ID,Status,Syntropy_Score,Catalytic_Potential,Structural_Pattern,Invention_Reason,Social_Context,Impact_Map,Properties,External_Data_Link
-GRID-AC,AC Power Grid,Alternating Current distribution.,ERA-05_ELECTRICAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-GRID-HV,High Voltage Grid,Industrial power feed.,ERA-05_ELECTRICAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-LOG-ROAD_DIRT,Dirt Roads,Basic logistics.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
+GRID-AC,AC Power Grid,Standard grid.,ERA-05_ELECTRICAL,,,,,,,,,,
+GRID-HV,High Voltage Grid,Industrial grid.,ERA-05_ELECTRICAL,,,,,,,,,,
+LOG-ROAD_DIRT,Dirt Roads,Basic logistics.,ERA-01_PRIMITIVE,,,,,,,,,,

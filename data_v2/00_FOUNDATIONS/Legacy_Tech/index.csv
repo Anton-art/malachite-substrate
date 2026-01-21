@@ -1,12 +1,18 @@
 ID,Name,Description,Era,Predecessor_ID,Status,Syntropy_Score,Catalytic_Potential,Structural_Pattern,Invention_Reason,Social_Context,Impact_Map,Properties,External_Data_Link
-MAT-BRONZE_CAST,Cast Bronze,First alloy of civilization.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-MAT-IRON_PUDDLED,Puddled Iron,Wrought iron precursor.,ERA-03_SCIENTIFIC,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-PART-RIVET,Industrial Rivet,Permanent fastener.,ERA-04_INDUSTRIAL,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-MECH-LOOM,Power Loom,First automated machine.,ERA-03_SCIENTIFIC,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-PROC-HAND_CRAFT,Manual Crafting,Made by hand.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-PROC-MASONRY,Masonry,Stone and brick laying.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-FAC-WORKSHOP_MANUAL,Manual Workshop,Pre-industrial shop.,ERA-02_ENGINEERING,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-FAC-STEAM_ENGINE,Steam Engine,First prime mover.,ERA-03_SCIENTIFIC,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-FAC-WATER_WHEEL,Water Wheel,Renewable mechanical power.,ERA-02_ENGINEERING,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-PROC-LOG_ANIMAL_CART,Animal Transport,Horse and cart logistics.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
-PROC-LOG_STORAGE_SIMPLE,Simple Storage,Barns and cellars.,ERA-01_PRIMITIVE,NULL,ACTIVE,1.0,5.0,ROOT_NODE,FOUNDATION,HISTORY,SOC-DEV:ENABLE:+1,{},NULL
+MAT-BRONZE_CAST,Cast Bronze,First alloy.,ERA-01_PRIMITIVE,,,,,,,,,,
+MAT-IRON_PUDDLED,Puddled Iron,Wrought iron precursor.,ERA-03_SCIENTIFIC,,,,,,,,,,
+PART-RIVET,Industrial Rivet,Permanent fastener.,ERA-04_INDUSTRIAL,,,,,,,,,,
+MECH-LOOM,Power Loom,First automated machine.,ERA-03_SCIENTIFIC,,,,,,,,,,
+PROC-HAND_CRAFT,Manual Crafting,Made by hand.,ERA-01_PRIMITIVE,,,,,,,,,,
+PROC-MASONRY,Masonry,Stone work.,ERA-01_PRIMITIVE,,,,,,,,,,
+FAC-WORKSHOP_MANUAL,Manual Workshop,Pre-industrial shop.,ERA-02_ENGINEERING,,,,,,,,,,
+FAC-STEAM_ENGINE,Steam Engine,First prime mover.,ERA-03_SCIENTIFIC,,,,,,,,,,
+FAC-WATER_WHEEL,Water Wheel,Renewable power.,ERA-02_ENGINEERING,,,,,,,,,,
+PROC-LOG_ANIMAL_CART,Animal Transport,Horse and cart.,ERA-01_PRIMITIVE,,,,,,,,,,
+PROC-LOG_STORAGE_SIMPLE,Simple Storage,Barns.,ERA-01_PRIMITIVE,,,,,,,,,,
+PART-RES_AXIAL,Axial Resistor (Legacy),Old style component.,ERA-05_ELECTRICAL,,,,,,,,,,
+MAT-LEATHER_GASKET,Leather Gasket,Precursor to O-Rings.,ERA-02_ENGINEERING,,,,,,,,,,
+PART-WHEEL_WOODEN,Wooden Wheel,The original wheel.,ERA-01_PRIMITIVE,,,,,,,,,,
+PART-BEAM_WOODEN,Wooden Beam,Structural timber.,ERA-01_PRIMITIVE,,,,,,,,,,
+PART-GEAR_WOODEN,Wooden Gear,Mill gear.,ERA-02_ENGINEERING,,,,,,,,,,
+PART-BUSHING_BRONZE,Bronze Bushing,Precursor to bearings.,ERA-02_ENGINEERING,,,,,,,,,,

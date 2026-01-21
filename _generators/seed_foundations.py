@@ -1,75 +1,60 @@
 ﻿import os
 import csv
 
-
-# =================================================================================
-# НАСТРОЙКИ
-# =================================================================================
 BASE_DIR = os.path.join("data_v2", "00_FOUNDATIONS")
-
-
 PATHS = {
     "COMMODITIES": os.path.join(BASE_DIR, "Commodities", "index.csv"),
     "LEGACY":      os.path.join(BASE_DIR, "Legacy_Tech", "index.csv"),
     "INFRA_BASE":  os.path.join("data_v2", "05_INFRASTRUCTURE", "Base", "index.csv")
 }
-
-
-HEADERS = [
-    "ID", "Name", "Description", "Era", "Predecessor_ID", "Status", 
-    "Syntropy_Score", "Catalytic_Potential", "Structural_Pattern",
-    "Invention_Reason", "Social_Context", "Impact_Map", "Properties", "External_Data_Link"
-]
+HEADERS = ["ID", "Name", "Description", "Era", "Predecessor_ID", "Status", "Syntropy_Score", "Catalytic_Potential", "Structural_Pattern", "Invention_Reason", "Social_Context", "Impact_Map", "Properties", "External_Data_Link"]
 
 DATA = {
     "COMMODITIES": [
-        # --- МЕТАЛЛЫ И ТОПЛИВО ---
-        {"id": "RES-ORE_IRON_HEMATITE", "name": "Iron Ore (Generic Hematite)", "era": "ERA-02_ENGINEERING", "desc": "Standard trade grade iron ore."},
-        {"id": "RES-ORE_COPPER_SULFIDE", "name": "Copper Ore (Chalcopyrite)", "era": "ERA-01_PRIMITIVE", "desc": "Source of copper and bronze."}, # <--- НОВОЕ (Бронзовый век)
-        {"id": "RES-COAL_COKE", "name": "Coking Coal", "era": "ERA-04_INDUSTRIAL", "desc": "Fuel for blast furnaces."},
-        {"id": "RES-FUEL_OIL_BRENT", "name": "Crude Oil (Benchmark)", "era": "ERA-05_ELECTRICAL", "desc": "Global oil price benchmark."},
-        {"id": "RES-FUEL_GAS_NGL", "name": "Natural Gas Liquids", "era": "ERA-05_ELECTRICAL", "desc": "Feedstock for plastics."},
-        
-        # --- БИОСФЕРА И АГРО ---
-        {"id": "RES-BIO_ANCIENT_FOREST", "name": "Ancient Biomass", "era": "ERA-01_PRIMITIVE", "desc": "Source of fossil fuels."},
-        {"id": "MAT-RUBBER_NATURAL", "name": "Natural Rubber", "era": "ERA-04_INDUSTRIAL", "desc": "Harvested latex."},
-        {"id": "RES-FIBER_COTTON", "name": "Raw Cotton", "era": "ERA-02_ENGINEERING", "desc": "Basis of early industrialization."}, # <--- НОВОЕ (Текстиль)
-        
-        # --- СТРОИТЕЛЬСТВО ---
-        {"id": "RES-MIN_LIMESTONE", "name": "Limestone", "era": "ERA-01_PRIMITIVE", "desc": "Flux for steel and base for cement."}, # <--- НОВОЕ (Для цемента и стали)
-
-       # --- СИРОТЫ ---
-        {"id": "RES-COAL_BITUMINOUS", "name": "Bituminous Coal", "era": "ERA-04_INDUSTRIAL", "desc": "Thermal coal for power plants."},
-        {"id": "RES-FUEL_GAS_METHANE", "name": "Methane", "era": "ERA-05_ELECTRICAL", "desc": "Natural gas fuel."},
-        {"id": "RES-FUEL_URANIUM", "name": "Uranium-235", "era": "ERA-05_ELECTRICAL", "desc": "Nuclear fuel."},
-        {"id": "ENV-SUNLIGHT", "name": "Solar Irradiance", "era": "ERA-01_PRIMITIVE", "desc": "Renewable energy source."},
+        {"ID": "RES-ORE_IRON_HEMATITE", "Name": "Iron Ore (Generic)", "Era": "ERA-02_ENGINEERING", "Description": "Standard trade grade iron ore."},
+        {"ID": "RES-ORE_COPPER_SULFIDE", "Name": "Copper Ore", "Era": "ERA-01_PRIMITIVE", "Description": "Source of copper."},
+        {"ID": "RES-COAL_COKE", "Name": "Coking Coal", "Era": "ERA-04_INDUSTRIAL", "Description": "Fuel for blast furnaces."},
+        {"ID": "RES-FUEL_OIL_BRENT", "Name": "Crude Oil (Benchmark)", "Era": "ERA-05_ELECTRICAL", "Description": "Global oil price benchmark."},
+        {"ID": "RES-FUEL_GAS_NGL", "Name": "Natural Gas Liquids", "Era": "ERA-05_ELECTRICAL", "Description": "Feedstock for plastics."},
+        {"ID": "RES-BIO_ANCIENT_FOREST", "Name": "Ancient Biomass", "Era": "ERA-01_PRIMITIVE", "Description": "Source of fossil fuels."},
+        {"ID": "MAT-RUBBER_NATURAL", "Name": "Natural Rubber", "Era": "ERA-04_INDUSTRIAL", "Description": "Harvested latex."},
+        {"ID": "RES-FIBER_COTTON", "Name": "Raw Cotton", "Era": "ERA-02_ENGINEERING", "Description": "Textile basis."},
+        {"ID": "RES-MIN_LIMESTONE", "Name": "Limestone", "Era": "ERA-01_PRIMITIVE", "Description": "Flux and cement base."},
+        {"ID": "RES-MIN_SILICA", "Name": "Silica Sand", "Era": "ERA-01_PRIMITIVE", "Description": "Glass and silicon base."},
+        {"ID": "RES-MIN_BAUXITE", "Name": "Bauxite", "Era": "ERA-02_ENGINEERING", "Description": "Aluminum ore."},
+        {"ID": "RES-FUEL_URANIUM", "Name": "Uranium-235", "Era": "ERA-05_ELECTRICAL", "Description": "Nuclear fuel."},
+        {"ID": "ENV-SUNLIGHT", "Name": "Solar Irradiance", "Era": "ERA-01_PRIMITIVE", "Description": "Renewable energy source."},
+        # НОВЫЕ ДОБАВЛЕНИЯ:
+        {"ID": "MAT-AL_6061_T6", "Name": "Aluminum 6061-T6", "Era": "ERA-05_ELECTRICAL", "Description": "Structural aluminum alloy."},
+        {"ID": "MAT-RUBBER_SYNTHETIC", "Name": "Synthetic Rubber", "Era": "ERA-04_INDUSTRIAL", "Description": "Petrochemical elastomer."},
+        {"ID": "PART-TRANSISTOR_MOSFET", "Name": "Discrete MOSFET", "Era": "ERA-05_ELECTRICAL", "Description": "Basic transistor."},
+        {"ID": "MAT-CER_CLAY_BRICK", "Name": "Clay Brick", "Era": "ERA-01_PRIMITIVE", "Description": "Fired clay."},
+        {"ID": "MAT-CER_SILICON_CARBIDE", "Name": "Silicon Carbide", "Era": "ERA-06_DIGITAL", "Description": "Hard ceramic."},
+        {"ID": "MAT-STL_52100_VAC_ARC", "Name": "Bearing Steel 52100", "Era": "ERA-04_INDUSTRIAL", "Description": "High hardness steel."},
     ],
     "LEGACY": [
-        # --- МЕТАЛЛУРГИЯ ---
-        {"id": "MAT-BRONZE_CAST", "name": "Cast Bronze", "era": "ERA-01_PRIMITIVE", "desc": "First alloy of civilization."}, # <--- НОВОЕ
-        {"id": "MAT-IRON_PUDDLED", "name": "Puddled Iron", "era": "ERA-03_SCIENTIFIC", "desc": "Wrought iron precursor."},
-        
-        # --- МЕХАНИКА ---
-        {"id": "PART-RIVET", "name": "Industrial Rivet", "era": "ERA-04_INDUSTRIAL", "desc": "Permanent fastener."},
-        {"id": "MECH-LOOM", "name": "Power Loom", "era": "ERA-03_SCIENTIFIC", "desc": "First automated machine."}, # <--- НОВОЕ (Предок ЧПУ)
-        
-        # --- ПРОЦЕССЫ ---
-        {"id": "PROC-HAND_CRAFT", "name": "Manual Crafting", "era": "ERA-01_PRIMITIVE", "desc": "Made by hand."},
-        {"id": "PROC-MASONRY", "name": "Masonry", "era": "ERA-01_PRIMITIVE", "desc": "Stone and brick laying."}, # <--- НОВОЕ (Строительство)
-        
-        # --- ЭНЕРГИЯ И ЦЕХА ---
-        {"id": "FAC-WORKSHOP_MANUAL", "name": "Manual Workshop", "era": "ERA-02_ENGINEERING", "desc": "Pre-industrial shop."},
-        {"id": "FAC-STEAM_ENGINE", "name": "Steam Engine", "era": "ERA-03_SCIENTIFIC", "desc": "First prime mover."},
-        {"id": "FAC-WATER_WHEEL", "name": "Water Wheel", "era": "ERA-02_ENGINEERING", "desc": "Renewable mechanical power."}, # <--- НОВОЕ (До пара)
-
-       # --- СИРОТЫ ---
-        {"id": "PROC-LOG_ANIMAL_CART", "name": "Animal Transport", "era": "ERA-01_PRIMITIVE", "desc": "Horse and cart logistics."},
-        {"id": "PROC-LOG_STORAGE_SIMPLE", "name": "Simple Storage", "era": "ERA-01_PRIMITIVE", "desc": "Barns and cellars."},
+        {"ID": "MAT-BRONZE_CAST", "Name": "Cast Bronze", "Era": "ERA-01_PRIMITIVE", "Description": "First alloy."},
+        {"ID": "MAT-IRON_PUDDLED", "Name": "Puddled Iron", "Era": "ERA-03_SCIENTIFIC", "Description": "Wrought iron precursor."},
+        {"ID": "PART-RIVET", "Name": "Industrial Rivet", "Era": "ERA-04_INDUSTRIAL", "Description": "Permanent fastener."},
+        {"ID": "MECH-LOOM", "Name": "Power Loom", "Era": "ERA-03_SCIENTIFIC", "Description": "First automated machine."},
+        {"ID": "PROC-HAND_CRAFT", "Name": "Manual Crafting", "Era": "ERA-01_PRIMITIVE", "Description": "Made by hand."},
+        {"ID": "PROC-MASONRY", "Name": "Masonry", "Era": "ERA-01_PRIMITIVE", "Description": "Stone work."},
+        {"ID": "FAC-WORKSHOP_MANUAL", "Name": "Manual Workshop", "Era": "ERA-02_ENGINEERING", "Description": "Pre-industrial shop."},
+        {"ID": "FAC-STEAM_ENGINE", "Name": "Steam Engine", "Era": "ERA-03_SCIENTIFIC", "Description": "First prime mover."},
+        {"ID": "FAC-WATER_WHEEL", "Name": "Water Wheel", "Era": "ERA-02_ENGINEERING", "Description": "Renewable power."},
+        {"ID": "PROC-LOG_ANIMAL_CART", "Name": "Animal Transport", "Era": "ERA-01_PRIMITIVE", "Description": "Horse and cart."},
+        {"ID": "PROC-LOG_STORAGE_SIMPLE", "Name": "Simple Storage", "Era": "ERA-01_PRIMITIVE", "Description": "Barns."},
+        {"ID": "PART-RES_AXIAL", "Name": "Axial Resistor (Legacy)", "Era": "ERA-05_ELECTRICAL", "Description": "Old style component."},
+        {"ID": "MAT-LEATHER_GASKET", "Name": "Leather Gasket", "Era": "ERA-02_ENGINEERING", "Description": "Precursor to O-Rings."},
+        {"ID": "PART-WHEEL_WOODEN", "Name": "Wooden Wheel", "Era": "ERA-01_PRIMITIVE", "Description": "The original wheel."},
+        {"ID": "PART-BEAM_WOODEN", "Name": "Wooden Beam", "Era": "ERA-01_PRIMITIVE", "Description": "Structural timber."},
+        {"ID": "PART-GEAR_WOODEN", "Name": "Wooden Gear", "Era": "ERA-02_ENGINEERING", "Description": "Mill gear."},
+        {"ID": "PART-BUSHING_BRONZE", "Name": "Bronze Bushing", "Era": "ERA-02_ENGINEERING", "Description": "Precursor to bearings."},
     ],
     "INFRA_BASE": [
-        {"id": "GRID-AC", "name": "AC Power Grid", "era": "ERA-05_ELECTRICAL", "desc": "Alternating Current distribution."},
-        {"id": "GRID-HV", "name": "High Voltage Grid", "era": "ERA-05_ELECTRICAL", "desc": "Industrial power feed."},
-        {"id": "LOG-ROAD_DIRT", "name": "Dirt Roads", "era": "ERA-01_PRIMITIVE", "desc": "Basic logistics."}, # <--- НОВОЕ
+        {"ID": "GRID-AC", "Name": "AC Power Grid", "Era": "ERA-05_ELECTRICAL", "Description": "Standard grid."},
+        {"ID": "GRID-HV", "Name": "High Voltage Grid", "Era": "ERA-05_ELECTRICAL", "Description": "Industrial grid."},
+        {"ID": "LOG-ROAD_DIRT", "Name": "Dirt Roads", "Era": "ERA-01_PRIMITIVE", "Description": "Basic logistics."},
     ]
 }
 
@@ -78,33 +63,15 @@ def generate():
     for key, items in DATA.items():
         path = PATHS[key]
         if not os.path.exists(os.path.dirname(path)): os.makedirs(os.path.dirname(path))
-        
-        rows = []
-        for item in items:
-            rows.append({
-                "ID": item['id'],
-                "Name": item['name'],
-                "Description": item['desc'],
-                "Era": item['era'],
-                "Predecessor_ID": "NULL",
-                "Status": "ACTIVE",
-                "Syntropy_Score": 1.0,
-                "Catalytic_Potential": 5.0,
-                "Structural_Pattern": "ROOT_NODE",
-                "Invention_Reason": "FOUNDATION",
-                "Social_Context": "HISTORY",
-                "Impact_Map": "SOC-DEV:ENABLE:+1",
-                "Properties": "{}",
-                "External_Data_Link": "NULL"
-            })
-            
-        with open(path, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=HEADERS, extrasaction='ignore')
-            writer.writeheader()
-            writer.writerows(rows)
-            
-    print(f"✅ Фундамент заложен ({len(DATA['COMMODITIES']) + len(DATA['LEGACY']) + len(DATA['INFRA_BASE'])} объектов).")
-
+        try:
+            with open(path, 'w', newline='', encoding='utf-8') as f:
+                writer = csv.DictWriter(f, fieldnames=HEADERS, extrasaction='ignore')
+                writer.writeheader()
+                writer.writerows(items)
+            print(f"   - {key}: Записано {len(items)} объектов.")
+        except Exception as e:
+            print(f"❌ ОШИБКА записи {key}: {e}")
+    print(f"✅ Фундамент успешно заложен.")
 
 if __name__ == "__main__":
     generate()
