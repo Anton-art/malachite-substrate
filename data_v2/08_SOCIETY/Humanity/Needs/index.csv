@@ -1,0 +1,13 @@
+ID,Name,Description,Era,Predecessor_ID,Status,Syntropy_Score,Catalytic_Potential,Structural_Pattern,Target_Group,Impact_Metric,Related_Artifacts,Cultural_Significance,Invention_Reason,Social_Context,Impact_Map,Properties,External_Data_Link
+SOC-NEED_SURVIVAL,Survival,"Food, water, shelter.",ERA-01_PRIMITIVE,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_SAFETY,Safety & Security,Protection from elements and threats.,ERA-01_PRIMITIVE,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_MOBILITY,Mobility,Movement of people and goods.,ERA-02_ENGINEERING,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_ENERGY,Energy Access,Power for machines and heat.,ERA-04_INDUSTRIAL,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_EFFICIENCY,Efficiency,Doing more with less.,ERA-04_INDUSTRIAL,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_CONNECTIVITY,Connectivity,Communication and information flow.,ERA-05_ELECTRICAL,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_COMPUTATION,Computation,Processing data and logic.,ERA-06_DIGITAL,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_INTELLIGENCE,Artificial Intelligence,Autonomous cognitive tasks.,ERA-07_INTELLECTUAL,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_EXPANSION,Space Expansion,Multi-planetary existence.,ERA-07_INTELLECTUAL,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_FIXATION,Mechanical Fixation,Holding things together.,ERA-02_ENGINEERING,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_STRENGTH,Structural Strength,Load bearing capacity.,ERA-02_ENGINEERING,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL
+SOC-NEED_CONTROL,Control Systems,Regulation of flows and energy.,ERA-05_ELECTRICAL,NULL,ACTIVE,10.0,100.0,HIERARCHY_NODE,Humanity,Quality of Life,,,EVOLUTION,CIVILIZATION,NULL,{},NULL

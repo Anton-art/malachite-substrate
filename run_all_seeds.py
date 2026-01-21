@@ -7,6 +7,7 @@ import datetime
 SCRIPTS = [
     # 1. Основа
     "_generators/seed_foundations.py",      # Фундамент (ID предков)
+    "_generators/seed_society.py",         # Общество и Рынки
     "_generators/seed_science_laws.py",     # Законы
     
     # 2. Ресурсы

@@ -1,0 +1,7 @@
+ID,Name,Description,Era,Predecessor_ID,Status,Syntropy_Score,Catalytic_Potential,Structural_Pattern,Target_Group,Impact_Metric,Related_Artifacts,Cultural_Significance,Invention_Reason,Social_Context,Impact_Map,Properties,External_Data_Link
+MKT-GLOBAL,Global Market,Economic exchange system.,ERA-04_INDUSTRIAL,MKT-BARTER,ACTIVE,5.0,50.0,NETWORK_EXCHANGE,Corporations,GDP,,,SOC-NEED_EFFICIENCY,CAPITALISM,NULL,{},NULL
+MKT-ENERGY,Energy Market,Economic exchange system.,ERA-04_INDUSTRIAL,MKT-BARTER,ACTIVE,5.0,50.0,NETWORK_EXCHANGE,Corporations,GDP,,,SOC-NEED_EFFICIENCY,CAPITALISM,NULL,{},NULL
+MKT-AUTOMOTIVE,Automotive Market,Economic exchange system.,ERA-05_ELECTRICAL,MKT-BARTER,ACTIVE,5.0,50.0,NETWORK_EXCHANGE,Corporations,GDP,,,SOC-NEED_EFFICIENCY,CAPITALISM,NULL,{},NULL
+MKT-ELECTRONICS,Consumer Electronics,Economic exchange system.,ERA-06_DIGITAL,MKT-BARTER,ACTIVE,5.0,50.0,NETWORK_EXCHANGE,Corporations,GDP,,,SOC-NEED_EFFICIENCY,CAPITALISM,NULL,{},NULL
+MKT-CONSTRUCTION,Construction & Real Estate,Economic exchange system.,ERA-02_ENGINEERING,MKT-BARTER,ACTIVE,5.0,50.0,NETWORK_EXCHANGE,Corporations,GDP,,,SOC-NEED_EFFICIENCY,CAPITALISM,NULL,{},NULL
+MKT-AEROSPACE,Aerospace & Defense,Economic exchange system.,ERA-06_DIGITAL,MKT-BARTER,ACTIVE,5.0,50.0,NETWORK_EXCHANGE,Corporations,GDP,,,SOC-NEED_EFFICIENCY,CAPITALISM,NULL,{},NULL

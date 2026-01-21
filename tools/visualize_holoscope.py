@@ -9,7 +9,7 @@ from pyvis.network import Network
 ROOT_DIR = "data_v2"
 OUTPUT_FILE = "malachite_holoscope.html"
 
-# Цвета Узлов (Neon Palette)
+# Цвета (Строгий Neon)
 NODE_COLORS = {
     "SCI":  "#00FFFF", # Cyan (Наука)
     "RES":  "#FF8C00", # DarkOrange (Ресурсы)
@@ -19,67 +19,60 @@ NODE_COLORS = {
     "GRID": "#FF4500", # Энергия
     "PART": "#BA55D3", # MediumOrchid (Детали)
     "ASSY": "#9932CC", # DarkOrchid (Сборки)
+    "PROD": "#9400D3", # DarkViolet (Изделия)
     "SOC":  "#00FF7F", # SpringGreen (Общество)
     "MKT":  "#00FF7F", # Рынок
-    "DEFAULT": "#808080"
+    "DEFAULT": "#696969"
 }
 
-# Цвета Связей (Semantic Edges)
-EDGE_STYLES = {
-    "PHYSICAL":  {"color": "#FF8C00", "dashes": False, "opacity": 0.4}, # Поток материи (Оранжевый)
-    "LOGICAL":   {"color": "#00FFFF", "dashes": False, "opacity": 0.3}, # Поток знаний (Голубой)
-    "INFRA":     {"color": "#FF4500", "dashes": False, "opacity": 0.3}, # Энергия/Станки (Красный)
-    "IMPACT":    {"color": "#00FF7F", "dashes": True,  "opacity": 0.6}, # Влияние (Зеленый пунктир)
-    "EVOLUTION": {"color": "#808080", "dashes": True,  "opacity": 0.2}  # Наследие (Серый)
-}
-
-# Карта колонок к типам связей
+# Типы связей
 COLUMN_MAP = {
-    "Req_Resource": "PHYSICAL",
-    "Req_Material": "PHYSICAL",
-    "Bill_of_Materials": "PHYSICAL",
-    "Req_Process": "LOGICAL",
-    "Req_Science": "LOGICAL",
-    "Req_Infrastructure": "INFRA",
-    "Power_Source": "INFRA",
-    "Predecessor_ID": "EVOLUTION",
-    "Impact_Map": "IMPACT"
+    "Req_Resource":      {"color": "#FF8C00", "width": 1.5, "dashes": False}, # Поток материи
+    "Req_Material":      {"color": "#FF8C00", "width": 1.5, "dashes": False},
+    "Bill_of_Materials": {"color": "#BA55D3", "width": 2.0, "dashes": False}, # Сборка
+    "Req_Process":       {"color": "#FFD700", "width": 1.0, "dashes": True},  # Технология
+    "Req_Science":       {"color": "#00FFFF", "width": 1.0, "dashes": True},  # Знание
+    "Req_Infrastructure":{"color": "#FF4500", "width": 1.0, "dashes": True},  # Энергия/Место
+    "Power_Source":      {"color": "#FF0000", "width": 1.5, "dashes": False}, # Питание
+    "Predecessor_ID":    {"color": "#444444", "width": 0.5, "dashes": [5, 5]},# Эволюция
+    "Impact_Map":        {"color": "#00FF7F", "width": 1.5, "dashes": [2, 2]} # Влияние
 }
-
-# =================================================================================
-# ЛОГИКА
-# =================================================================================
 
 def get_node_size(row):
-    size = 15
     try:
-        syn = float(row.get("Syntropy_Score", 1.0))
-        if syn > 50: size = 35
-        elif syn > 10: size = 25
-        elif syn < 0: size = 10
+        syn = float(row.get("Syntropy_Score", 0))
+        if syn > 50: return 30
+        if syn > 10: return 20
+        if syn < 0: return 10
     except: pass
-    
-    # Катализаторы важнее
-    try:
-        cat = float(row.get("Catalytic_Potential", 0.0))
-        if cat > 20: size += 5
-    except: pass
-    return size
+    return 15
 
 def build_graph():
-    print("🔭 Инициализация Голоскопа v2.0 (Semantic Edges)...")
+    print("🔭 Рендеринг Голоскопа v3.0 (Stable Physics)...")
     
-    # Настройки UI: темная тема, кнопки управления физикой
-    net = Network(height="95vh", width="100%", bgcolor="#0E1117", font_color="#cccccc", select_menu=True, filter_menu=True)
+    # 1. Инициализация
+    net = Network(height="95vh", width="100%", bgcolor="#0b0c10", font_color="#c5c6c7", select_menu=True, filter_menu=True)
     
-    # Тонкая настройка физики для "Технологического Древа"
-    # Увеличили spring_length, чтобы граф "дышал"
-    net.barnes_hut(gravity=-10000, central_gravity=0.1, spring_length=250, spring_strength=0.04, damping=0.09)
+    # 2. НАСТРОЙКА ФИЗИКИ (УСМИРЕНИЕ ОДУВАНЧИКА)
+    # forceAtlas2Based - лучший алгоритм для больших графов.
+    # damping=0.9 - очень быстрое затухание колебаний.
+    net.force_atlas_2based(
+        gravity=-100, 
+        central_gravity=0.005, 
+        spring_length=100, 
+        spring_strength=0.08, 
+        damping=0.95, 
+        overlap=0
+    )
+    
+    # Включаем кнопки управления, чтобы пользователь мог нажать "Stop"
+    net.show_buttons(filter_=['physics'])
 
     nodes = {}
     edges = []
 
-    print("   - Сканирование data_v2...")
+    # 3. Сканирование
+    print("   - Чтение данных...")
     for dirpath, _, filenames in os.walk(ROOT_DIR):
         if "index.csv" in filenames:
             path = os.path.join(dirpath, "index.csv")
@@ -90,31 +83,26 @@ def build_graph():
                         if not row.get("ID"): continue
                         obj_id = row["ID"]
                         
-                        # Богатый Tooltip
+                        # Tooltip
                         tooltip = (
-                            f"<div style='font-family: monospace; padding: 5px;'>"
-                            f"<b style='font-size: 14px; color: white;'>{row.get('Name')}</b><br>"
-                            f"<hr style='border-color: #444;'>"
-                            f"🆔 {obj_id}<br>"
-                            f"📅 {row.get('Era')}<br>"
-                            f"⚡ Syntropy: <span style='color: {'#0f0' if float(row.get('Syntropy_Score',0))>0 else '#f00'}'>{row.get('Syntropy_Score')}</span><br>"
-                            f"🧩 Pattern: {row.get('Structural_Pattern', 'N/A')}<br>"
-                            f"<br><i>{row.get('Description')}</i>"
-                            f"</div>"
+                            f"ID: {obj_id}\n"
+                            f"Name: {row.get('Name')}\n"
+                            f"Era: {row.get('Era')}\n"
+                            f"Syntropy: {row.get('Syntropy_Score')}"
                         )
 
                         prefix = obj_id.split('-')[0]
                         nodes[obj_id] = {
                             "id": obj_id,
-                            "label": row.get("Name"),
+                            "label": "  " + row.get("Name"), # Отступ для красоты
                             "title": tooltip,
                             "color": NODE_COLORS.get(prefix, NODE_COLORS["DEFAULT"]),
                             "size": get_node_size(row),
-                            "shape": "star" if prefix == "RES" and "ORE" in obj_id else "dot" # Руды как звезды
+                            "shape": "dot"
                         }
 
-                        # Обработка связей
-                        for col, style_key in COLUMN_MAP.items():
+                        # Связи
+                        for col, style in COLUMN_MAP.items():
                             val = row.get(col)
                             if val and val != "NULL":
                                 targets = val.split(';')
@@ -122,42 +110,35 @@ def build_graph():
                                     clean_t = t.split(':')[0].strip()
                                     if not clean_t: continue
                                     
-                                    style = EDGE_STYLES[style_key]
-                                    
-                                    # ЛОГИКА НАПРАВЛЕНИЯ
-                                    if col == "Impact_Map":
-                                        # Влияние: Я -> Цель (Source -> Target)
-                                        edges.append({
-                                            "src": obj_id, "dst": clean_t, 
-                                            "color": style["color"], 
-                                            "dashes": style["dashes"],
-                                            "width": 1
-                                        })
+                                    # Направление стрелок
+                                    if col in ["Impact_Map"]:
+                                        src, dst = obj_id, clean_t
                                     else:
-                                        # Зависимость: Цель -> Я (Target -> Source)
-                                        # "Мне нужен Ресурс", значит Ресурс течет ко мне
-                                        edges.append({
-                                            "src": clean_t, "dst": obj_id, 
-                                            "color": style["color"], 
-                                            "dashes": style["dashes"],
-                                            "width": 1 if style_key == "EVOLUTION" else 2
-                                        })
+                                        src, dst = clean_t, obj_id # Ресурс -> Продукт
+                                        
+                                    edges.append({
+                                        "src": src, "dst": dst,
+                                        "color": style["color"],
+                                        "width": style["width"],
+                                        "dashes": style["dashes"]
+                                    })
 
             except Exception as e:
                 print(f"⚠️ Ошибка в {path}: {e}")
 
-    print(f"   - Рендеринг {len(nodes)} узлов и {len(edges)} связей...")
-
+    # 4. Сборка
+    print(f"   - Узлов: {len(nodes)}, Связей: {len(edges)}")
+    
     for n in nodes.values():
         net.add_node(n["id"], label=n["label"], title=n["title"], color=n["color"], size=n["size"], shape=n["shape"])
 
     for e in edges:
         if e["src"] in nodes and e["dst"] in nodes:
-            net.add_edge(e["src"], e["dst"], color=e["color"], dashes=e["dashes"], width=e["width"])
+            net.add_edge(e["src"], e["dst"], color=e["color"], width=e["width"], dashes=e["dashes"])
 
-    print(f"💾 Сохранение в {OUTPUT_FILE}...")
+    # 5. Сохранение
     net.save_graph(OUTPUT_FILE)
-    print("✅ Готово! Откройте HTML файл.")
+    print(f"✅ Готово: {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     build_graph()
